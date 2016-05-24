@@ -7,6 +7,8 @@
 //
 
 #import "LJMyInfoViewController.h"
+#import "LJAccountOverviewCell.h"
+#import "LJMyInfoTableViewCell.h"
 
 @interface LJMyInfoViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -32,12 +34,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *ID = @"ID";
+    static NSString *ID = @"InfoCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    LJMyInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+        cell = [[LJMyInfoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
     
     
