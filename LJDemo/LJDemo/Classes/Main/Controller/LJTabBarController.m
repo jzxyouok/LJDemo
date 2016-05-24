@@ -8,7 +8,7 @@
 
 #import "LJTabBarController.h"
 #import "LJHomeViewController.h"
-#import "LJMeViewController.h"
+#import "LJMyInfoViewController.h"
 #import "LJMessageViewController.h"
 
 @interface LJTabBarController ()

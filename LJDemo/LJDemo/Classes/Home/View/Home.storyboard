@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="1281" y="332"/>
         </scene>
-        <!--Nav View Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="UuM-rd-keO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Th9-ga-8Md" customClass="LJNavViewController" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Th9-ga-8Md" customClass="LJNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="f5Q-p8-CIL">

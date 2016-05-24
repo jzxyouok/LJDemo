@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Me View Controller-->
+        <!--My Info View Controller-->
         <scene sceneID="LCb-ql-VqZ">
             <objects>
-                <viewController id="7WC-Ji-1Yt" customClass="LJMeViewController" sceneMemberID="viewController">
+                <viewController id="7WC-Ji-1Yt" customClass="LJMyInfoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L6Z-CF-Y04"/>
                         <viewControllerLayoutGuide type="bottom" id="xhg-If-pAQ"/>
@@ -16,19 +16,38 @@
                     <view key="view" contentMode="scaleToFill" id="KAl-vm-Gj8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RgU-g4-FGC">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="7WC-Ji-1Yt" id="Smr-0Q-cIr"/>
+                                    <outlet property="delegate" destination="7WC-Ji-1Yt" id="uvT-7z-XsR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="RgU-g4-FGC" secondAttribute="trailing" id="14h-Ql-KfN"/>
+                            <constraint firstItem="RgU-g4-FGC" firstAttribute="leading" secondItem="KAl-vm-Gj8" secondAttribute="leading" id="M4R-L0-avd"/>
+                            <constraint firstItem="RgU-g4-FGC" firstAttribute="top" secondItem="L6Z-CF-Y04" secondAttribute="bottom" id="X0l-HA-q4g"/>
+                            <constraint firstItem="xhg-If-pAQ" firstAttribute="top" secondItem="RgU-g4-FGC" secondAttribute="bottom" id="w4B-ZW-F81"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1rH-dB-jVP"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="RgU-g4-FGC" id="box-8l-0l1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5rc-S1-QZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1155" y="274"/>
+            <point key="canvasLocation" x="813" y="274"/>
         </scene>
-        <!--Nav View Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="pGP-VO-1cJ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AD8-Ca-DA4" customClass="LJNavViewController" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AD8-Ca-DA4" customClass="LJNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CF9-di-Skc">

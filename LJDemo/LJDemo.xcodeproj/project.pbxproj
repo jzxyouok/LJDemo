@@ -10,17 +10,21 @@
 		4F39A3A21CF33A50004E37E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F39A3A11CF33A50004E37E8 /* main.m */; };
 		4F39A3AD1CF33A50004E37E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F39A3AC1CF33A50004E37E8 /* Assets.xcassets */; };
 		4F39A3B01CF33A50004E37E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F39A3AE1CF33A50004E37E8 /* LaunchScreen.storyboard */; };
-		4F39A3CB1CF358E6004E37E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F39A3CA1CF358E6004E37E8 /* AppDelegate.m */; };
-		4F39A3D01CF3607A004E37E8 /* LJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F39A3CF1CF3607A004E37E8 /* LJTabBarController.m */; };
-		4FDDE0A51CF48FCA00B321EA /* LJHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDE0A41CF48FCA00B321EA /* LJHomeViewController.m */; };
-		4FDDE0A71CF48FD900B321EA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDDE0A61CF48FD900B321EA /* Home.storyboard */; };
-		4FDDE0AA1CF4900600B321EA /* LJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDE0A91CF4900600B321EA /* LJMeViewController.m */; };
-		4FDDE0AC1CF4901400B321EA /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDDE0AB1CF4901400B321EA /* Me.storyboard */; };
-		4FDDE0AF1CF4903800B321EA /* LJMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDE0AE1CF4903800B321EA /* LJMessageViewController.m */; };
-		4FDDE0B11CF4904300B321EA /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDDE0B01CF4904300B321EA /* Message.storyboard */; };
-		4FDDE0B31CF490DB00B321EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDDE0B21CF490DB00B321EA /* Main.storyboard */; };
-		4FDDE0B61CF4998300B321EA /* LJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDE0B51CF4998300B321EA /* LJBaseViewController.m */; };
-		4FDDE0BC1CF49E3E00B321EA /* LJNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDE0BB1CF49E3E00B321EA /* LJNavViewController.m */; };
+		4F98D1F71CF50F60001DDD78 /* LJHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F98D1D11CF50F60001DDD78 /* LJHomeViewController.m */; };
+		4F98D1F81CF50F60001DDD78 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F98D1D41CF50F60001DDD78 /* Home.storyboard */; };
+		4F98D1F91CF50F60001DDD78 /* LJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F98D1D81CF50F60001DDD78 /* LJBaseViewController.m */; };
+		4F98D1FA1CF50F60001DDD78 /* LJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F98D1DA1CF50F60001DDD78 /* LJNavigationController.m */; };
+		4F98D1FB1CF50F60001DDD78 /* LJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F98D1DC1CF50F60001DDD78 /* LJTabBarController.m */; };
+		4F98D1FC1CF50F60001DDD78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F98D1E01CF50F60001DDD78 /* AppDelegate.m */; };
+		4F98D1FD1CF50F60001DDD78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F98D1E21CF50F60001DDD78 /* Main.storyboard */; };
+		4F98D1FE1CF50F60001DDD78 /* LJMyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F98D1E61CF50F60001DDD78 /* LJMyInfoViewController.m */; };
+		4F98D1FF1CF50F60001DDD78 /* LJAccountOverviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F98D1EA1CF50F60001DDD78 /* LJAccountOverviewCell.m */; };
+		4F98D2001CF50F60001DDD78 /* LJAccountOverviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F98D1EB1CF50F60001DDD78 /* LJAccountOverviewCell.xib */; };
+		4F98D2011CF50F60001DDD78 /* LJMyInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F98D1ED1CF50F60001DDD78 /* LJMyInfoTableViewCell.m */; };
+		4F98D2021CF50F60001DDD78 /* LJMyInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F98D1EE1CF50F60001DDD78 /* LJMyInfoTableViewCell.xib */; };
+		4F98D2031CF50F60001DDD78 /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F98D1EF1CF50F60001DDD78 /* Me.storyboard */; };
+		4F98D2041CF50F60001DDD78 /* LJMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F98D1F31CF50F60001DDD78 /* LJMessageViewController.m */; };
+		4F98D2051CF50F60001DDD78 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F98D1F61CF50F60001DDD78 /* Message.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,24 +33,30 @@
 		4F39A3AC1CF33A50004E37E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F39A3AF1CF33A50004E37E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F39A3B11CF33A50004E37E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F39A3C91CF358E6004E37E8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		4F39A3CA1CF358E6004E37E8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4F39A3CE1CF3607A004E37E8 /* LJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJTabBarController.h; sourceTree = "<group>"; };
-		4F39A3CF1CF3607A004E37E8 /* LJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJTabBarController.m; sourceTree = "<group>"; };
-		4FDDE0A31CF48FCA00B321EA /* LJHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJHomeViewController.h; sourceTree = "<group>"; };
-		4FDDE0A41CF48FCA00B321EA /* LJHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJHomeViewController.m; sourceTree = "<group>"; };
-		4FDDE0A61CF48FD900B321EA /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		4FDDE0A81CF4900600B321EA /* LJMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMeViewController.h; sourceTree = "<group>"; };
-		4FDDE0A91CF4900600B321EA /* LJMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMeViewController.m; sourceTree = "<group>"; };
-		4FDDE0AB1CF4901400B321EA /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
-		4FDDE0AD1CF4903800B321EA /* LJMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMessageViewController.h; sourceTree = "<group>"; };
-		4FDDE0AE1CF4903800B321EA /* LJMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMessageViewController.m; sourceTree = "<group>"; };
-		4FDDE0B01CF4904300B321EA /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
-		4FDDE0B21CF490DB00B321EA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		4FDDE0B41CF4998300B321EA /* LJBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJBaseViewController.h; sourceTree = "<group>"; };
-		4FDDE0B51CF4998300B321EA /* LJBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJBaseViewController.m; sourceTree = "<group>"; };
-		4FDDE0BA1CF49E3E00B321EA /* LJNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJNavViewController.h; sourceTree = "<group>"; };
-		4FDDE0BB1CF49E3E00B321EA /* LJNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJNavViewController.m; sourceTree = "<group>"; };
+		4F98D1D01CF50F60001DDD78 /* LJHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJHomeViewController.h; sourceTree = "<group>"; };
+		4F98D1D11CF50F60001DDD78 /* LJHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJHomeViewController.m; sourceTree = "<group>"; };
+		4F98D1D41CF50F60001DDD78 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		4F98D1D71CF50F60001DDD78 /* LJBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJBaseViewController.h; sourceTree = "<group>"; };
+		4F98D1D81CF50F60001DDD78 /* LJBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJBaseViewController.m; sourceTree = "<group>"; };
+		4F98D1D91CF50F60001DDD78 /* LJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJNavigationController.h; sourceTree = "<group>"; };
+		4F98D1DA1CF50F60001DDD78 /* LJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJNavigationController.m; sourceTree = "<group>"; };
+		4F98D1DB1CF50F60001DDD78 /* LJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJTabBarController.h; sourceTree = "<group>"; };
+		4F98D1DC1CF50F60001DDD78 /* LJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJTabBarController.m; sourceTree = "<group>"; };
+		4F98D1DF1CF50F60001DDD78 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4F98D1E01CF50F60001DDD78 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4F98D1E21CF50F60001DDD78 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4F98D1E51CF50F60001DDD78 /* LJMyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMyInfoViewController.h; sourceTree = "<group>"; };
+		4F98D1E61CF50F60001DDD78 /* LJMyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMyInfoViewController.m; sourceTree = "<group>"; };
+		4F98D1E91CF50F60001DDD78 /* LJAccountOverviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJAccountOverviewCell.h; sourceTree = "<group>"; };
+		4F98D1EA1CF50F60001DDD78 /* LJAccountOverviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJAccountOverviewCell.m; sourceTree = "<group>"; };
+		4F98D1EB1CF50F60001DDD78 /* LJAccountOverviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJAccountOverviewCell.xib; sourceTree = "<group>"; };
+		4F98D1EC1CF50F60001DDD78 /* LJMyInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMyInfoTableViewCell.h; sourceTree = "<group>"; };
+		4F98D1ED1CF50F60001DDD78 /* LJMyInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMyInfoTableViewCell.m; sourceTree = "<group>"; };
+		4F98D1EE1CF50F60001DDD78 /* LJMyInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJMyInfoTableViewCell.xib; sourceTree = "<group>"; };
+		4F98D1EF1CF50F60001DDD78 /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
+		4F98D1F21CF50F60001DDD78 /* LJMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMessageViewController.h; sourceTree = "<group>"; };
+		4F98D1F31CF50F60001DDD78 /* LJMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMessageViewController.m; sourceTree = "<group>"; };
+		4F98D1F61CF50F60001DDD78 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +89,7 @@
 		4F39A39F1CF33A50004E37E8 /* LJDemo */ = {
 			isa = PBXGroup;
 			children = (
-				4F39A3B71CF358A7004E37E8 /* Classes */,
+				4F98D1CD1CF50F60001DDD78 /* Classes */,
 				4F39A3A01CF33A50004E37E8 /* Supporting Files */,
 			);
 			path = LJDemo;
@@ -96,165 +106,171 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4F39A3B71CF358A7004E37E8 /* Classes */ = {
+		4F98D1CD1CF50F60001DDD78 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4F39A3B81CF358A7004E37E8 /* Home */,
-				4F39A3BC1CF358A7004E37E8 /* Main */,
-				4F39A3C01CF358A7004E37E8 /* Me */,
-				4F39A3C41CF358A7004E37E8 /* Message */,
+				4F98D1CE1CF50F60001DDD78 /* Home */,
+				4F98D1D51CF50F60001DDD78 /* Main */,
+				4F98D1E31CF50F60001DDD78 /* Me */,
+				4F98D1F01CF50F60001DDD78 /* Message */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		4F39A3B81CF358A7004E37E8 /* Home */ = {
+		4F98D1CE1CF50F60001DDD78 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4F39A3B91CF358A7004E37E8 /* Controller */,
-				4F39A3BA1CF358A7004E37E8 /* Model */,
-				4F39A3BB1CF358A7004E37E8 /* View */,
+				4F98D1CF1CF50F60001DDD78 /* Controller */,
+				4F98D1D21CF50F60001DDD78 /* Model */,
+				4F98D1D31CF50F60001DDD78 /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		4F39A3B91CF358A7004E37E8 /* Controller */ = {
+		4F98D1CF1CF50F60001DDD78 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4FDDE0A31CF48FCA00B321EA /* LJHomeViewController.h */,
-				4FDDE0A41CF48FCA00B321EA /* LJHomeViewController.m */,
+				4F98D1D01CF50F60001DDD78 /* LJHomeViewController.h */,
+				4F98D1D11CF50F60001DDD78 /* LJHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		4F39A3BA1CF358A7004E37E8 /* Model */ = {
+		4F98D1D21CF50F60001DDD78 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4F39A3BB1CF358A7004E37E8 /* View */ = {
+		4F98D1D31CF50F60001DDD78 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4FDDE0A61CF48FD900B321EA /* Home.storyboard */,
+				4F98D1D41CF50F60001DDD78 /* Home.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		4F39A3BC1CF358A7004E37E8 /* Main */ = {
+		4F98D1D51CF50F60001DDD78 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				4F39A3C81CF358D4004E37E8 /* Other */,
-				4F39A3BD1CF358A7004E37E8 /* Controller */,
-				4F39A3BE1CF358A7004E37E8 /* Model */,
-				4F39A3BF1CF358A7004E37E8 /* View */,
+				4F98D1D61CF50F60001DDD78 /* Controller */,
+				4F98D1DD1CF50F60001DDD78 /* Model */,
+				4F98D1DE1CF50F60001DDD78 /* Other */,
+				4F98D1E11CF50F60001DDD78 /* View */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		4F39A3BD1CF358A7004E37E8 /* Controller */ = {
+		4F98D1D61CF50F60001DDD78 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4F39A3CE1CF3607A004E37E8 /* LJTabBarController.h */,
-				4F39A3CF1CF3607A004E37E8 /* LJTabBarController.m */,
-				4FDDE0B41CF4998300B321EA /* LJBaseViewController.h */,
-				4FDDE0B51CF4998300B321EA /* LJBaseViewController.m */,
-				4FDDE0BA1CF49E3E00B321EA /* LJNavViewController.h */,
-				4FDDE0BB1CF49E3E00B321EA /* LJNavViewController.m */,
+				4F98D1D71CF50F60001DDD78 /* LJBaseViewController.h */,
+				4F98D1D81CF50F60001DDD78 /* LJBaseViewController.m */,
+				4F98D1D91CF50F60001DDD78 /* LJNavigationController.h */,
+				4F98D1DA1CF50F60001DDD78 /* LJNavigationController.m */,
+				4F98D1DB1CF50F60001DDD78 /* LJTabBarController.h */,
+				4F98D1DC1CF50F60001DDD78 /* LJTabBarController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		4F39A3BE1CF358A7004E37E8 /* Model */ = {
+		4F98D1DD1CF50F60001DDD78 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4F39A3BF1CF358A7004E37E8 /* View */ = {
+		4F98D1DE1CF50F60001DDD78 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				4FDDE0B21CF490DB00B321EA /* Main.storyboard */,
+				4F98D1DF1CF50F60001DDD78 /* AppDelegate.h */,
+				4F98D1E01CF50F60001DDD78 /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		4F98D1E11CF50F60001DDD78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4F98D1E21CF50F60001DDD78 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		4F39A3C01CF358A7004E37E8 /* Me */ = {
+		4F98D1E31CF50F60001DDD78 /* Me */ = {
 			isa = PBXGroup;
 			children = (
-				4F39A3C11CF358A7004E37E8 /* Controller */,
-				4F39A3C21CF358A7004E37E8 /* Model */,
-				4F39A3C31CF358A7004E37E8 /* View */,
+				4F98D1E41CF50F60001DDD78 /* Controller */,
+				4F98D1E71CF50F60001DDD78 /* Model */,
+				4F98D1E81CF50F60001DDD78 /* View */,
 			);
 			path = Me;
 			sourceTree = "<group>";
 		};
-		4F39A3C11CF358A7004E37E8 /* Controller */ = {
+		4F98D1E41CF50F60001DDD78 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4FDDE0A81CF4900600B321EA /* LJMeViewController.h */,
-				4FDDE0A91CF4900600B321EA /* LJMeViewController.m */,
+				4F98D1E51CF50F60001DDD78 /* LJMyInfoViewController.h */,
+				4F98D1E61CF50F60001DDD78 /* LJMyInfoViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		4F39A3C21CF358A7004E37E8 /* Model */ = {
+		4F98D1E71CF50F60001DDD78 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4F39A3C31CF358A7004E37E8 /* View */ = {
+		4F98D1E81CF50F60001DDD78 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4FDDE0AB1CF4901400B321EA /* Me.storyboard */,
+				4F98D1E91CF50F60001DDD78 /* LJAccountOverviewCell.h */,
+				4F98D1EA1CF50F60001DDD78 /* LJAccountOverviewCell.m */,
+				4F98D1EB1CF50F60001DDD78 /* LJAccountOverviewCell.xib */,
+				4F98D1EC1CF50F60001DDD78 /* LJMyInfoTableViewCell.h */,
+				4F98D1ED1CF50F60001DDD78 /* LJMyInfoTableViewCell.m */,
+				4F98D1EE1CF50F60001DDD78 /* LJMyInfoTableViewCell.xib */,
+				4F98D1EF1CF50F60001DDD78 /* Me.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		4F39A3C41CF358A7004E37E8 /* Message */ = {
+		4F98D1F01CF50F60001DDD78 /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				4F39A3C51CF358A7004E37E8 /* Controller */,
-				4F39A3C61CF358A7004E37E8 /* Model */,
-				4F39A3C71CF358A7004E37E8 /* View */,
+				4F98D1F11CF50F60001DDD78 /* Controller */,
+				4F98D1F41CF50F60001DDD78 /* Model */,
+				4F98D1F51CF50F60001DDD78 /* View */,
 			);
 			path = Message;
 			sourceTree = "<group>";
 		};
-		4F39A3C51CF358A7004E37E8 /* Controller */ = {
+		4F98D1F11CF50F60001DDD78 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4FDDE0AD1CF4903800B321EA /* LJMessageViewController.h */,
-				4FDDE0AE1CF4903800B321EA /* LJMessageViewController.m */,
+				4F98D1F21CF50F60001DDD78 /* LJMessageViewController.h */,
+				4F98D1F31CF50F60001DDD78 /* LJMessageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		4F39A3C61CF358A7004E37E8 /* Model */ = {
+		4F98D1F41CF50F60001DDD78 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4F39A3C71CF358A7004E37E8 /* View */ = {
+		4F98D1F51CF50F60001DDD78 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4FDDE0B01CF4904300B321EA /* Message.storyboard */,
+				4F98D1F61CF50F60001DDD78 /* Message.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		4F39A3C81CF358D4004E37E8 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				4F39A3C91CF358E6004E37E8 /* AppDelegate.h */,
-				4F39A3CA1CF358E6004E37E8 /* AppDelegate.m */,
-			);
-			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,12 +330,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FDDE0A71CF48FD900B321EA /* Home.storyboard in Resources */,
+				4F98D1F81CF50F60001DDD78 /* Home.storyboard in Resources */,
+				4F98D2001CF50F60001DDD78 /* LJAccountOverviewCell.xib in Resources */,
 				4F39A3B01CF33A50004E37E8 /* LaunchScreen.storyboard in Resources */,
-				4FDDE0B11CF4904300B321EA /* Message.storyboard in Resources */,
-				4FDDE0B31CF490DB00B321EA /* Main.storyboard in Resources */,
-				4FDDE0AC1CF4901400B321EA /* Me.storyboard in Resources */,
+				4F98D2021CF50F60001DDD78 /* LJMyInfoTableViewCell.xib in Resources */,
 				4F39A3AD1CF33A50004E37E8 /* Assets.xcassets in Resources */,
+				4F98D2031CF50F60001DDD78 /* Me.storyboard in Resources */,
+				4F98D2051CF50F60001DDD78 /* Message.storyboard in Resources */,
+				4F98D1FD1CF50F60001DDD78 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,14 +348,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FDDE0B61CF4998300B321EA /* LJBaseViewController.m in Sources */,
-				4FDDE0AF1CF4903800B321EA /* LJMessageViewController.m in Sources */,
-				4FDDE0BC1CF49E3E00B321EA /* LJNavViewController.m in Sources */,
-				4FDDE0A51CF48FCA00B321EA /* LJHomeViewController.m in Sources */,
-				4F39A3CB1CF358E6004E37E8 /* AppDelegate.m in Sources */,
-				4FDDE0AA1CF4900600B321EA /* LJMeViewController.m in Sources */,
-				4F39A3D01CF3607A004E37E8 /* LJTabBarController.m in Sources */,
+				4F98D1FB1CF50F60001DDD78 /* LJTabBarController.m in Sources */,
 				4F39A3A21CF33A50004E37E8 /* main.m in Sources */,
+				4F98D1FC1CF50F60001DDD78 /* AppDelegate.m in Sources */,
+				4F98D1FA1CF50F60001DDD78 /* LJNavigationController.m in Sources */,
+				4F98D1FF1CF50F60001DDD78 /* LJAccountOverviewCell.m in Sources */,
+				4F98D2011CF50F60001DDD78 /* LJMyInfoTableViewCell.m in Sources */,
+				4F98D1F71CF50F60001DDD78 /* LJHomeViewController.m in Sources */,
+				4F98D1FE1CF50F60001DDD78 /* LJMyInfoViewController.m in Sources */,
+				4F98D2041CF50F60001DDD78 /* LJMessageViewController.m in Sources */,
+				4F98D1F91CF50F60001DDD78 /* LJBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
