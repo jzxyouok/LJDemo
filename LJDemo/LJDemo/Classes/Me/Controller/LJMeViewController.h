@@ -6,8 +6,8 @@
 //  Copyright © 2016年 黄花菜. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "LJBaseViewController.h"
 
-@interface LJMeViewController : UIViewController
+@interface LJMeViewController : LJBaseViewController
 
 @end

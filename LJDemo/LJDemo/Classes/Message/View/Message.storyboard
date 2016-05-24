@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="1449" y="443"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Nav View Controller-->
         <scene sceneID="gUB-zO-8zw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ckh-gW-aIy" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ckh-gW-aIy" customClass="LJNavViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sIk-yj-sWN">

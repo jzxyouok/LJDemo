@@ -19,6 +19,8 @@
 		4FDDE0AF1CF4903800B321EA /* LJMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDE0AE1CF4903800B321EA /* LJMessageViewController.m */; };
 		4FDDE0B11CF4904300B321EA /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDDE0B01CF4904300B321EA /* Message.storyboard */; };
 		4FDDE0B31CF490DB00B321EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDDE0B21CF490DB00B321EA /* Main.storyboard */; };
+		4FDDE0B61CF4998300B321EA /* LJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDE0B51CF4998300B321EA /* LJBaseViewController.m */; };
+		4FDDE0BC1CF49E3E00B321EA /* LJNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDE0BB1CF49E3E00B321EA /* LJNavViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,10 @@
 		4FDDE0AE1CF4903800B321EA /* LJMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMessageViewController.m; sourceTree = "<group>"; };
 		4FDDE0B01CF4904300B321EA /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
 		4FDDE0B21CF490DB00B321EA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4FDDE0B41CF4998300B321EA /* LJBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJBaseViewController.h; sourceTree = "<group>"; };
+		4FDDE0B51CF4998300B321EA /* LJBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJBaseViewController.m; sourceTree = "<group>"; };
+		4FDDE0BA1CF49E3E00B321EA /* LJNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJNavViewController.h; sourceTree = "<group>"; };
+		4FDDE0BB1CF49E3E00B321EA /* LJNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJNavViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +157,10 @@
 			children = (
 				4F39A3CE1CF3607A004E37E8 /* LJTabBarController.h */,
 				4F39A3CF1CF3607A004E37E8 /* LJTabBarController.m */,
+				4FDDE0B41CF4998300B321EA /* LJBaseViewController.h */,
+				4FDDE0B51CF4998300B321EA /* LJBaseViewController.m */,
+				4FDDE0BA1CF49E3E00B321EA /* LJNavViewController.h */,
+				4FDDE0BB1CF49E3E00B321EA /* LJNavViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -320,7 +330,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FDDE0B61CF4998300B321EA /* LJBaseViewController.m in Sources */,
 				4FDDE0AF1CF4903800B321EA /* LJMessageViewController.m in Sources */,
+				4FDDE0BC1CF49E3E00B321EA /* LJNavViewController.m in Sources */,
 				4FDDE0A51CF48FCA00B321EA /* LJHomeViewController.m in Sources */,
 				4F39A3CB1CF358E6004E37E8 /* AppDelegate.m in Sources */,
 				4FDDE0AA1CF4900600B321EA /* LJMeViewController.m in Sources */,
