@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LJTabBarController.h
 //  LJDemo
 //
 //  Created by 蔡万鸿 on 16/5/23.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LJTabBarController : UITabBarController
 
 @end
-
