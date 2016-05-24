@@ -19,13 +19,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    // 2.创建window
+    // 1.创建window
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    // 4.显示window
+    // 2.显示window
     [self.window makeKeyAndVisible];
     
-    // 显示默认界面
+    // 3.显示默认界面
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *vc = sb.instantiateInitialViewController;
     self.window.rootViewController = vc;
