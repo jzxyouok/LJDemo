@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class LJItem;
+
 @interface LJMyInfoTableViewCell : UITableViewCell
+
+@property (nonatomic, strong) LJItem *item;
 
 @end

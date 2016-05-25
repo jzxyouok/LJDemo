@@ -28,4 +28,8 @@
     // Configure the view for the selected state
 }
 
+- (void)setItem:(LJItem *)item {
+    
+}
+
 @end

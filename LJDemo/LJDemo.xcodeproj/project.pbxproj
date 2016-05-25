@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F31A37F1CF5F88C003EC378 /* LJItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F31A37E1CF5F88C003EC378 /* LJItem.m */; };
+		4F31A3821CF6002D003EC378 /* LJMyInfoTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F31A3811CF6002D003EC378 /* LJMyInfoTopView.m */; };
+		4F31A3841CF60047003EC378 /* LJMyInfoTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F31A3831CF60047003EC378 /* LJMyInfoTopView.xib */; };
 		4F39A3A21CF33A50004E37E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F39A3A11CF33A50004E37E8 /* main.m */; };
 		4F39A3AD1CF33A50004E37E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F39A3AC1CF33A50004E37E8 /* Assets.xcassets */; };
 		4F39A3B01CF33A50004E37E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F39A3AE1CF33A50004E37E8 /* LaunchScreen.storyboard */; };
@@ -28,6 +31,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F31A37D1CF5F88C003EC378 /* LJItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJItem.h; sourceTree = "<group>"; };
+		4F31A37E1CF5F88C003EC378 /* LJItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJItem.m; sourceTree = "<group>"; };
+		4F31A3801CF6002D003EC378 /* LJMyInfoTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMyInfoTopView.h; sourceTree = "<group>"; };
+		4F31A3811CF6002D003EC378 /* LJMyInfoTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMyInfoTopView.m; sourceTree = "<group>"; };
+		4F31A3831CF60047003EC378 /* LJMyInfoTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJMyInfoTopView.xib; sourceTree = "<group>"; };
 		4F39A39D1CF33A50004E37E8 /* LJDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LJDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F39A3A11CF33A50004E37E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F39A3AC1CF33A50004E37E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -221,6 +229,8 @@
 		4F98D1E71CF50F60001DDD78 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4F31A37D1CF5F88C003EC378 /* LJItem.h */,
+				4F31A37E1CF5F88C003EC378 /* LJItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,6 +245,9 @@
 				4F98D1ED1CF50F60001DDD78 /* LJMyInfoTableViewCell.m */,
 				4F98D1EE1CF50F60001DDD78 /* LJMyInfoTableViewCell.xib */,
 				4F98D1EF1CF50F60001DDD78 /* Me.storyboard */,
+				4F31A3801CF6002D003EC378 /* LJMyInfoTopView.h */,
+				4F31A3811CF6002D003EC378 /* LJMyInfoTopView.m */,
+				4F31A3831CF60047003EC378 /* LJMyInfoTopView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -334,6 +347,7 @@
 				4F98D2001CF50F60001DDD78 /* LJAccountOverviewCell.xib in Resources */,
 				4F39A3B01CF33A50004E37E8 /* LaunchScreen.storyboard in Resources */,
 				4F98D2021CF50F60001DDD78 /* LJMyInfoTableViewCell.xib in Resources */,
+				4F31A3841CF60047003EC378 /* LJMyInfoTopView.xib in Resources */,
 				4F39A3AD1CF33A50004E37E8 /* Assets.xcassets in Resources */,
 				4F98D2031CF50F60001DDD78 /* Me.storyboard in Resources */,
 				4F98D2051CF50F60001DDD78 /* Message.storyboard in Resources */,
@@ -349,10 +363,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F98D1FB1CF50F60001DDD78 /* LJTabBarController.m in Sources */,
+				4F31A37F1CF5F88C003EC378 /* LJItem.m in Sources */,
 				4F39A3A21CF33A50004E37E8 /* main.m in Sources */,
 				4F98D1FC1CF50F60001DDD78 /* AppDelegate.m in Sources */,
 				4F98D1FA1CF50F60001DDD78 /* LJNavigationController.m in Sources */,
 				4F98D1FF1CF50F60001DDD78 /* LJAccountOverviewCell.m in Sources */,
+				4F31A3821CF6002D003EC378 /* LJMyInfoTopView.m in Sources */,
 				4F98D2011CF50F60001DDD78 /* LJMyInfoTableViewCell.m in Sources */,
 				4F98D1F71CF50F60001DDD78 /* LJHomeViewController.m in Sources */,
 				4F98D1FE1CF50F60001DDD78 /* LJMyInfoViewController.m in Sources */,
