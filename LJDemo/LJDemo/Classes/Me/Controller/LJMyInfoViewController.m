@@ -9,8 +9,13 @@
 #import "LJMyInfoViewController.h"
 #import "LJAccountOverviewCell.h"
 #import "LJMyInfoTableViewCell.h"
+#import "LJFollowedBuildingListViewController.h"
+
+#import "LJGroup.h"
+#import "LJItemArrow.h"
 
 #import "LJMyInfoTopView.h"
+
 
 #define ImageHight 200.0f
 
@@ -22,6 +27,9 @@
 @property (nonatomic, strong) NSMutableArray *dataSourceArray;
 
 @property (nonatomic, strong)  UIImageView *zoomImageView;//变焦图片做底层
+
+// 表示组的集合
+@property (nonatomic, strong) NSMutableArray *groups;
 @end
 
 @implementation LJMyInfoViewController
@@ -53,7 +61,16 @@
         frame.size.height =  -y;//contentMode = UIViewContentModeScaleAspectFill时，高度改变宽度也跟着改变
         _zoomImageView.frame = frame;
     }
+}
+
+- (void)loadGroup0 {
+    // 创建组, 以及每组内的模型
+    LJGroup *group0 = [[LJGroup alloc] init];
     
+    LJItemArrow *item0_1 = [LJItemArrow itemArrowWithTitle:@"我关注的新房" icon:@"myhome_icon_xinfang" targetVc:[LJFollowedBuildingListViewController class]];
+    group0.items = @[item0_1];
+    
+    [self.groups addObject:group0];
 }
 
 -(void)p_initData{

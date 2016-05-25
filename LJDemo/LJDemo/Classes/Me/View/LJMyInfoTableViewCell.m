@@ -29,6 +29,8 @@
 }
 
 - (void)setItem:(LJItem *)item {
+    _item = item;
+    
     
 }
 

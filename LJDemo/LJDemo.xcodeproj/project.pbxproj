@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F31A37F1CF5F88C003EC378 /* LJItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F31A37E1CF5F88C003EC378 /* LJItem.m */; };
 		4F31A3821CF6002D003EC378 /* LJMyInfoTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F31A3811CF6002D003EC378 /* LJMyInfoTopView.m */; };
 		4F31A3841CF60047003EC378 /* LJMyInfoTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F31A3831CF60047003EC378 /* LJMyInfoTopView.xib */; };
 		4F39A3A21CF33A50004E37E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F39A3A11CF33A50004E37E8 /* main.m */; };
@@ -46,11 +45,13 @@
 		4FB5AFF21CF6641C00A4B509 /* LCUserFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5AFF01CF6641C00A4B509 /* LCUserFeedbackViewController.m */; };
 		4FB5AFF31CF6641C00A4B509 /* LCUserFeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB5AFF11CF6641C00A4B509 /* LCUserFeedbackViewController.xib */; };
 		4FB5AFFB1CF6648D00A4B509 /* LJSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5AFFA1CF6648D00A4B509 /* LJSettingViewController.m */; };
+		4FB5B0031CF6667900A4B509 /* LJGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5B0021CF6667900A4B509 /* LJGroup.m */; };
+		4FB5B0061CF6668000A4B509 /* LJItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5B0051CF6668000A4B509 /* LJItem.m */; };
+		4FB5B0091CF667E800A4B509 /* LJItemArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5B0081CF667E800A4B509 /* LJItemArrow.m */; };
+		4FB5B00C1CF6681F00A4B509 /* LJItemSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5B00B1CF6681F00A4B509 /* LJItemSwitch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4F31A37D1CF5F88C003EC378 /* LJItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJItem.h; sourceTree = "<group>"; };
-		4F31A37E1CF5F88C003EC378 /* LJItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJItem.m; sourceTree = "<group>"; };
 		4F31A3801CF6002D003EC378 /* LJMyInfoTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMyInfoTopView.h; sourceTree = "<group>"; };
 		4F31A3811CF6002D003EC378 /* LJMyInfoTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMyInfoTopView.m; sourceTree = "<group>"; };
 		4F31A3831CF60047003EC378 /* LJMyInfoTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJMyInfoTopView.xib; sourceTree = "<group>"; };
@@ -111,6 +112,14 @@
 		4FB5AFF11CF6641C00A4B509 /* LCUserFeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCUserFeedbackViewController.xib; sourceTree = "<group>"; };
 		4FB5AFF91CF6648D00A4B509 /* LJSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJSettingViewController.h; sourceTree = "<group>"; };
 		4FB5AFFA1CF6648D00A4B509 /* LJSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJSettingViewController.m; sourceTree = "<group>"; };
+		4FB5B0011CF6667900A4B509 /* LJGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJGroup.h; sourceTree = "<group>"; };
+		4FB5B0021CF6667900A4B509 /* LJGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJGroup.m; sourceTree = "<group>"; };
+		4FB5B0041CF6668000A4B509 /* LJItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJItem.h; sourceTree = "<group>"; };
+		4FB5B0051CF6668000A4B509 /* LJItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJItem.m; sourceTree = "<group>"; };
+		4FB5B0071CF667E800A4B509 /* LJItemArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJItemArrow.h; sourceTree = "<group>"; };
+		4FB5B0081CF667E800A4B509 /* LJItemArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJItemArrow.m; sourceTree = "<group>"; };
+		4FB5B00A1CF6681F00A4B509 /* LJItemSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJItemSwitch.h; sourceTree = "<group>"; };
+		4FB5B00B1CF6681F00A4B509 /* LJItemSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJItemSwitch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,10 +276,10 @@
 			isa = PBXGroup;
 			children = (
 				4F98D1E51CF50F60001DDD78 /* LJMyInfoViewController.h */,
+				4F98D1E61CF50F60001DDD78 /* LJMyInfoViewController.m */,
 				4FB5AFD81CF6625C00A4B509 /* LJMySeenRecordViewController.h */,
 				4FB5AFD91CF6625C00A4B509 /* LJMySeenRecordViewController.m */,
 				4FB5AFDA1CF6625C00A4B509 /* LJMySeenRecordViewController.xib */,
-				4F98D1E61CF50F60001DDD78 /* LJMyInfoViewController.m */,
 				4FB5AFC91CF6616800A4B509 /* LJMyFollowedCommunityViewController.h */,
 				4FB5AFCA1CF6616800A4B509 /* LJMyFollowedCommunityViewController.m */,
 				4FB5AFCB1CF6616800A4B509 /* LJMyFollowedCommunityViewController.xib */,
@@ -303,8 +312,8 @@
 		4F98D1E71CF50F60001DDD78 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4F31A37D1CF5F88C003EC378 /* LJItem.h */,
-				4F31A37E1CF5F88C003EC378 /* LJItem.m */,
+				4FB5AFFF1CF6666900A4B509 /* Groups */,
+				4FB5B0001CF6666900A4B509 /* Items */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -358,6 +367,28 @@
 				4F98D1F61CF50F60001DDD78 /* Message.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4FB5AFFF1CF6666900A4B509 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				4FB5B0011CF6667900A4B509 /* LJGroup.h */,
+				4FB5B0021CF6667900A4B509 /* LJGroup.m */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		4FB5B0001CF6666900A4B509 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				4FB5B0041CF6668000A4B509 /* LJItem.h */,
+				4FB5B0051CF6668000A4B509 /* LJItem.m */,
+				4FB5B0071CF667E800A4B509 /* LJItemArrow.h */,
+				4FB5B0081CF667E800A4B509 /* LJItemArrow.m */,
+				4FB5B00A1CF6681F00A4B509 /* LJItemSwitch.h */,
+				4FB5B00B1CF6681F00A4B509 /* LJItemSwitch.m */,
+			);
+			path = Items;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,9 +480,10 @@
 				4FB5AFD11CF661A600A4B509 /* LJMyFollowedHouseListViewController.m in Sources */,
 				4FB5AFF21CF6641C00A4B509 /* LCUserFeedbackViewController.m in Sources */,
 				4FB5AFD61CF661DA00A4B509 /* LJFollowedBuildingListViewController.m in Sources */,
-				4F31A37F1CF5F88C003EC378 /* LJItem.m in Sources */,
 				4FB5AFEA1CF6637A00A4B509 /* LJInviteFriendsViewController.m in Sources */,
+				4FB5B0031CF6667900A4B509 /* LJGroup.m in Sources */,
 				4F39A3A21CF33A50004E37E8 /* main.m in Sources */,
+				4FB5B0091CF667E800A4B509 /* LJItemArrow.m in Sources */,
 				4F98D1FC1CF50F60001DDD78 /* AppDelegate.m in Sources */,
 				4F98D1FA1CF50F60001DDD78 /* LJNavigationController.m in Sources */,
 				4F98D1FF1CF50F60001DDD78 /* LJAccountOverviewCell.m in Sources */,
@@ -466,6 +498,8 @@
 				4FB5AFE51CF6634400A4B509 /* LJSellerEntrancePageController.m in Sources */,
 				4F98D1F91CF50F60001DDD78 /* LJBaseViewController.m in Sources */,
 				4FB5AFFB1CF6648D00A4B509 /* LJSettingViewController.m in Sources */,
+				4FB5B00C1CF6681F00A4B509 /* LJItemSwitch.m in Sources */,
+				4FB5B0061CF6668000A4B509 /* LJItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
