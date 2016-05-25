@@ -28,6 +28,24 @@
 		4F98D2031CF50F60001DDD78 /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F98D1EF1CF50F60001DDD78 /* Me.storyboard */; };
 		4F98D2041CF50F60001DDD78 /* LJMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F98D1F31CF50F60001DDD78 /* LJMessageViewController.m */; };
 		4F98D2051CF50F60001DDD78 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F98D1F61CF50F60001DDD78 /* Message.storyboard */; };
+		4FB5AFCC1CF6616800A4B509 /* LJMyFollowedCommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5AFCA1CF6616800A4B509 /* LJMyFollowedCommunityViewController.m */; };
+		4FB5AFCD1CF6616800A4B509 /* LJMyFollowedCommunityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB5AFCB1CF6616800A4B509 /* LJMyFollowedCommunityViewController.xib */; };
+		4FB5AFD11CF661A600A4B509 /* LJMyFollowedHouseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5AFCF1CF661A600A4B509 /* LJMyFollowedHouseListViewController.m */; };
+		4FB5AFD21CF661A600A4B509 /* LJMyFollowedHouseListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB5AFD01CF661A600A4B509 /* LJMyFollowedHouseListViewController.xib */; };
+		4FB5AFD61CF661DA00A4B509 /* LJFollowedBuildingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5AFD41CF661DA00A4B509 /* LJFollowedBuildingListViewController.m */; };
+		4FB5AFD71CF661DA00A4B509 /* LJFollowedBuildingListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB5AFD51CF661DA00A4B509 /* LJFollowedBuildingListViewController.xib */; };
+		4FB5AFDB1CF6625C00A4B509 /* LJMySeenRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5AFD91CF6625C00A4B509 /* LJMySeenRecordViewController.m */; };
+		4FB5AFDC1CF6625C00A4B509 /* LJMySeenRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB5AFDA1CF6625C00A4B509 /* LJMySeenRecordViewController.xib */; };
+		4FB5AFE01CF662AA00A4B509 /* LJMyAskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5AFDE1CF662AA00A4B509 /* LJMyAskViewController.m */; };
+		4FB5AFE11CF662AA00A4B509 /* LJMyAskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB5AFDF1CF662AA00A4B509 /* LJMyAskViewController.xib */; };
+		4FB5AFE51CF6634400A4B509 /* LJSellerEntrancePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5AFE31CF6634400A4B509 /* LJSellerEntrancePageController.m */; };
+		4FB5AFE61CF6634400A4B509 /* LJSellerEntrancePageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB5AFE41CF6634400A4B509 /* LJSellerEntrancePageController.xib */; };
+		4FB5AFEA1CF6637A00A4B509 /* LJInviteFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5AFE81CF6637A00A4B509 /* LJInviteFriendsViewController.m */; };
+		4FB5AFEB1CF6637A00A4B509 /* LJInviteFriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB5AFE91CF6637A00A4B509 /* LJInviteFriendsViewController.xib */; };
+		4FB5AFEE1CF663EB00A4B509 /* LJCalculateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5AFED1CF663EB00A4B509 /* LJCalculateViewController.m */; };
+		4FB5AFF21CF6641C00A4B509 /* LCUserFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5AFF01CF6641C00A4B509 /* LCUserFeedbackViewController.m */; };
+		4FB5AFF31CF6641C00A4B509 /* LCUserFeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB5AFF11CF6641C00A4B509 /* LCUserFeedbackViewController.xib */; };
+		4FB5AFFB1CF6648D00A4B509 /* LJSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5AFFA1CF6648D00A4B509 /* LJSettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +83,34 @@
 		4F98D1F21CF50F60001DDD78 /* LJMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMessageViewController.h; sourceTree = "<group>"; };
 		4F98D1F31CF50F60001DDD78 /* LJMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMessageViewController.m; sourceTree = "<group>"; };
 		4F98D1F61CF50F60001DDD78 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Message.storyboard; sourceTree = "<group>"; };
+		4FB5AFC91CF6616800A4B509 /* LJMyFollowedCommunityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMyFollowedCommunityViewController.h; sourceTree = "<group>"; };
+		4FB5AFCA1CF6616800A4B509 /* LJMyFollowedCommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMyFollowedCommunityViewController.m; sourceTree = "<group>"; };
+		4FB5AFCB1CF6616800A4B509 /* LJMyFollowedCommunityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJMyFollowedCommunityViewController.xib; sourceTree = "<group>"; };
+		4FB5AFCE1CF661A600A4B509 /* LJMyFollowedHouseListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMyFollowedHouseListViewController.h; sourceTree = "<group>"; };
+		4FB5AFCF1CF661A600A4B509 /* LJMyFollowedHouseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMyFollowedHouseListViewController.m; sourceTree = "<group>"; };
+		4FB5AFD01CF661A600A4B509 /* LJMyFollowedHouseListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJMyFollowedHouseListViewController.xib; sourceTree = "<group>"; };
+		4FB5AFD31CF661DA00A4B509 /* LJFollowedBuildingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJFollowedBuildingListViewController.h; sourceTree = "<group>"; };
+		4FB5AFD41CF661DA00A4B509 /* LJFollowedBuildingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJFollowedBuildingListViewController.m; sourceTree = "<group>"; };
+		4FB5AFD51CF661DA00A4B509 /* LJFollowedBuildingListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJFollowedBuildingListViewController.xib; sourceTree = "<group>"; };
+		4FB5AFD81CF6625C00A4B509 /* LJMySeenRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMySeenRecordViewController.h; sourceTree = "<group>"; };
+		4FB5AFD91CF6625C00A4B509 /* LJMySeenRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMySeenRecordViewController.m; sourceTree = "<group>"; };
+		4FB5AFDA1CF6625C00A4B509 /* LJMySeenRecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJMySeenRecordViewController.xib; sourceTree = "<group>"; };
+		4FB5AFDD1CF662AA00A4B509 /* LJMyAskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMyAskViewController.h; sourceTree = "<group>"; };
+		4FB5AFDE1CF662AA00A4B509 /* LJMyAskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMyAskViewController.m; sourceTree = "<group>"; };
+		4FB5AFDF1CF662AA00A4B509 /* LJMyAskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJMyAskViewController.xib; sourceTree = "<group>"; };
+		4FB5AFE21CF6634400A4B509 /* LJSellerEntrancePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJSellerEntrancePageController.h; sourceTree = "<group>"; };
+		4FB5AFE31CF6634400A4B509 /* LJSellerEntrancePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJSellerEntrancePageController.m; sourceTree = "<group>"; };
+		4FB5AFE41CF6634400A4B509 /* LJSellerEntrancePageController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJSellerEntrancePageController.xib; sourceTree = "<group>"; };
+		4FB5AFE71CF6637A00A4B509 /* LJInviteFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJInviteFriendsViewController.h; sourceTree = "<group>"; };
+		4FB5AFE81CF6637A00A4B509 /* LJInviteFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJInviteFriendsViewController.m; sourceTree = "<group>"; };
+		4FB5AFE91CF6637A00A4B509 /* LJInviteFriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJInviteFriendsViewController.xib; sourceTree = "<group>"; };
+		4FB5AFEC1CF663EB00A4B509 /* LJCalculateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJCalculateViewController.h; sourceTree = "<group>"; };
+		4FB5AFED1CF663EB00A4B509 /* LJCalculateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJCalculateViewController.m; sourceTree = "<group>"; };
+		4FB5AFEF1CF6641C00A4B509 /* LCUserFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCUserFeedbackViewController.h; sourceTree = "<group>"; };
+		4FB5AFF01CF6641C00A4B509 /* LCUserFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCUserFeedbackViewController.m; sourceTree = "<group>"; };
+		4FB5AFF11CF6641C00A4B509 /* LCUserFeedbackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCUserFeedbackViewController.xib; sourceTree = "<group>"; };
+		4FB5AFF91CF6648D00A4B509 /* LJSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJSettingViewController.h; sourceTree = "<group>"; };
+		4FB5AFFA1CF6648D00A4B509 /* LJSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJSettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,7 +267,35 @@
 			isa = PBXGroup;
 			children = (
 				4F98D1E51CF50F60001DDD78 /* LJMyInfoViewController.h */,
+				4FB5AFD81CF6625C00A4B509 /* LJMySeenRecordViewController.h */,
+				4FB5AFD91CF6625C00A4B509 /* LJMySeenRecordViewController.m */,
+				4FB5AFDA1CF6625C00A4B509 /* LJMySeenRecordViewController.xib */,
 				4F98D1E61CF50F60001DDD78 /* LJMyInfoViewController.m */,
+				4FB5AFC91CF6616800A4B509 /* LJMyFollowedCommunityViewController.h */,
+				4FB5AFCA1CF6616800A4B509 /* LJMyFollowedCommunityViewController.m */,
+				4FB5AFCB1CF6616800A4B509 /* LJMyFollowedCommunityViewController.xib */,
+				4FB5AFCE1CF661A600A4B509 /* LJMyFollowedHouseListViewController.h */,
+				4FB5AFCF1CF661A600A4B509 /* LJMyFollowedHouseListViewController.m */,
+				4FB5AFD01CF661A600A4B509 /* LJMyFollowedHouseListViewController.xib */,
+				4FB5AFD31CF661DA00A4B509 /* LJFollowedBuildingListViewController.h */,
+				4FB5AFD41CF661DA00A4B509 /* LJFollowedBuildingListViewController.m */,
+				4FB5AFD51CF661DA00A4B509 /* LJFollowedBuildingListViewController.xib */,
+				4FB5AFDD1CF662AA00A4B509 /* LJMyAskViewController.h */,
+				4FB5AFDE1CF662AA00A4B509 /* LJMyAskViewController.m */,
+				4FB5AFDF1CF662AA00A4B509 /* LJMyAskViewController.xib */,
+				4FB5AFE21CF6634400A4B509 /* LJSellerEntrancePageController.h */,
+				4FB5AFE31CF6634400A4B509 /* LJSellerEntrancePageController.m */,
+				4FB5AFE41CF6634400A4B509 /* LJSellerEntrancePageController.xib */,
+				4FB5AFE71CF6637A00A4B509 /* LJInviteFriendsViewController.h */,
+				4FB5AFE81CF6637A00A4B509 /* LJInviteFriendsViewController.m */,
+				4FB5AFE91CF6637A00A4B509 /* LJInviteFriendsViewController.xib */,
+				4FB5AFEC1CF663EB00A4B509 /* LJCalculateViewController.h */,
+				4FB5AFED1CF663EB00A4B509 /* LJCalculateViewController.m */,
+				4FB5AFEF1CF6641C00A4B509 /* LCUserFeedbackViewController.h */,
+				4FB5AFF01CF6641C00A4B509 /* LCUserFeedbackViewController.m */,
+				4FB5AFF11CF6641C00A4B509 /* LCUserFeedbackViewController.xib */,
+				4FB5AFF91CF6648D00A4B509 /* LJSettingViewController.h */,
+				4FB5AFFA1CF6648D00A4B509 /* LJSettingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -346,10 +420,18 @@
 				4F98D1F81CF50F60001DDD78 /* Home.storyboard in Resources */,
 				4F98D2001CF50F60001DDD78 /* LJAccountOverviewCell.xib in Resources */,
 				4F39A3B01CF33A50004E37E8 /* LaunchScreen.storyboard in Resources */,
+				4FB5AFEB1CF6637A00A4B509 /* LJInviteFriendsViewController.xib in Resources */,
 				4F98D2021CF50F60001DDD78 /* LJMyInfoTableViewCell.xib in Resources */,
+				4FB5AFD71CF661DA00A4B509 /* LJFollowedBuildingListViewController.xib in Resources */,
+				4FB5AFDC1CF6625C00A4B509 /* LJMySeenRecordViewController.xib in Resources */,
+				4FB5AFF31CF6641C00A4B509 /* LCUserFeedbackViewController.xib in Resources */,
+				4FB5AFE11CF662AA00A4B509 /* LJMyAskViewController.xib in Resources */,
 				4F31A3841CF60047003EC378 /* LJMyInfoTopView.xib in Resources */,
 				4F39A3AD1CF33A50004E37E8 /* Assets.xcassets in Resources */,
+				4FB5AFE61CF6634400A4B509 /* LJSellerEntrancePageController.xib in Resources */,
+				4FB5AFCD1CF6616800A4B509 /* LJMyFollowedCommunityViewController.xib in Resources */,
 				4F98D2031CF50F60001DDD78 /* Me.storyboard in Resources */,
+				4FB5AFD21CF661A600A4B509 /* LJMyFollowedHouseListViewController.xib in Resources */,
 				4F98D2051CF50F60001DDD78 /* Message.storyboard in Resources */,
 				4F98D1FD1CF50F60001DDD78 /* Main.storyboard in Resources */,
 			);
@@ -363,17 +445,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F98D1FB1CF50F60001DDD78 /* LJTabBarController.m in Sources */,
+				4FB5AFEE1CF663EB00A4B509 /* LJCalculateViewController.m in Sources */,
+				4FB5AFD11CF661A600A4B509 /* LJMyFollowedHouseListViewController.m in Sources */,
+				4FB5AFF21CF6641C00A4B509 /* LCUserFeedbackViewController.m in Sources */,
+				4FB5AFD61CF661DA00A4B509 /* LJFollowedBuildingListViewController.m in Sources */,
 				4F31A37F1CF5F88C003EC378 /* LJItem.m in Sources */,
+				4FB5AFEA1CF6637A00A4B509 /* LJInviteFriendsViewController.m in Sources */,
 				4F39A3A21CF33A50004E37E8 /* main.m in Sources */,
 				4F98D1FC1CF50F60001DDD78 /* AppDelegate.m in Sources */,
 				4F98D1FA1CF50F60001DDD78 /* LJNavigationController.m in Sources */,
 				4F98D1FF1CF50F60001DDD78 /* LJAccountOverviewCell.m in Sources */,
+				4FB5AFE01CF662AA00A4B509 /* LJMyAskViewController.m in Sources */,
 				4F31A3821CF6002D003EC378 /* LJMyInfoTopView.m in Sources */,
 				4F98D2011CF50F60001DDD78 /* LJMyInfoTableViewCell.m in Sources */,
+				4FB5AFCC1CF6616800A4B509 /* LJMyFollowedCommunityViewController.m in Sources */,
 				4F98D1F71CF50F60001DDD78 /* LJHomeViewController.m in Sources */,
 				4F98D1FE1CF50F60001DDD78 /* LJMyInfoViewController.m in Sources */,
 				4F98D2041CF50F60001DDD78 /* LJMessageViewController.m in Sources */,
+				4FB5AFDB1CF6625C00A4B509 /* LJMySeenRecordViewController.m in Sources */,
+				4FB5AFE51CF6634400A4B509 /* LJSellerEntrancePageController.m in Sources */,
 				4F98D1F91CF50F60001DDD78 /* LJBaseViewController.m in Sources */,
+				4FB5AFFB1CF6648D00A4B509 /* LJSettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
