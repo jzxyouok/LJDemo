@@ -1,23 +1,22 @@
 //
-//  LJMessageViewController.m
+//  LJLoginViewController.m
 //  LJDemo
 //
-//  Created by 蔡万鸿 on 16/5/24.
+//  Created by 蔡万鸿 on 16/5/27.
 //  Copyright © 2016年 黄花菜. All rights reserved.
 //
 
-#import "LJMessageViewController.h"
+#import "LJLoginViewController.h"
 
-
-@interface LJMessageViewController ()
+@interface LJLoginViewController ()
 
 @end
 
-@implementation LJMessageViewController
+@implementation LJLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {

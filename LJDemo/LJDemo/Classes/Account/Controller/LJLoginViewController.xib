@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LJLoginViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctP-Bm-6nZ">
+                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="bf9-oy-PdC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="普通登录">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="in9-wZ-RSO">
+                    <rect key="frame" x="187" y="0.0" width="187.5" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="验证码快捷登录">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTp-cm-LGC">
+                    <rect key="frame" x="0.0" y="44" width="187.5" height="3"/>
+                    <color key="backgroundColor" red="0.23137254900000001" green="0.80392156859999997" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="fyb-Ia-LFZ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oX8-BI-pfS">
+                    <rect key="frame" x="187" y="44" width="187.5" height="3"/>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="building-bg" translatesAutoresizingMaskIntoConstraints="NO" id="MSh-Qk-Gyz">
+                    <rect key="frame" x="0.0" y="522" width="375" height="145"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="145" id="fJy-fn-SQO"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dTp-cm-LGC" firstAttribute="top" secondItem="ctP-Bm-6nZ" secondAttribute="bottom" id="3cI-H3-LoI"/>
+                <constraint firstItem="in9-wZ-RSO" firstAttribute="width" secondItem="ctP-Bm-6nZ" secondAttribute="width" id="A37-ca-eki"/>
+                <constraint firstItem="in9-wZ-RSO" firstAttribute="leading" secondItem="ctP-Bm-6nZ" secondAttribute="trailing" id="EkG-eF-1hb"/>
+                <constraint firstItem="oX8-BI-pfS" firstAttribute="width" secondItem="dTp-cm-LGC" secondAttribute="width" id="GPs-o1-i8c"/>
+                <constraint firstItem="ctP-Bm-6nZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Lrr-gt-d6v"/>
+                <constraint firstItem="in9-wZ-RSO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="MgU-c7-dRX"/>
+                <constraint firstAttribute="trailing" secondItem="in9-wZ-RSO" secondAttribute="trailing" id="N6U-gp-JWl"/>
+                <constraint firstItem="in9-wZ-RSO" firstAttribute="height" secondItem="ctP-Bm-6nZ" secondAttribute="height" id="O17-y2-Dv7"/>
+                <constraint firstItem="oX8-BI-pfS" firstAttribute="leading" secondItem="dTp-cm-LGC" secondAttribute="trailing" id="OcL-Rl-fFk"/>
+                <constraint firstItem="oX8-BI-pfS" firstAttribute="height" secondItem="dTp-cm-LGC" secondAttribute="height" id="R8M-0s-A2n"/>
+                <constraint firstItem="oX8-BI-pfS" firstAttribute="top" secondItem="in9-wZ-RSO" secondAttribute="bottom" id="aMT-bl-eiN"/>
+                <constraint firstItem="ctP-Bm-6nZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="at9-EI-mGp"/>
+                <constraint firstAttribute="trailing" secondItem="oX8-BI-pfS" secondAttribute="trailing" id="bNP-s1-bfr"/>
+                <constraint firstItem="dTp-cm-LGC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lVC-4N-AaZ"/>
+                <constraint firstAttribute="trailing" secondItem="MSh-Qk-Gyz" secondAttribute="trailing" id="mb9-JM-q4J"/>
+                <constraint firstItem="MSh-Qk-Gyz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mt7-r3-i4a"/>
+                <constraint firstAttribute="bottom" secondItem="MSh-Qk-Gyz" secondAttribute="bottom" id="yUV-em-EwU"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="418.5" y="357.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="building-bg" width="375" height="145"/>
+    </resources>
+</document>
