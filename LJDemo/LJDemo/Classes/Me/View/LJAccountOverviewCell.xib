@@ -8,12 +8,99 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="LJAccountOverviewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjH-gw-0ck">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="54.5"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O01-n9-fuw">
+                        <rect key="frame" x="160" y="0.0" width="160" height="54.5"/>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wd_icon_kaquan" translatesAutoresizingMaskIntoConstraints="NO" id="d1A-5k-TVD">
+                        <rect key="frame" x="170" y="11.5" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="WNA-JD-tCF"/>
+                            <constraint firstAttribute="width" constant="32" id="XXa-jq-0T0"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kr-O8-XLt">
+                        <rect key="frame" x="212" y="30.5" width="80" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="gbM-VB-C6X"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的卡券" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lF2-vF-dvj">
+                        <rect key="frame" x="212" y="11" width="80" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="1RD-Xc-whV"/>
+                            <constraint firstAttribute="height" constant="21" id="Gua-zc-Yk1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wd_icon_jiajijin" translatesAutoresizingMaskIntoConstraints="NO" id="bBi-V0-m0H">
+                        <rect key="frame" x="15" y="11" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="Jd1-ny-M3o"/>
+                            <constraint firstAttribute="width" constant="32" id="mX9-SR-SuI"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="家基金" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPg-X7-vg3">
+                        <rect key="frame" x="57" y="12" width="80" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="JTf-kU-0XK"/>
+                            <constraint firstAttribute="height" constant="21" id="P6R-vS-KwM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V86-eM-dNY">
+                        <rect key="frame" x="57" y="31" width="80" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="CMs-OM-RaP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="O01-n9-fuw" secondAttribute="trailing" id="2ft-XR-Xof"/>
+                    <constraint firstItem="lF2-vF-dvj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="3QA-bK-4qZ"/>
+                    <constraint firstItem="d1A-5k-TVD" firstAttribute="leading" secondItem="fjH-gw-0ck" secondAttribute="trailing" constant="10" id="6cZ-vW-8eg"/>
+                    <constraint firstItem="O01-n9-fuw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8Cq-Uw-8Re"/>
+                    <constraint firstItem="V86-eM-dNY" firstAttribute="leading" secondItem="bBi-V0-m0H" secondAttribute="trailing" constant="10" id="AaS-pD-TAe"/>
+                    <constraint firstItem="fjH-gw-0ck" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HRn-RG-wao"/>
+                    <constraint firstItem="lF2-vF-dvj" firstAttribute="leading" secondItem="d1A-5k-TVD" secondAttribute="trailing" constant="10" id="JB0-TO-WxT"/>
+                    <constraint firstAttribute="bottom" secondItem="O01-n9-fuw" secondAttribute="bottom" id="Jal-2a-yjh"/>
+                    <constraint firstItem="V86-eM-dNY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="31" id="KYO-au-Bbb"/>
+                    <constraint firstItem="IPg-X7-vg3" firstAttribute="leading" secondItem="bBi-V0-m0H" secondAttribute="trailing" constant="10" id="OEY-27-9As"/>
+                    <constraint firstItem="IPg-X7-vg3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="WNH-XT-yf9"/>
+                    <constraint firstItem="bBi-V0-m0H" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZmC-wk-HfY"/>
+                    <constraint firstItem="O01-n9-fuw" firstAttribute="leading" secondItem="fjH-gw-0ck" secondAttribute="trailing" id="ZnQ-eL-tpv"/>
+                    <constraint firstItem="bBi-V0-m0H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="ed2-Xx-6BV"/>
+                    <constraint firstItem="d1A-5k-TVD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="fEu-as-mrF"/>
+                    <constraint firstItem="2kr-O8-XLt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="31" id="fLQ-8n-Bcb"/>
+                    <constraint firstItem="O01-n9-fuw" firstAttribute="width" secondItem="fjH-gw-0ck" secondAttribute="width" id="fMe-3H-05l"/>
+                    <constraint firstItem="fjH-gw-0ck" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="icW-O5-3PU"/>
+                    <constraint firstAttribute="bottom" secondItem="fjH-gw-0ck" secondAttribute="bottom" id="wQN-tx-pEn"/>
+                    <constraint firstItem="2kr-O8-XLt" firstAttribute="leading" secondItem="d1A-5k-TVD" secondAttribute="trailing" constant="10" id="xJQ-fs-Gz0"/>
+                </constraints>
             </tableViewCellContentView>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="wd_icon_jiajijin" width="32" height="32"/>
+        <image name="wd_icon_kaquan" width="32" height="32"/>
+    </resources>
 </document>
