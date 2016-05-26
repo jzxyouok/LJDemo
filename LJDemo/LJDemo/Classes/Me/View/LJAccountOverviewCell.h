@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LJAccountOverviewCell : UITableViewCell
-
++ (instancetype)cellWithTableView:(UITableView *)tableView;
 @end

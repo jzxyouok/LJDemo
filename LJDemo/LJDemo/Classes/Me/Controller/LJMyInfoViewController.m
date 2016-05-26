@@ -58,6 +58,8 @@
     
     [self.tableView addSubview:_zoomImageView];
     
+    [self loadGroup0];
+    
     [self loadGroup1];
     
     [self loadGroup2];
@@ -78,6 +80,13 @@
         frame.size.height =  -y;//contentMode = UIViewContentModeScaleAspectFill时，高度改变宽度也跟着改变
         _zoomImageView.frame = frame;
     }
+}
+
+- (void)loadGroup0 {
+    // 创建组, 以及每组内的模型
+    LJGroup *group0 = [[LJGroup alloc] init];
+    group0.items = @[@"group0"];
+    [self.groups addObject:group0];
 }
 
 - (void)loadGroup1 {
@@ -157,14 +166,17 @@
     LJItem *item = group.items[indexPath.row];
     
     // 2. 创建单元格
-    LJMyInfoTableViewCell *cell = [LJMyInfoTableViewCell settingCellWithTableView:tableView];
-    
-    // 3. 设置单元格数据
-    cell.item = item;
-    
-    // 4. 返回单元格
-    
-    return cell;
+    if (indexPath.section == 0) {
+        LJAccountOverviewCell *cell = [LJAccountOverviewCell cellWithTableView:tableView];
+        return cell;
+    }
+    else {
+        LJMyInfoTableViewCell *cell = [LJMyInfoTableViewCell settingCellWithTableView:tableView];
+        // 3. 设置单元格数据
+        cell.item = item;
+        // 4. 返回单元格
+        return cell;
+    }
 }
 
 //选中table view的某行的时候执行
@@ -192,11 +204,17 @@
         }
     }
     
-    
     // 判断当前模型的block属性(completion)是否赋值了, 如果赋值了(不为nil), 那么就执行以下
     if (item.completion) {
         item.completion();
     }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return 55;
+    }
+    return 44;
 }
 
 - (NSMutableArray *)groups {

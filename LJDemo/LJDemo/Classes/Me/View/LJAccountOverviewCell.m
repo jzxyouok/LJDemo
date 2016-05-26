@@ -21,4 +21,13 @@
     // Configure the view for the selected state
 }
 
++ (instancetype)cellWithTableView:(UITableView *)tableView {
+    static NSString *ID = @"Cell";
+    LJAccountOverviewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
+    }
+    return cell;
+}
+
 @end

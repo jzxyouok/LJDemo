@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F04F5521CF7B3B8005437F6 /* LJCreditCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F04F5501CF7B3B8005437F6 /* LJCreditCenterViewController.m */; };
+		4F04F5531CF7B3B8005437F6 /* LJCreditCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F04F5511CF7B3B8005437F6 /* LJCreditCenterViewController.xib */; };
+		4F04F5571CF7B3EC005437F6 /* LJMyCouponsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F04F5551CF7B3EC005437F6 /* LJMyCouponsViewController.m */; };
+		4F04F5581CF7B3EC005437F6 /* LJMyCouponsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F04F5561CF7B3EC005437F6 /* LJMyCouponsViewController.xib */; };
 		4F31A3821CF6002D003EC378 /* LJMyInfoTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F31A3811CF6002D003EC378 /* LJMyInfoTopView.m */; };
 		4F31A3841CF60047003EC378 /* LJMyInfoTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F31A3831CF60047003EC378 /* LJMyInfoTopView.xib */; };
 		4F39A3A21CF33A50004E37E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F39A3A11CF33A50004E37E8 /* main.m */; };
@@ -52,6 +56,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F04F54F1CF7B3B8005437F6 /* LJCreditCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJCreditCenterViewController.h; sourceTree = "<group>"; };
+		4F04F5501CF7B3B8005437F6 /* LJCreditCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJCreditCenterViewController.m; sourceTree = "<group>"; };
+		4F04F5511CF7B3B8005437F6 /* LJCreditCenterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJCreditCenterViewController.xib; sourceTree = "<group>"; };
+		4F04F5541CF7B3EC005437F6 /* LJMyCouponsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMyCouponsViewController.h; sourceTree = "<group>"; };
+		4F04F5551CF7B3EC005437F6 /* LJMyCouponsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMyCouponsViewController.m; sourceTree = "<group>"; };
+		4F04F5561CF7B3EC005437F6 /* LJMyCouponsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJMyCouponsViewController.xib; sourceTree = "<group>"; };
 		4F31A3801CF6002D003EC378 /* LJMyInfoTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJMyInfoTopView.h; sourceTree = "<group>"; };
 		4F31A3811CF6002D003EC378 /* LJMyInfoTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJMyInfoTopView.m; sourceTree = "<group>"; };
 		4F31A3831CF60047003EC378 /* LJMyInfoTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJMyInfoTopView.xib; sourceTree = "<group>"; };
@@ -305,6 +315,12 @@
 				4FB5AFF11CF6641C00A4B509 /* LCUserFeedbackViewController.xib */,
 				4FB5AFF91CF6648D00A4B509 /* LJSettingViewController.h */,
 				4FB5AFFA1CF6648D00A4B509 /* LJSettingViewController.m */,
+				4F04F54F1CF7B3B8005437F6 /* LJCreditCenterViewController.h */,
+				4F04F5501CF7B3B8005437F6 /* LJCreditCenterViewController.m */,
+				4F04F5511CF7B3B8005437F6 /* LJCreditCenterViewController.xib */,
+				4F04F5541CF7B3EC005437F6 /* LJMyCouponsViewController.h */,
+				4F04F5551CF7B3EC005437F6 /* LJMyCouponsViewController.m */,
+				4F04F5561CF7B3EC005437F6 /* LJMyCouponsViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -453,12 +469,14 @@
 				4F98D2001CF50F60001DDD78 /* LJAccountOverviewCell.xib in Resources */,
 				4F39A3B01CF33A50004E37E8 /* LaunchScreen.storyboard in Resources */,
 				4FB5AFEB1CF6637A00A4B509 /* LJInviteFriendsViewController.xib in Resources */,
+				4F04F5581CF7B3EC005437F6 /* LJMyCouponsViewController.xib in Resources */,
 				4F98D2021CF50F60001DDD78 /* LJMyInfoTableViewCell.xib in Resources */,
 				4FB5AFD71CF661DA00A4B509 /* LJFollowedBuildingListViewController.xib in Resources */,
 				4FB5AFDC1CF6625C00A4B509 /* LJMySeenRecordViewController.xib in Resources */,
 				4FB5AFF31CF6641C00A4B509 /* LCUserFeedbackViewController.xib in Resources */,
 				4FB5AFE11CF662AA00A4B509 /* LJMyAskViewController.xib in Resources */,
 				4F31A3841CF60047003EC378 /* LJMyInfoTopView.xib in Resources */,
+				4F04F5531CF7B3B8005437F6 /* LJCreditCenterViewController.xib in Resources */,
 				4F39A3AD1CF33A50004E37E8 /* Assets.xcassets in Resources */,
 				4FB5AFE61CF6634400A4B509 /* LJSellerEntrancePageController.xib in Resources */,
 				4FB5AFCD1CF6616800A4B509 /* LJMyFollowedCommunityViewController.xib in Resources */,
@@ -494,8 +512,10 @@
 				4FB5AFCC1CF6616800A4B509 /* LJMyFollowedCommunityViewController.m in Sources */,
 				4F98D1F71CF50F60001DDD78 /* LJHomeViewController.m in Sources */,
 				4F98D1FE1CF50F60001DDD78 /* LJMyInfoViewController.m in Sources */,
+				4F04F5521CF7B3B8005437F6 /* LJCreditCenterViewController.m in Sources */,
 				4F98D2041CF50F60001DDD78 /* LJMessageViewController.m in Sources */,
 				4FB5AFDB1CF6625C00A4B509 /* LJMySeenRecordViewController.m in Sources */,
+				4F04F5571CF7B3EC005437F6 /* LJMyCouponsViewController.m in Sources */,
 				4FB5AFE51CF6634400A4B509 /* LJSellerEntrancePageController.m in Sources */,
 				4F98D1F91CF50F60001DDD78 /* LJBaseViewController.m in Sources */,
 				4FB5AFFB1CF6648D00A4B509 /* LJSettingViewController.m in Sources */,
