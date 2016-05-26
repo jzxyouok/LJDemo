@@ -14,4 +14,8 @@
 
 @property (nonatomic, strong) LJItem *item;
 
++ (instancetype)settingCellWithTableView:(UITableView *)tableview;
+
++ (instancetype)settingCellWithTableView:(UITableView *)tableview withStyle:(UITableViewCellStyle)style;
+
 @end

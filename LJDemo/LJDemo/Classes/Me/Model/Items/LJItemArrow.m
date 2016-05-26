@@ -10,15 +10,15 @@
 
 @implementation LJItemArrow
 
-- (instancetype)initWithTitle:(NSString *)title icon:(NSString *)icon targetVc:(Class)targetVc {
-    if (self = [super initWithTitle:title icon:icon]) {
+- (instancetype)initWithTitle:(NSString *)title icon:(NSString *)icon numStr:(NSString *)numStr targetVc:(Class)targetVc {
+    if (self = [super initWithTitle:title icon:icon subTitle:numStr]) {
         self.targetVc = targetVc;
     }
     return self;
 }
 
-+ (instancetype)itemArrowWithTitle:(NSString *)title icon:(NSString *)icon targetVc:(Class)targetVc {
-    return [[self alloc] initWithTitle:title icon:icon targetVc:targetVc];
++ (instancetype)itemArrowWithTitle:(NSString *)title icon:(NSString *)icon numStr:(NSString *)numStr targetVc:(Class)targetVc {
+    return [[self alloc] initWithTitle:title icon:icon numStr:numStr targetVc:targetVc];
 }
 
 @end

@@ -10,4 +10,13 @@
 
 @implementation LJItem
 
+- (instancetype)initWithTitle:(NSString *)title icon:(NSString *)icon subTitle:(NSString *)subtitle {
+    if (self = [super init]) {
+        self.title = title;
+        self.icon = icon;
+        self.subTitle = subtitle;
+    }
+    return self;
+}
+
 @end

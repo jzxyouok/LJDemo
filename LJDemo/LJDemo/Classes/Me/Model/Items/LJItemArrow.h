@@ -13,8 +13,8 @@
 // 为ArrowItem模型增加一个目标控制器类型的属性
 @property (nonatomic, assign) Class targetVc;
 
-- (instancetype)initWithTitle:(NSString *)title icon:(NSString *)icon targetVc:(Class)targetVc;
+- (instancetype)initWithTitle:(NSString *)title icon:(NSString *)icon numStr:(NSString *)numStr targetVc:(Class)targetVc;
 
-+ (instancetype)itemArrowWithTitle:(NSString *)title icon:(NSString *)icon targetVc:(Class)targetVc;
++ (instancetype)itemArrowWithTitle:(NSString *)title icon:(NSString *)icon numStr:(NSString *)numStr  targetVc:(Class)targetVc;
 
 @end
