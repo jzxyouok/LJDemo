@@ -25,8 +25,7 @@
 }
 
 // 这个方法, 只会在当前类, 第一次被使用的时候, 只调用一次
-+ (void)initialize
-{
++ (void)initialize {
     // 设置所有的导航栏的背景图片和title的文字颜色,大小
     UINavigationBar *navBarProxy = [UINavigationBar appearance];
     // 设置导航栏的背景图片
@@ -41,7 +40,16 @@
     
     
     [navBarProxy setTintColor:[UIColor whiteColor]];
-
 }
+
+// 重写导航控制器的push方法
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    // 当这个控制器被push的时候, 把底部的TabBar隐藏掉。
+    viewController.hidesBottomBarWhenPushed = YES;
+    
+    // 必须调用一下父类的push方法, 才会进行push
+    [super pushViewController:viewController animated:animated];
+}
+
 
 @end
