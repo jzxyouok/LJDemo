@@ -6,8 +6,8 @@
 //  Copyright © 2016年 黄花菜. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface LJMyInfoTopView : NSObject
-
+@interface LJMyInfoTopView : UIView
++ (instancetype)viewFromXib;
 @end

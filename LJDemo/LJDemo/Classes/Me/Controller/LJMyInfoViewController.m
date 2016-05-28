@@ -24,6 +24,7 @@
 #import "LJItemArrow.h"
 
 #import "LJMyInfoTopView.h"
+#import "UIView+LJExtension.h"
 
 /** 顶部图片高度 */
 static const CGFloat LJImageHeight = 235;
@@ -36,6 +37,8 @@ static const CGFloat LJImageHeight = 235;
 @property (nonatomic, strong)  UIImageView *zoomImageView;
 /** 表示组的集合 */
 @property (nonatomic, strong) NSMutableArray *groups;
+
+@property (nonatomic, weak) UIView *topView;
 @end
 
 @implementation LJMyInfoViewController
@@ -50,12 +53,19 @@ static const CGFloat LJImageHeight = 235;
     //4.设置contentInset属性（上左下右 的值）
     self.tableView.contentInset = UIEdgeInsetsMake(LJImageHeight, 0, 0, 0);
     
-    _zoomImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg"]];
-    _zoomImageView.frame = CGRectMake(0, -LJImageHeight, self.view.frame.size.width, LJImageHeight);
+    LJMyInfoTopView *topView = [LJMyInfoTopView viewFromXib];
+    topView.frame = CGRectMake(0, -LJImageHeight, self.view.frame.size.width, LJImageHeight);
     
-    //contentMode = UIViewContentModeScaleAspectFill时，高度改变宽度也跟着改变
-    _zoomImageView.contentMode = UIViewContentModeScaleAspectFill;//重点（不设置那将只会被纵向拉伸）
-    [self.tableView addSubview:_zoomImageView];
+    NSLog(@"%@",NSStringFromCGRect(topView.frame));
+    
+//    topView.contentMode = UIViewContentModeScaleAspectFill;//重点（不设置那将只会被纵向拉伸）
+    [self.tableView addSubview:topView];
+    self.topView = topView;
+    
+//    _zoomImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg"]];
+//    _zoomImageView.frame = CGRectMake(0, -LJImageHeight, self.view.frame.size.width, LJImageHeight);
+//    _zoomImageView.contentMode = UIViewContentModeScaleAspectFill;//重点（不设置那将只会被纵向拉伸）
+//    [self.tableView addSubview:_zoomImageView];
     
     //初始化数据
     [self loadGroup0];
@@ -75,10 +85,10 @@ static const CGFloat LJImageHeight = 235;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGFloat y = scrollView.contentOffset.y;//根据实际选择加不加上NavigationBarHight（44、64 或者没有导航条）
     if (y < -LJImageHeight) {
-        CGRect frame = _zoomImageView.frame;
+        CGRect frame = self.topView.frame;
         frame.origin.y = y;
         frame.size.height =  -y;//contentMode = UIViewContentModeScaleAspectFill时，高度改变宽度也跟着改变
-        _zoomImageView.frame = frame;
+        self.topView.frame = frame;
     }
 }
 
@@ -146,6 +156,10 @@ static const CGFloat LJImageHeight = 235;
         return 55;
     }
     return 44;
+}
+
+- ( CGFloat )tableView:( UITableView *)tableView heightForHeaderInSection:( NSInteger )section {
+    return 0.1;
 }
 
 #pragma mark - Private
