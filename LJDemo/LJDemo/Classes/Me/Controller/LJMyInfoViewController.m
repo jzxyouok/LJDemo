@@ -19,11 +19,8 @@
 #import "LJCalculateViewController.h"
 #import "LCUserFeedbackViewController.h"
 #import "LJSettingViewController.h"
-
 #import "LJGroup.h"
 #import "LJItemArrow.h"
-
-#import "LJMyInfoTopView.h"
 #import "UIView+LJExtension.h"
 
 /** 顶部图片高度 */
@@ -39,6 +36,8 @@ static const CGFloat LJImageHeight = 235;
 @property (nonatomic, strong) NSMutableArray *groups;
 
 @property (nonatomic, weak) UIView *topView;
+@property (nonatomic, weak) UIImageView *avatarImageView;
+@property (nonatomic, weak) UIButton *loginButton;
 @end
 
 @implementation LJMyInfoViewController
@@ -53,24 +52,37 @@ static const CGFloat LJImageHeight = 235;
     //4.设置contentInset属性（上左下右 的值）
     self.tableView.contentInset = UIEdgeInsetsMake(LJImageHeight, 0, 0, 0);
     
-    LJMyInfoTopView *topView = [LJMyInfoTopView viewFromXib];
+    _zoomImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg"]];
+    _zoomImageView.frame = CGRectMake(0, -LJImageHeight, self.view.frame.size.width, LJImageHeight);
+    
+    //contentMode = UIViewContentModeScaleAspectFill时，高度改变宽度也跟着改变
+    _zoomImageView.contentMode = UIViewContentModeScaleAspectFill;//重点（不设置那将只会被纵向拉伸）
+    [self.tableView addSubview:_zoomImageView];
+    
+    
+    
+    UIView *topView = [[UIView alloc] init];
     topView.frame = CGRectMake(0, -LJImageHeight, self.view.frame.size.width, LJImageHeight);
 
     topView.contentMode = UIViewContentModeScaleAspectFill;//重点（不设置那将只会被纵向拉伸）
     [self.tableView addSubview:topView];
     self.topView = topView;
+
+    UIImageView *avatarImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"myhome-icon-avatar"]];
+    avatarImageView.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, LJImageHeight/2 + 10);
+    [self.topView addSubview:avatarImageView];
+    self.avatarImageView = avatarImageView;
     
-    UIImageView *avatarButton = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"myhome-icon-avatar"]];
-    avatarButton.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, LJImageHeight/2 + 10);
-    [self.topView addSubview:avatarButton];
-    
+    NSLog(@"avatarImageView.lj_centerY  %f",avatarImageView.lj_centerY);
+
     UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [loginButton setTitle:@"登录/注册" forState:UIControlStateNormal];
     [loginButton setTintColor:[UIColor whiteColor]];
     loginButton.lj_size = CGSizeMake(137, 35);
-    loginButton.lj_centerX = avatarButton.lj_centerX;
-    loginButton.lj_centerY = CGRectGetMaxY(avatarButton.frame) + 25;
+    loginButton.lj_centerX = avatarImageView.lj_centerX;
+    loginButton.lj_centerY = CGRectGetMaxY(avatarImageView.frame) + 25;
     [self.topView addSubview:loginButton];
+    self.loginButton = loginButton;
 
     //初始化数据
     [self loadGroup0];
@@ -90,10 +102,15 @@ static const CGFloat LJImageHeight = 235;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGFloat y = scrollView.contentOffset.y;//根据实际选择加不加上NavigationBarHight（44、64 或者没有导航条）
     if (y < -LJImageHeight) {
-        CGRect frame = self.topView.frame;
+        CGRect frame = _zoomImageView.frame;
         frame.origin.y = y;
         frame.size.height =  -y;//contentMode = UIViewContentModeScaleAspectFill时，高度改变宽度也跟着改变
+        _zoomImageView.frame = frame;
         self.topView.frame = frame;
+
+        self.avatarImageView.lj_centerY = -self.topView.lj_centerY + 10;
+        self.loginButton.lj_centerY =  CGRectGetMaxY(self.avatarImageView.frame) + 25;
+        
     }
 }
 
@@ -163,9 +180,9 @@ static const CGFloat LJImageHeight = 235;
     return 44;
 }
 
-//- ( CGFloat )tableView:( UITableView *)tableView heightForHeaderInSection:( NSInteger )section {
-//    return 0.1;
-//}
+- ( CGFloat )tableView:( UITableView *)tableView heightForHeaderInSection:( NSInteger )section {
+    return 0.1;
+}
 
 #pragma mark - Private
 - (void)loadGroup0 {
