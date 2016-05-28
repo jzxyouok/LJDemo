@@ -6,19 +6,19 @@
 //  Copyright © 2016年 黄花菜. All rights reserved.
 //
 
-#import "LJHomeViewController.h"
+#import "LJHomePageViewController.h"
 
 #define ImageHight 200.0f
 
 #define NavigationBarHight 64.0f
 
-@interface LJHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface LJHomePageViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong)  UIImageView *zoomImageView;//变焦图片做底层
 @end
 
-@implementation LJHomeViewController
+@implementation LJHomePageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

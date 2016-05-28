@@ -8,6 +8,6 @@
 
 #import "LJBaseViewController.h"
 
-@interface LJHomeViewController : LJBaseViewController
+@interface LJHomePageViewController : LJBaseViewController
 
 @end
