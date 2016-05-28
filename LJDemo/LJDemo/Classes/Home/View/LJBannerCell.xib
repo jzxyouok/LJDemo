@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BannerCell" id="gTV-IL-0wX" customClass="LJBannerCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                <subviews>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="LDs-3g-Fq2">
+                        <rect key="frame" x="168" y="65" width="39" height="37"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="39" id="00m-1h-atu"/>
+                            <constraint firstAttribute="height" constant="37" id="YHD-mM-BtM"/>
+                        </constraints>
+                    </pageControl>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="upw-rg-ZQg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                    </scrollView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="upw-rg-ZQg" secondAttribute="bottom" id="4G0-BJ-UAr"/>
+                <constraint firstItem="LDs-3g-Fq2" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Trw-it-eGd"/>
+                <constraint firstItem="LDs-3g-Fq2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="65" id="YCo-v7-6wd"/>
+                <constraint firstItem="upw-rg-ZQg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="oQc-uB-qcP"/>
+                <constraint firstAttribute="trailing" secondItem="upw-rg-ZQg" secondAttribute="trailing" id="pOI-LJ-WcI"/>
+                <constraint firstItem="upw-rg-ZQg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="yxm-Wf-wje"/>
+            </constraints>
+            <connections>
+                <outlet property="pageControl" destination="LDs-3g-Fq2" id="3bh-nF-kFc"/>
+                <outlet property="scrollView" destination="upw-rg-ZQg" id="qqh-gM-Gae"/>
+            </connections>
+            <point key="canvasLocation" x="557.5" y="346"/>
+        </collectionViewCell>
+    </objects>
+</document>

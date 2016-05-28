@@ -8,6 +8,7 @@
 
 #import "LJHomePageViewController.h"
 #import "LJHouseEnterCell.h"
+#import "LJBannerCell.h"
 
 static NSString *cellId = @"houseCell";
 
@@ -27,10 +28,6 @@ static const CGFloat LJImageHeight = 192;
 
     //隐藏导航栏
     self.navigationController.navigationBar.hidden = YES;
-    
-    // 注册cell、sectionHeader、sectionFooter
-//    [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cellId];
-
     
     //4.设置contentInset属性（上左下右 的值）
     self.collectionView.contentInset = UIEdgeInsetsMake(LJImageHeight, 0, 0, 0);
@@ -60,14 +57,12 @@ static const CGFloat LJImageHeight = 192;
     }
 }
 
-#pragma mark - UITableViewDataSource
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
+#pragma mark - UICollectionViewDataSource
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 5;
 }
 
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return 8;
 }
 
@@ -75,6 +70,10 @@ static const CGFloat LJImageHeight = 192;
     static NSString *ID = @"houseCell";
     LJHouseEnterCell *cell = [LJHouseEnterCell cellWithCollectionView:collectionView];
     cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
+    
+//    static NSString *ID = @"BannerCell";
+//    LJBannerCell *cell = [LJBannerCell cellWithCollectionView:collectionView];
+//    cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
     
     cell.backgroundColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
     
@@ -87,27 +86,23 @@ static const CGFloat LJImageHeight = 192;
 }
 
 //每个item之间的间距
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
-{
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
     return 25;
 }
 
 //每个section中不同的行之间的行间距
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
-{
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     return 10;
 }
 
 //选择了某个cell
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
     [cell setBackgroundColor:[UIColor greenColor]];
 }
 
 //定义每个Section 的 margin
--(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-{
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(15, 25, 5, 25);//分别为上、左、下、右
 }
 
