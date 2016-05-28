@@ -55,7 +55,6 @@
     
     //contentMode = UIViewContentModeScaleAspectFill时，高度改变宽度也跟着改变
     _zoomImageView.contentMode = UIViewContentModeScaleAspectFill;//重点（不设置那将只会被纵向拉伸）
-    
     [self.tableView addSubview:_zoomImageView];
     
     [self loadGroup0];
@@ -180,8 +179,7 @@
 }
 
 //选中table view的某行的时候执行
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     // 让当前行变成非选中状态
     //[self.tableView deselectRowAtIndexPath:indexPath animated:YES];

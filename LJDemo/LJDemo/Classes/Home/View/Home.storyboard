@@ -16,10 +16,30 @@
                     <view key="view" contentMode="scaleToFill" id="PRh-gL-BEj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rtX-2q-iMc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="OJc-Zh-dz8" id="qzh-xM-Jxi"/>
+                                    <outlet property="delegate" destination="OJc-Zh-dz8" id="Scy-Ta-2K4"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rtX-2q-iMc" firstAttribute="leading" secondItem="PRh-gL-BEj" secondAttribute="leading" id="FZn-FR-ebM"/>
+                            <constraint firstAttribute="trailing" secondItem="rtX-2q-iMc" secondAttribute="trailing" id="Hj9-71-HA4"/>
+                            <constraint firstItem="Gh7-8G-ArX" firstAttribute="top" secondItem="rtX-2q-iMc" secondAttribute="bottom" id="nDM-FO-Fvk"/>
+                            <constraint firstItem="rtX-2q-iMc" firstAttribute="top" secondItem="PRh-gL-BEj" secondAttribute="top" id="uV9-C3-stS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a8c-x9-jm3"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="rtX-2q-iMc" id="XaA-GZ-2xo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tum-kd-cVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
