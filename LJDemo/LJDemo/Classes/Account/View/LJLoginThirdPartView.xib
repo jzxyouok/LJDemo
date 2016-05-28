@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mez-wt-CAY">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="98"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="第三方合作账号登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLp-bB-uSf">
+                    <rect key="frame" x="115" y="0.0" width="144" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Ecf-hJ-av1"/>
+                        <constraint firstAttribute="width" constant="144" id="vK0-SV-QBl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Lj-If-IK8">
+                    <rect key="frame" x="44" y="9" width="61" height="0.5"/>
+                    <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="9jq-gi-YcH"/>
+                        <constraint firstAttribute="width" constant="61" id="yPy-u5-IiC"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r6p-3M-DbR">
+                    <rect key="frame" x="269" y="9" width="61" height="0.5"/>
+                    <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="61" id="bLy-AX-yMN"/>
+                        <constraint firstAttribute="height" constant="0.5" id="lIg-Qk-uWA"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="1Lj-If-IK8" firstAttribute="top" secondItem="Mez-wt-CAY" secondAttribute="top" constant="9.5" id="4YG-g1-Btp"/>
+                <constraint firstItem="bLp-bB-uSf" firstAttribute="top" secondItem="Mez-wt-CAY" secondAttribute="top" id="CUU-gl-ycg"/>
+                <constraint firstItem="r6p-3M-DbR" firstAttribute="top" secondItem="Mez-wt-CAY" secondAttribute="top" constant="9.5" id="afE-QG-0ov"/>
+                <constraint firstAttribute="height" constant="98" id="bdf-eT-W8V"/>
+                <constraint firstItem="r6p-3M-DbR" firstAttribute="leading" secondItem="bLp-bB-uSf" secondAttribute="trailing" constant="10" id="hBM-RO-8N7"/>
+                <constraint firstItem="bLp-bB-uSf" firstAttribute="centerX" secondItem="Mez-wt-CAY" secondAttribute="centerX" id="wuc-Ie-0BO"/>
+                <constraint firstItem="bLp-bB-uSf" firstAttribute="leading" secondItem="1Lj-If-IK8" secondAttribute="trailing" constant="10" id="x7F-0o-iuM"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="575.5" y="605"/>
+        </view>
+    </objects>
+</document>
