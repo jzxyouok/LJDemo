@@ -8,7 +8,7 @@
 
 #import "LJHomePageViewController.h"
 
-#define ImageHight 200.0f
+#define ImageHight 211.0f
 
 #define NavigationBarHight 64.0f
 
@@ -41,7 +41,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
-    CGFloat y = scrollView.contentOffset.y+NavigationBarHight;//根据实际选择加不加上NavigationBarHight（44、64 或者没有导航条）
+    CGFloat y = scrollView.contentOffset.y;//根据实际选择加不加上NavigationBarHight（44、64 或者没有导航条）
     if (y < -ImageHight) {
         CGRect frame = _zoomImageView.frame;
         frame.origin.y = y;
@@ -55,7 +55,6 @@
 //    return self.groups.count;
 //}
 
-#pragma mark - 数据源方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 10;
 }
