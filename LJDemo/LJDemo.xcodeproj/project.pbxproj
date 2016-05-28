@@ -13,6 +13,8 @@
 		4F04F5581CF7B3EC005437F6 /* LJMyCouponsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F04F5561CF7B3EC005437F6 /* LJMyCouponsViewController.xib */; };
 		4F04F5601CF7B4FF005437F6 /* LJLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F04F55E1CF7B4FF005437F6 /* LJLoginViewController.m */; };
 		4F04F5611CF7B4FF005437F6 /* LJLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F04F55F1CF7B4FF005437F6 /* LJLoginViewController.xib */; };
+		4F2BC6A71CF9E0F1006923BB /* LJHouseEnterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2BC6A51CF9E0F1006923BB /* LJHouseEnterCell.m */; };
+		4F2BC6A81CF9E0F1006923BB /* LJHouseEnterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F2BC6A61CF9E0F1006923BB /* LJHouseEnterCell.xib */; };
 		4F39A3A21CF33A50004E37E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F39A3A11CF33A50004E37E8 /* main.m */; };
 		4F39A3AD1CF33A50004E37E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F39A3AC1CF33A50004E37E8 /* Assets.xcassets */; };
 		4F39A3B01CF33A50004E37E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F39A3AE1CF33A50004E37E8 /* LaunchScreen.storyboard */; };
@@ -70,6 +72,9 @@
 		4F04F55D1CF7B4FF005437F6 /* LJLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJLoginViewController.h; sourceTree = "<group>"; };
 		4F04F55E1CF7B4FF005437F6 /* LJLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJLoginViewController.m; sourceTree = "<group>"; };
 		4F04F55F1CF7B4FF005437F6 /* LJLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJLoginViewController.xib; sourceTree = "<group>"; };
+		4F2BC6A41CF9E0F1006923BB /* LJHouseEnterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJHouseEnterCell.h; sourceTree = "<group>"; };
+		4F2BC6A51CF9E0F1006923BB /* LJHouseEnterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJHouseEnterCell.m; sourceTree = "<group>"; };
+		4F2BC6A61CF9E0F1006923BB /* LJHouseEnterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJHouseEnterCell.xib; sourceTree = "<group>"; };
 		4F39A39D1CF33A50004E37E8 /* LJDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LJDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F39A3A11CF33A50004E37E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F39A3AC1CF33A50004E37E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -282,6 +287,9 @@
 			isa = PBXGroup;
 			children = (
 				4F98D1D41CF50F60001DDD78 /* Home.storyboard */,
+				4F2BC6A41CF9E0F1006923BB /* LJHouseEnterCell.h */,
+				4F2BC6A51CF9E0F1006923BB /* LJHouseEnterCell.m */,
+				4F2BC6A61CF9E0F1006923BB /* LJHouseEnterCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -564,6 +572,7 @@
 				4F98D2031CF50F60001DDD78 /* Me.storyboard in Resources */,
 				4FB5AFD21CF661A600A4B509 /* LJMyFollowedHouseListViewController.xib in Resources */,
 				4F98D2051CF50F60001DDD78 /* Message.storyboard in Resources */,
+				4F2BC6A81CF9E0F1006923BB /* LJHouseEnterCell.xib in Resources */,
 				4F98D1FD1CF50F60001DDD78 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,6 +657,7 @@
 				4FB5AFDB1CF6625C00A4B509 /* LJMySeenRecordViewController.m in Sources */,
 				4F04F5571CF7B3EC005437F6 /* LJMyCouponsViewController.m in Sources */,
 				4FB5AFE51CF6634400A4B509 /* LJSellerEntrancePageController.m in Sources */,
+				4F2BC6A71CF9E0F1006923BB /* LJHouseEnterCell.m in Sources */,
 				4F98D1F91CF50F60001DDD78 /* LJBaseViewController.m in Sources */,
 				4FB5AFFB1CF6648D00A4B509 /* LJSettingViewController.m in Sources */,
 				4FB5B00C1CF6681F00A4B509 /* LJItemSwitch.m in Sources */,

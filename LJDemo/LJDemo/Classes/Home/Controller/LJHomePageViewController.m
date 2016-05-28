@@ -7,12 +7,15 @@
 //
 
 #import "LJHomePageViewController.h"
+#import "LJHouseEnterCell.h"
+
+static NSString *cellId = @"houseCell";
 
 /** 顶部图片高度 */
 static const CGFloat LJImageHeight = 192;
 
-@interface LJHomePageViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@interface LJHomePageViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @property (nonatomic, strong)  UIImageView *zoomImageView;//变焦图片做底层
 @end
@@ -25,15 +28,19 @@ static const CGFloat LJImageHeight = 192;
     //隐藏导航栏
     self.navigationController.navigationBar.hidden = YES;
     
+    // 注册cell、sectionHeader、sectionFooter
+//    [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cellId];
+
+    
     //4.设置contentInset属性（上左下右 的值）
-    self.tableView.contentInset = UIEdgeInsetsMake(LJImageHeight, 0, 0, 0);
+    self.collectionView.contentInset = UIEdgeInsetsMake(LJImageHeight, 0, 0, 0);
     
     _zoomImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"homepage_visual"]];
     _zoomImageView.frame = CGRectMake(0, -LJImageHeight, self.view.frame.size.width, LJImageHeight);
     
     //contentMode = UIViewContentModeScaleAspectFill时，高度改变宽度也跟着改变
     _zoomImageView.contentMode = UIViewContentModeScaleAspectFill;//重点（不设置那将只会被纵向拉伸）
-    [self.tableView addSubview:_zoomImageView];
+    [self.collectionView addSubview:_zoomImageView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,27 +61,54 @@ static const CGFloat LJImageHeight = 192;
 }
 
 #pragma mark - UITableViewDataSource
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    return self.groups.count;
-//}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 5;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 8;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *ID = @"houseCell";
+    LJHouseEnterCell *cell = [LJHouseEnterCell cellWithCollectionView:collectionView];
+    cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
     
-    static NSString *ID = @"ID";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-    }
-    
-    // 设置 Cell...
+    cell.backgroundColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
     
     return cell;
 }
 
+//定义每个UICollectionViewCell 的大小
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(54, 92);
+}
+
+//每个item之间的间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 25;
+}
+
+//每个section中不同的行之间的行间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 10;
+}
+
+//选择了某个cell
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    [cell setBackgroundColor:[UIColor greenColor]];
+}
+
+//定义每个Section 的 margin
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(15, 25, 5, 25);//分别为上、左、下、右
+}
 
 @end

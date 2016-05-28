@@ -72,8 +72,6 @@ static const CGFloat LJImageHeight = 235;
     avatarImageView.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, LJImageHeight/2 + 10);
     [self.topView addSubview:avatarImageView];
     self.avatarImageView = avatarImageView;
-    
-    NSLog(@"avatarImageView.lj_centerY  %f",avatarImageView.lj_centerY);
 
     UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [loginButton setBackgroundImage:[UIImage imageNamed:@"action_btn_border"] forState:UIControlStateNormal];
