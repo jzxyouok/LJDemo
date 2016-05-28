@@ -55,18 +55,23 @@ static const CGFloat LJImageHeight = 235;
     
     LJMyInfoTopView *topView = [LJMyInfoTopView viewFromXib];
     topView.frame = CGRectMake(0, -LJImageHeight, self.view.frame.size.width, LJImageHeight);
-    
-    NSLog(@"%@",NSStringFromCGRect(topView.frame));
-    
-//    topView.contentMode = UIViewContentModeScaleAspectFill;//重点（不设置那将只会被纵向拉伸）
+
+    topView.contentMode = UIViewContentModeScaleAspectFill;//重点（不设置那将只会被纵向拉伸）
     [self.tableView addSubview:topView];
     self.topView = topView;
     
-//    _zoomImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg"]];
-//    _zoomImageView.frame = CGRectMake(0, -LJImageHeight, self.view.frame.size.width, LJImageHeight);
-//    _zoomImageView.contentMode = UIViewContentModeScaleAspectFill;//重点（不设置那将只会被纵向拉伸）
-//    [self.tableView addSubview:_zoomImageView];
+    UIImageView *avatarButton = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"myhome-icon-avatar"]];
+    avatarButton.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, LJImageHeight/2 + 10);
+    [self.topView addSubview:avatarButton];
     
+    UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [loginButton setTitle:@"登录/注册" forState:UIControlStateNormal];
+    [loginButton setTintColor:[UIColor whiteColor]];
+    loginButton.lj_size = CGSizeMake(137, 35);
+    loginButton.lj_centerX = avatarButton.lj_centerX;
+    loginButton.lj_centerY = CGRectGetMaxY(avatarButton.frame) + 25;
+    [self.topView addSubview:loginButton];
+
     //初始化数据
     [self loadGroup0];
     [self loadGroup1];
@@ -158,9 +163,9 @@ static const CGFloat LJImageHeight = 235;
     return 44;
 }
 
-- ( CGFloat )tableView:( UITableView *)tableView heightForHeaderInSection:( NSInteger )section {
-    return 0.1;
-}
+//- ( CGFloat )tableView:( UITableView *)tableView heightForHeaderInSection:( NSInteger )section {
+//    return 0.1;
+//}
 
 #pragma mark - Private
 - (void)loadGroup0 {

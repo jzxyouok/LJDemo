@@ -14,30 +14,11 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="FsS-1Q-LVU">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="235"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myhome-icon-avatar" translatesAutoresizingMaskIntoConstraints="NO" id="ORX-N9-y2e">
-                    <rect key="frame" x="154.5" y="84.5" width="66" height="66"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="66" id="AQg-4d-rUv"/>
-                        <constraint firstAttribute="height" constant="66" id="RDU-iw-JZS"/>
-                    </constraints>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxw-qC-szT">
-                    <rect key="frame" x="119" y="175.5" width="137" height="35"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="137" id="87n-WZ-2w6"/>
-                        <constraint firstAttribute="height" constant="35" id="mqQ-rv-UFy"/>
-                    </constraints>
-                    <state key="normal" title="Button"/>
-                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="gxw-qC-szT" firstAttribute="top" secondItem="ORX-N9-y2e" secondAttribute="bottom" constant="25" id="4mE-ac-35a"/>
-                <constraint firstItem="ORX-N9-y2e" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="IEz-qm-p7x"/>
-                <constraint firstItem="ORX-N9-y2e" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TRz-Pj-nng"/>
                 <constraint firstAttribute="bottom" secondItem="FsS-1Q-LVU" secondAttribute="bottom" id="XWA-Cw-Oi5"/>
                 <constraint firstAttribute="trailing" secondItem="FsS-1Q-LVU" secondAttribute="trailing" id="mDx-6S-D2o"/>
-                <constraint firstItem="gxw-qC-szT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="uBe-jz-got"/>
                 <constraint firstItem="FsS-1Q-LVU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vUK-9r-aIb"/>
                 <constraint firstItem="FsS-1Q-LVU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vj2-BR-Zc9"/>
             </constraints>
@@ -47,6 +28,5 @@
     </objects>
     <resources>
         <image name="bg" width="320" height="165"/>
-        <image name="myhome-icon-avatar" width="66" height="67"/>
     </resources>
 </document>
