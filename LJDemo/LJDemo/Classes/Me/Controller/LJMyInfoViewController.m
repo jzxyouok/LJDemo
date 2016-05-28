@@ -76,6 +76,7 @@ static const CGFloat LJImageHeight = 235;
     NSLog(@"avatarImageView.lj_centerY  %f",avatarImageView.lj_centerY);
 
     UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [loginButton setBackgroundImage:[UIImage imageNamed:@"action_btn_border"] forState:UIControlStateNormal];
     [loginButton setTitle:@"登录/注册" forState:UIControlStateNormal];
     [loginButton setTintColor:[UIColor whiteColor]];
     loginButton.lj_size = CGSizeMake(137, 35);
