@@ -32,6 +32,7 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="nPu-7N-dRk" secondAttribute="trailing" id="6dk-iT-oGZ"/>
                 <constraint firstItem="nPu-7N-dRk" firstAttribute="top" secondItem="BSR-Bg-jm1" secondAttribute="bottom" constant="9" id="AWh-dh-ICj"/>

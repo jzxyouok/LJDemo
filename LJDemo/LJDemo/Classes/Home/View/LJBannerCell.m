@@ -31,7 +31,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    [self initScrollView];
+//    [self initScrollView];
 }
 
 - (void)initScrollView {

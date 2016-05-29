@@ -49,18 +49,29 @@
                         <color key="textColor" red="1" green="0.45098039215686275" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5L-UM-S6s">
+                        <rect key="frame" x="0.0" y="114" width="375" height="0.0"/>
+                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="SEU-cb-rJ6"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="5U7-r5-LQU" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="1md-Ar-tGY"/>
                 <constraint firstItem="5U7-r5-LQU" firstAttribute="leading" secondItem="Pmi-xh-42n" secondAttribute="trailing" constant="12" id="4Gk-PO-JM7"/>
                 <constraint firstItem="Pmi-xh-42n" firstAttribute="leading" secondItem="0N4-QC-pFC" secondAttribute="leading" id="Fk9-K2-1gd"/>
                 <constraint firstItem="Mb9-VU-TXp" firstAttribute="leading" secondItem="Pmi-xh-42n" secondAttribute="leading" id="OsL-4k-EOp"/>
+                <constraint firstAttribute="trailing" secondItem="K5L-UM-S6s" secondAttribute="trailing" id="RAP-zt-DcX"/>
                 <constraint firstItem="0N4-QC-pFC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="Ubr-QS-82u"/>
                 <constraint firstItem="Mb9-VU-TXp" firstAttribute="top" secondItem="Pmi-xh-42n" secondAttribute="bottom" constant="5" id="Y3L-ch-Ozp"/>
                 <constraint firstAttribute="trailing" secondItem="5U7-r5-LQU" secondAttribute="trailing" constant="20" id="dqc-Yl-046"/>
+                <constraint firstAttribute="bottom" secondItem="K5L-UM-S6s" secondAttribute="bottom" id="eHH-ho-ebj"/>
                 <constraint firstItem="Pmi-xh-42n" firstAttribute="top" secondItem="0N4-QC-pFC" secondAttribute="bottom" constant="4" id="hHL-Pb-gOL"/>
+                <constraint firstItem="K5L-UM-S6s" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="j3Q-Tt-elV"/>
                 <constraint firstItem="5U7-r5-LQU" firstAttribute="leading" secondItem="0N4-QC-pFC" secondAttribute="trailing" constant="12" id="nEF-yy-hY3"/>
                 <constraint firstItem="0N4-QC-pFC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="uxS-6V-uu2"/>
             </constraints>
