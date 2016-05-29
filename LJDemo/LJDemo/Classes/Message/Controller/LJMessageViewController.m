@@ -7,7 +7,7 @@
 //
 
 #import "LJMessageViewController.h"
-
+#import "LJErrorView.h"
 
 @interface LJMessageViewController ()
 
@@ -18,6 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    LJErrorView *errorView = [LJErrorView viewFromXib];
+    errorView.frame = self.view.bounds;
+    [self.view addSubview:errorView];
 }
 
 - (void)didReceiveMemoryWarning {

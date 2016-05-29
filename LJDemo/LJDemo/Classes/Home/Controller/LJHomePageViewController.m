@@ -15,8 +15,6 @@
 #import "LJKnowledgeInfoCell.h"
 #import "LJGroup.h"
 
-static NSString *cellId = @"houseCell";
-
 /** 顶部图片高度 */
 static const CGFloat LJImageHeight = 192;
 
@@ -137,21 +135,7 @@ static const CGFloat LJImageHeight = 192;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-//    static NSString *ID = @"houseCell";
-//    LJHouseEnterCell *cell = [LJHouseEnterCell cellWithCollectionView:collectionView];
-//    cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
-    
-//    static NSString *ID = @"BannerCell";
-//    LJBannerCell *cell = [LJBannerCell cellWithCollectionView:collectionView];
-//    cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
-    
-    // 1. 获取模型数据
-//    LJGroup *group = self.groups[indexPath.section];
-//    LJItem *item = group.items[indexPath.row];
-    
-    NSLog(@"%s",__func__);
-    
-    // 2. 创建单元格
+ 
     if (indexPath.section == 0) {
         static NSString *ID = @"houseCell";
         LJHouseEnterCell *cell = [LJHouseEnterCell cellWithCollectionView:collectionView];
@@ -189,10 +173,6 @@ static const CGFloat LJImageHeight = 192;
         return cell;
     }
     
-    
-//    cell.backgroundColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
-//    
-//    return cell;
 }
 
 //定义每个UICollectionViewCell 的大小
