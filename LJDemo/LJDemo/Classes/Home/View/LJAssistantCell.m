@@ -9,11 +9,16 @@
 #import "LJAssistantCell.h"
 #import "LJAssistantItemView.h"
 
+@interface LJAssistantCell ()
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@end
+
 @implementation LJAssistantCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    [self initScrollViewSubView];
 }
 
 + (instancetype)cellWithCollectionView:(UICollectionView *)collectionView {
@@ -23,4 +28,20 @@
     LJAssistantCell *cell = [[LJAssistantCell alloc] init];
     return cell;
 }
+
+- (void)initScrollViewSubView {
+
+    CGFloat w = 83;
+    CGFloat h = 86;
+    CGFloat y = 0;
+    
+    for (int i = 0; i < 7; ++i) {
+        LJAssistantItemView *itemView = [LJAssistantItemView viewFromXib];
+        itemView.frame = CGRectMake(w * i, y, w, h);
+        [self.scrollView addSubview:itemView];
+    }
+    
+    self.scrollView.contentSize = CGSizeMake(h * 7, 0);
+}
+
 @end

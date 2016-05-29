@@ -40,7 +40,7 @@
                             <constraint firstAttribute="height" constant="0.5" id="PQq-Ah-wdz"/>
                         </constraints>
                     </view>
-                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xhw-1D-Ipc">
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xhw-1D-Ipc">
                         <rect key="frame" x="0.0" y="55.5" width="375" height="85.5"/>
                     </scrollView>
                 </subviews>
@@ -60,6 +60,9 @@
                 <constraint firstItem="fnF-56-VZk" firstAttribute="top" secondItem="OFV-uU-UeQ" secondAttribute="bottom" constant="19" id="gzU-tz-9Vh"/>
                 <constraint firstItem="jzr-nV-qiA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="hA8-DY-x93"/>
             </constraints>
+            <connections>
+                <outlet property="scrollView" destination="Xhw-1D-Ipc" id="ZuR-f5-Av9"/>
+            </connections>
             <point key="canvasLocation" x="373.5" y="356.5"/>
         </collectionViewCell>
     </objects>

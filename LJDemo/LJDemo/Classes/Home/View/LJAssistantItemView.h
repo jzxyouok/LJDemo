@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LJAssistantItemView : UIView
-
++ (instancetype)viewFromXib;
 @end
