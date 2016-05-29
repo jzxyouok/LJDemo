@@ -18,7 +18,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="54" id="e1V-sE-yaT"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" backgroundImage="homepage_button_moren"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPu-7N-dRk">
                         <rect key="frame" x="0.0" y="63" width="54" height="16"/>
@@ -43,4 +43,7 @@
             </constraints>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="homepage_button_moren" width="156" height="156"/>
+    </resources>
 </document>

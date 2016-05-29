@@ -13,16 +13,18 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                 <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="upw-rg-ZQg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                    </scrollView>
                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="LDs-3g-Fq2">
                         <rect key="frame" x="168" y="65" width="39" height="37"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="39" id="00m-1h-atu"/>
                             <constraint firstAttribute="height" constant="37" id="YHD-mM-BtM"/>
                         </constraints>
+                        <color key="pageIndicatorTintColor" red="0.83137254901960778" green="0.83137254901960778" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="currentPageIndicatorTintColor" red="0.58039215686274503" green="0.61176470588235299" blue="0.6705882352941176" alpha="1" colorSpace="calibratedRGB"/>
                     </pageControl>
-                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="upw-rg-ZQg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
-                    </scrollView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>

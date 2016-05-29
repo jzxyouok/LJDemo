@@ -31,7 +31,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-//    [self initScrollView];
+    [self initScrollView];
 }
 
 - (void)initScrollView {
@@ -40,8 +40,8 @@
     CGFloat imgH = self.scrollView.frame.size.height;
     
     for (int i = 0;i < image_count;i++){
-        NSString *imgName = [NSString stringWithFormat:@"%02d",i+1];
-        UIImage *img = [UIImage imageNamed:imgName];
+//        NSString *imgName = [NSString stringWithFormat:@"%02d",i+1];
+        UIImage *img = [UIImage imageNamed:@"default-banner"];
         
         UIImageView *imgView = [[UIImageView alloc] initWithImage:img];
         [self.scrollView addSubview:imgView];
@@ -80,7 +80,7 @@
     self.scrollView.delegate = self;
     
     //4 定时器,自动滚动    当时间间隔到达才会执行
-    NSTimer *timer = [NSTimer timerWithTimeInterval:2 target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:4 target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
     self.timer = timer;
     
     NSRunLoop *runloop = [NSRunLoop currentRunLoop];
@@ -114,7 +114,7 @@
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     //结束拖拽 重新开启定时器
-    NSTimer *timer = [NSTimer timerWithTimeInterval:2 target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:4 target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
     self.timer = timer;
     //    extern NSString* const  NSDefaultRunLoopMode ;
     //    extern NSString* const  NSRunLoopCommonModes;
