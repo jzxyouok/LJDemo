@@ -59,8 +59,6 @@ static const CGFloat LJImageHeight = 235;
     _zoomImageView.contentMode = UIViewContentModeScaleAspectFill;//重点（不设置那将只会被纵向拉伸）
     [self.tableView addSubview:_zoomImageView];
     
-    
-    
     UIView *topView = [[UIView alloc] init];
     topView.frame = CGRectMake(0, -LJImageHeight, self.view.frame.size.width, LJImageHeight);
 

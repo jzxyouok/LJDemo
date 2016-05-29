@@ -17,4 +17,6 @@
 @property (nonatomic, assign) CGFloat lj_centerY;
 @property (nonatomic, assign) CGSize  lj_size;
 @property (nonatomic, assign) CGPoint lj_origin;
+
++ (instancetype)viewFromXib;
 @end

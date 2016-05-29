@@ -46,8 +46,7 @@
     self.center = center;
 }
 
-- (CGFloat)lj_centerY
-{
+- (CGFloat)lj_centerY {
     return self.center.y;
 }
 
@@ -63,13 +62,11 @@
     self.frame = frame;
 }
 
-- (CGFloat)lj_height
-{
+- (CGFloat)lj_height {
     return self.frame.size.height;
 }
 
-- (CGFloat)lj_width
-{
+- (CGFloat)lj_width {
     return self.frame.size.width;
 }
 
@@ -79,8 +76,7 @@
     self.frame = frame;
 }
 
-- (CGSize)lj_size
-{
+- (CGSize)lj_size {
     return self.frame.size;
 }
 
@@ -90,9 +86,12 @@
     self.frame = frame;
 }
 
-- (CGPoint)lj_origin
-{
+- (CGPoint)lj_origin {
     return self.frame.origin;
+}
+
++ (instancetype)viewFromXib {
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
 }
 
 @end

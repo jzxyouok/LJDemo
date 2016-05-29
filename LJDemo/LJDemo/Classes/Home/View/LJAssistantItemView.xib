@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LJAssistantItemView">
             <rect key="frame" x="0.0" y="0.0" width="83" height="86"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -48,6 +48,11 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconView" destination="QgH-z6-O9t" id="qc3-b2-ceq"/>
+                <outlet property="lineView" destination="GIx-zP-t2U" id="8SN-58-0Gs"/>
+                <outlet property="nameLabel" destination="0Cn-OE-hZX" id="Isk-vC-fT9"/>
+            </connections>
             <point key="canvasLocation" x="213.5" y="167"/>
         </view>
     </objects>

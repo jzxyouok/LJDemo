@@ -8,6 +8,12 @@
 
 #import "LJAssistantItemView.h"
 
+@interface LJAssistantItemView ()
+@property (weak, nonatomic) IBOutlet UIImageView *iconView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIView *lineView;
+@end
+
 @implementation LJAssistantItemView
 
 + (instancetype)viewFromXib {

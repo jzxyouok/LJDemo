@@ -23,11 +23,12 @@ static const CGFloat LJImageHeight = 192;
 
 @property (nonatomic, strong)  UIImageView *zoomImageView;//变焦图片做底层
 
-
 /** 数据源 */
 @property (nonatomic, strong) NSMutableArray *dataSourceArray;
 /** 表示组的集合 */
 @property (nonatomic, strong) NSMutableArray *groups;
+
+@property (nonatomic, weak) UIView *topView;
 @end
 
 @implementation LJHomePageViewController
@@ -47,6 +48,18 @@ static const CGFloat LJImageHeight = 192;
     //contentMode = UIViewContentModeScaleAspectFill时，高度改变宽度也跟着改变
     _zoomImageView.contentMode = UIViewContentModeScaleAspectFill;//重点（不设置那将只会被纵向拉伸）
     [self.collectionView addSubview:_zoomImageView];
+    
+    
+    UIView *topView = [[UIView alloc] init];
+    topView.frame = CGRectMake(0, -LJImageHeight, self.view.frame.size.width, LJImageHeight);
+    
+    topView.contentMode = UIViewContentModeScaleAspectFill;//重点（不设置那将只会被纵向拉伸）
+    [self.collectionView addSubview:topView];
+    self.topView = topView;
+    
+    UIImageView *titleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"homepage_biaoti"]];
+    titleImageView.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, LJImageHeight/2 - 20);
+    [self.topView addSubview:titleImageView];
     
     [self initData];
     
