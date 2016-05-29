@@ -49,6 +49,52 @@ static const CGFloat LJImageHeight = 192;
     [self.collectionView addSubview:_zoomImageView];
     
     [self initData];
+    
+    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"kHeaderID"];
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return CGSizeMake(0, 0);
+    }
+    else if (section == 1) {
+        return CGSizeMake(375, 12);
+    }
+    else if (section == 2) {
+        return CGSizeMake(375, 12);
+    }
+    else if (section == 3) {
+        return CGSizeMake(375, 12);
+    }
+    else if (section == 4) {
+        return CGSizeMake(375, 12);
+    }
+    else {
+        return CGSizeMake(0, 0);
+    }
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    //如果是头部视图 (因为这里的kind 有头部和尾部所以需要判断  默认是头部,严谨判断比较好)
+    /*
+     JHHeaderReusableView 头部的类
+     kHeaderID  重用标识
+     */
+    if (kind == UICollectionElementKindSectionHeader) {
+        UICollectionReusableView *headerRV = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"kHeaderID" forIndexPath:indexPath];
+
+        if (!headerRV) {
+            headerRV = [[UICollectionReusableView alloc] init];
+        }
+        
+        headerRV.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1];
+        return headerRV;
+        
+    }else //有兴趣的也可以添加尾部视图
+    {
+        return nil;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -226,7 +272,6 @@ static const CGFloat LJImageHeight = 192;
         return 0;
     }
     
-    
 }
 
 //选择了某个cell
@@ -242,22 +287,37 @@ static const CGFloat LJImageHeight = 192;
         return UIEdgeInsetsMake(15, 25, 5, 25);//分别为上、左、下、右
     }
     else if (section == 1) {
-        return UIEdgeInsetsMake(20, 0, 0, 0);//分别为上、左、下、右
+        return UIEdgeInsetsMake(0, 0, 0, 0);//分别为上、左、下、右
     }
     else if (section == 2) {
-        return UIEdgeInsetsMake(20, 0, 0, 0);//分别为上、左、下、右
+        return UIEdgeInsetsMake(0, 0, 0, 0);//分别为上、左、下、右
     }
     else if (section == 3) {
-        return UIEdgeInsetsMake(20, 0, 0, 0);//分别为上、左、下、右
+        return UIEdgeInsetsMake(0, 0, 0, 0);//分别为上、左、下、右
     }
     else if (section == 4) {
-        return UIEdgeInsetsMake(20, 0, 0, 0);//分别为上、左、下、右
+        return UIEdgeInsetsMake(0, 0, 0, 0);//分别为上、左、下、右
     }
     else {
         return UIEdgeInsetsMake(0, 0, 0, 0);//分别为上、左、下、右
     }
 
 }
+
+////这个方法是返回 Header的大小 size
+//-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+//    return CGSizeMake(10, 10);
+//}
+
+////这个也是最重要的方法 获取Header的 方法。
+//- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+//{
+//    
+//    NSString *CellIdentifier = @"header";
+//    //从缓存中获取 Headercell
+//    HeaderCRView *cell = (HeaderCRView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+//    return cell;
+//}
 
 #pragma mark - Lazy
 - (NSMutableArray *)groups {
