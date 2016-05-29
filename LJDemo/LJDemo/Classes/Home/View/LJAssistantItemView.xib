@@ -29,7 +29,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIx-zP-t2U">
-                    <rect key="frame" x="82.5" y="20" width="1" height="46"/>
+                    <rect key="frame" x="81" y="20" width="1" height="46"/>
                     <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="0.5" id="9nO-Ww-pmS"/>
@@ -39,7 +39,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="0Cn-OE-hZX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1gt-dv-ejw"/>
-                <constraint firstAttribute="trailing" secondItem="GIx-zP-t2U" secondAttribute="trailing" constant="-0.5" id="1ul-fV-5Js"/>
+                <constraint firstAttribute="trailing" secondItem="GIx-zP-t2U" secondAttribute="trailing" constant="1" id="1ul-fV-5Js"/>
                 <constraint firstItem="QgH-z6-O9t" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="CkN-Jz-EmG"/>
                 <constraint firstAttribute="bottom" secondItem="GIx-zP-t2U" secondAttribute="bottom" constant="20" id="WOS-q9-sqP"/>
                 <constraint firstItem="0Cn-OE-hZX" firstAttribute="top" secondItem="QgH-z6-O9t" secondAttribute="bottom" constant="10" id="hqx-i0-h1m"/>
