@@ -29,6 +29,9 @@ static const CGFloat LJImageHeight = 192;
 @property (nonatomic, strong) NSMutableArray *groups;
 
 @property (nonatomic, weak) UIView *topView;
+
+
+@property (nonatomic, strong) UIView *searchView;
 @end
 
 @implementation LJHomePageViewController
@@ -64,50 +67,16 @@ static const CGFloat LJImageHeight = 192;
     [self initData];
     
     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"kHeaderID"];
-}
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
-    if (section == 0) {
-        return CGSizeMake(0, 0);
-    }
-    else if (section == 1) {
-        return CGSizeMake(375, 12);
-    }
-    else if (section == 2) {
-        return CGSizeMake(375, 12);
-    }
-    else if (section == 3) {
-        return CGSizeMake(375, 12);
-    }
-    else if (section == 4) {
-        return CGSizeMake(375, 12);
-    }
-    else {
-        return CGSizeMake(0, 0);
-    }
-}
-
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
-{
-    //如果是头部视图 (因为这里的kind 有头部和尾部所以需要判断  默认是头部,严谨判断比较好)
-    /*
-     JHHeaderReusableView 头部的类
-     kHeaderID  重用标识
-     */
-    if (kind == UICollectionElementKindSectionHeader) {
-        UICollectionReusableView *headerRV = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"kHeaderID" forIndexPath:indexPath];
-
-        if (!headerRV) {
-            headerRV = [[UICollectionReusableView alloc] init];
-        }
-        
-        headerRV.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1];
-        return headerRV;
-        
-    }else //有兴趣的也可以添加尾部视图
-    {
-        return nil;
-    }
+    
+    
+    self.searchView = [[UIView alloc] init];
+    self.searchView.frame = CGRectMake(15, 151, 345, 40);
+    [self.view addSubview:self.searchView];
+    [self.view bringSubviewToFront:self.searchView];
+    self.searchView.backgroundColor = [UIColor redColor];
+    CGFloat margin = self.topView.lj_height - CGRectGetMaxY(self.searchView.frame);
+//    CGFloat margin = CGRectGetMaxY(self.topView.frame) - self.searchView.lj_centerY;
+    NSLog(@"%f",margin);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -181,6 +150,11 @@ static const CGFloat LJImageHeight = 192;
         frame.origin.y = y;
         frame.size.height =  -y;//contentMode = UIViewContentModeScaleAspectFill时，高度改变宽度也跟着改变
         _zoomImageView.frame = frame;
+        self.topView.frame = frame;
+
+        self.searchView.lj_centerY = CGRectGetHeight(self.topView.frame)- 50;
+        
+        NSLog(@"%@",NSStringFromCGRect(self.topView.frame));
     }
 }
 
@@ -317,20 +291,48 @@ static const CGFloat LJImageHeight = 192;
 
 }
 
-////这个方法是返回 Header的大小 size
-//-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
-//    return CGSizeMake(10, 10);
-//}
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return CGSizeMake(0, 0);
+    }
+    else if (section == 1) {
+        return CGSizeMake(375, 12);
+    }
+    else if (section == 2) {
+        return CGSizeMake(375, 12);
+    }
+    else if (section == 3) {
+        return CGSizeMake(375, 12);
+    }
+    else if (section == 4) {
+        return CGSizeMake(375, 12);
+    }
+    else {
+        return CGSizeMake(0, 0);
+    }
+}
 
-////这个也是最重要的方法 获取Header的 方法。
-//- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
-//{
-//    
-//    NSString *CellIdentifier = @"header";
-//    //从缓存中获取 Headercell
-//    HeaderCRView *cell = (HeaderCRView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-//    return cell;
-//}
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    //如果是头部视图 (因为这里的kind 有头部和尾部所以需要判断  默认是头部,严谨判断比较好)
+    /*
+     JHHeaderReusableView 头部的类
+     kHeaderID  重用标识
+     */
+    if (kind == UICollectionElementKindSectionHeader) {
+        UICollectionReusableView *headerRV = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"kHeaderID" forIndexPath:indexPath];
+        
+        if (!headerRV) {
+            headerRV = [[UICollectionReusableView alloc] init];
+        }
+        
+        headerRV.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1];
+        return headerRV;
+        
+    }else //有兴趣的也可以添加尾部视图
+    {
+        return nil;
+    }
+}
 
 #pragma mark - Lazy
 - (NSMutableArray *)groups {

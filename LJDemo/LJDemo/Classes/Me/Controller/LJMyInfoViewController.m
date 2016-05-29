@@ -21,7 +21,6 @@
 #import "LJSettingViewController.h"
 #import "LJGroup.h"
 #import "LJItemArrow.h"
-#import "UIView+LJExtension.h"
 
 /** 顶部图片高度 */
 static const CGFloat LJImageHeight = 235;
