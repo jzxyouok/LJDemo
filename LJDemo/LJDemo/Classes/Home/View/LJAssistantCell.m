@@ -16,4 +16,11 @@
     // Initialization code
 }
 
++ (instancetype)cellWithCollectionView:(UICollectionView *)collectionView {
+    static NSString *ID = @"AssistantCell";
+    UINib *nib = [UINib nibWithNibName:@"LJAssistantCell" bundle: [NSBundle mainBundle]];
+    [collectionView registerNib:nib forCellWithReuseIdentifier:ID];
+    LJAssistantCell *cell = [[LJAssistantCell alloc] init];
+    return cell;
+}
 @end

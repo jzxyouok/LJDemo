@@ -29,6 +29,10 @@
 		4F3B80251CF91CF100784F3E /* LJLoginThirdPartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3B80241CF91CF100784F3E /* LJLoginThirdPartView.m */; };
 		4F3B80271CF91D0100784F3E /* LJLoginThirdPartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F3B80261CF91D0100784F3E /* LJLoginThirdPartView.xib */; };
 		4F3B80511CF976F300784F3E /* UIView+LJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3B80501CF976F300784F3E /* UIView+LJExtension.m */; };
+		4F4C112F1CFA75DE00D99DD5 /* LJKnowledgeTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C112D1CFA75DE00D99DD5 /* LJKnowledgeTitleCell.m */; };
+		4F4C11301CFA75DE00D99DD5 /* LJKnowledgeTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F4C112E1CFA75DE00D99DD5 /* LJKnowledgeTitleCell.xib */; };
+		4F4C11341CFA760500D99DD5 /* LJKnowledgeInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C11321CFA760500D99DD5 /* LJKnowledgeInfoCell.m */; };
+		4F4C11351CFA760500D99DD5 /* LJKnowledgeInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F4C11331CFA760500D99DD5 /* LJKnowledgeInfoCell.xib */; };
 		4F98D1F71CF50F60001DDD78 /* LJHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F98D1D11CF50F60001DDD78 /* LJHomePageViewController.m */; };
 		4F98D1F81CF50F60001DDD78 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F98D1D41CF50F60001DDD78 /* Home.storyboard */; };
 		4F98D1F91CF50F60001DDD78 /* LJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F98D1D81CF50F60001DDD78 /* LJBaseViewController.m */; };
@@ -105,6 +109,12 @@
 		4F3B80261CF91D0100784F3E /* LJLoginThirdPartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJLoginThirdPartView.xib; sourceTree = "<group>"; };
 		4F3B804F1CF976F300784F3E /* UIView+LJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LJExtension.h"; sourceTree = "<group>"; };
 		4F3B80501CF976F300784F3E /* UIView+LJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LJExtension.m"; sourceTree = "<group>"; };
+		4F4C112C1CFA75DE00D99DD5 /* LJKnowledgeTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJKnowledgeTitleCell.h; sourceTree = "<group>"; };
+		4F4C112D1CFA75DE00D99DD5 /* LJKnowledgeTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJKnowledgeTitleCell.m; sourceTree = "<group>"; };
+		4F4C112E1CFA75DE00D99DD5 /* LJKnowledgeTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJKnowledgeTitleCell.xib; sourceTree = "<group>"; };
+		4F4C11311CFA760500D99DD5 /* LJKnowledgeInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJKnowledgeInfoCell.h; sourceTree = "<group>"; };
+		4F4C11321CFA760500D99DD5 /* LJKnowledgeInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJKnowledgeInfoCell.m; sourceTree = "<group>"; };
+		4F4C11331CFA760500D99DD5 /* LJKnowledgeInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJKnowledgeInfoCell.xib; sourceTree = "<group>"; };
 		4F98D1D01CF50F60001DDD78 /* LJHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJHomePageViewController.h; sourceTree = "<group>"; };
 		4F98D1D11CF50F60001DDD78 /* LJHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJHomePageViewController.m; sourceTree = "<group>"; };
 		4F98D1D41CF50F60001DDD78 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -322,6 +332,12 @@
 				4F2BC6B81CF9FC67006923BB /* LJHousePriceCell.h */,
 				4F2BC6B91CF9FC67006923BB /* LJHousePriceCell.m */,
 				4F2BC6BA1CF9FC67006923BB /* LJHousePriceCell.xib */,
+				4F4C112C1CFA75DE00D99DD5 /* LJKnowledgeTitleCell.h */,
+				4F4C112D1CFA75DE00D99DD5 /* LJKnowledgeTitleCell.m */,
+				4F4C112E1CFA75DE00D99DD5 /* LJKnowledgeTitleCell.xib */,
+				4F4C11311CFA760500D99DD5 /* LJKnowledgeInfoCell.h */,
+				4F4C11321CFA760500D99DD5 /* LJKnowledgeInfoCell.m */,
+				4F4C11331CFA760500D99DD5 /* LJKnowledgeInfoCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -594,6 +610,7 @@
 				4FB5AFEB1CF6637A00A4B509 /* LJInviteFriendsViewController.xib in Resources */,
 				4F04F5581CF7B3EC005437F6 /* LJMyCouponsViewController.xib in Resources */,
 				4F98D2021CF50F60001DDD78 /* LJMyInfoTableViewCell.xib in Resources */,
+				4F4C11301CFA75DE00D99DD5 /* LJKnowledgeTitleCell.xib in Resources */,
 				4FB5AFD71CF661DA00A4B509 /* LJFollowedBuildingListViewController.xib in Resources */,
 				4FB5AFDC1CF6625C00A4B509 /* LJMySeenRecordViewController.xib in Resources */,
 				4F2BC6B71CF9F973006923BB /* LJAssistantItemView.xib in Resources */,
@@ -603,6 +620,7 @@
 				4F39A3AD1CF33A50004E37E8 /* Assets.xcassets in Resources */,
 				4FB5AFE61CF6634400A4B509 /* LJSellerEntrancePageController.xib in Resources */,
 				4F2BC6AD1CF9F021006923BB /* LJBannerCell.xib in Resources */,
+				4F4C11351CFA760500D99DD5 /* LJKnowledgeInfoCell.xib in Resources */,
 				4FB5AFCD1CF6616800A4B509 /* LJMyFollowedCommunityViewController.xib in Resources */,
 				4F98D2031CF50F60001DDD78 /* Me.storyboard in Resources */,
 				4F2BC6B21CF9F692006923BB /* LJAssistantCell.xib in Resources */,
@@ -686,6 +704,7 @@
 				4FB5AFE01CF662AA00A4B509 /* LJMyAskViewController.m in Sources */,
 				4F98D2011CF50F60001DDD78 /* LJMyInfoTableViewCell.m in Sources */,
 				4FB5AFCC1CF6616800A4B509 /* LJMyFollowedCommunityViewController.m in Sources */,
+				4F4C11341CFA760500D99DD5 /* LJKnowledgeInfoCell.m in Sources */,
 				4F98D1F71CF50F60001DDD78 /* LJHomePageViewController.m in Sources */,
 				4F98D1FE1CF50F60001DDD78 /* LJMyInfoViewController.m in Sources */,
 				4F04F5521CF7B3B8005437F6 /* LJCreditCenterViewController.m in Sources */,
@@ -698,6 +717,7 @@
 				4F2BC6A71CF9E0F1006923BB /* LJHouseEnterCell.m in Sources */,
 				4F2BC6BB1CF9FC67006923BB /* LJHousePriceCell.m in Sources */,
 				4F98D1F91CF50F60001DDD78 /* LJBaseViewController.m in Sources */,
+				4F4C112F1CFA75DE00D99DD5 /* LJKnowledgeTitleCell.m in Sources */,
 				4F2BC6B11CF9F692006923BB /* LJAssistantCell.m in Sources */,
 				4FB5AFFB1CF6648D00A4B509 /* LJSettingViewController.m in Sources */,
 				4FB5B00C1CF6681F00A4B509 /* LJItemSwitch.m in Sources */,

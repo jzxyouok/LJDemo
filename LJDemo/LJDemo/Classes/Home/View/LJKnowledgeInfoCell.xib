@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="KnowledgeInfoCell" id="gTV-IL-0wX" customClass="LJKnowledgeInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="刚需福音！195万住海淀精装房" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0N4-QC-pFC">
+                        <rect key="frame" x="20" y="20" width="249" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="rjV-ru-2gL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5U7-r5-LQU">
+                        <rect key="frame" x="281" y="20" width="74" height="74"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="74" id="2OJ-fw-Flx"/>
+                            <constraint firstAttribute="width" constant="74" id="Mcq-9D-lUd"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="谁说刚需就不能住高端小区呢？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pmi-xh-42n">
+                        <rect key="frame" x="20" y="40" width="249" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="AtL-rq-MUv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热点" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mb9-VU-TXp">
+                        <rect key="frame" x="20" y="79" width="22" height="14"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="cvG-gP-SgC"/>
+                            <constraint firstAttribute="width" constant="22" id="ioU-db-V6o"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="1" green="0.45098039215686275" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="5U7-r5-LQU" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="1md-Ar-tGY"/>
+                <constraint firstItem="5U7-r5-LQU" firstAttribute="leading" secondItem="Pmi-xh-42n" secondAttribute="trailing" constant="12" id="4Gk-PO-JM7"/>
+                <constraint firstItem="Pmi-xh-42n" firstAttribute="leading" secondItem="0N4-QC-pFC" secondAttribute="leading" id="Fk9-K2-1gd"/>
+                <constraint firstItem="Mb9-VU-TXp" firstAttribute="leading" secondItem="Pmi-xh-42n" secondAttribute="leading" id="OsL-4k-EOp"/>
+                <constraint firstItem="0N4-QC-pFC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="Ubr-QS-82u"/>
+                <constraint firstItem="Mb9-VU-TXp" firstAttribute="top" secondItem="Pmi-xh-42n" secondAttribute="bottom" constant="5" id="Y3L-ch-Ozp"/>
+                <constraint firstAttribute="trailing" secondItem="5U7-r5-LQU" secondAttribute="trailing" constant="20" id="dqc-Yl-046"/>
+                <constraint firstItem="Pmi-xh-42n" firstAttribute="top" secondItem="0N4-QC-pFC" secondAttribute="bottom" constant="4" id="hHL-Pb-gOL"/>
+                <constraint firstItem="5U7-r5-LQU" firstAttribute="leading" secondItem="0N4-QC-pFC" secondAttribute="trailing" constant="12" id="nEF-yy-hY3"/>
+                <constraint firstItem="0N4-QC-pFC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="uxS-6V-uu2"/>
+            </constraints>
+            <point key="canvasLocation" x="506.5" y="334"/>
+        </collectionViewCell>
+    </objects>
+</document>

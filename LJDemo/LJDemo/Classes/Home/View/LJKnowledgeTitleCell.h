@@ -1,5 +1,5 @@
 //
-//  LJHousePriceCell.h
+//  LJKnowledgeTitleCell.h
 //  LJDemo
 //
 //  Created by 蔡万鸿 on 16/5/29.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LJHousePriceCell : UICollectionViewCell
+@interface LJKnowledgeTitleCell : UICollectionViewCell
 + (instancetype)cellWithCollectionView:(UICollectionView *)collectionView;
 @end

@@ -1,14 +1,14 @@
 //
-//  LJHousePriceCell.m
+//  LJKnowledgeTitleCell.m
 //  LJDemo
 //
 //  Created by 蔡万鸿 on 16/5/29.
 //  Copyright © 2016年 黄花菜. All rights reserved.
 //
 
-#import "LJHousePriceCell.h"
+#import "LJKnowledgeTitleCell.h"
 
-@implementation LJHousePriceCell
+@implementation LJKnowledgeTitleCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -16,10 +16,10 @@
 }
 
 + (instancetype)cellWithCollectionView:(UICollectionView *)collectionView {
-    static NSString *ID = @"HousePriceCell";
-    UINib *nib = [UINib nibWithNibName:@"LJHousePriceCell" bundle: [NSBundle mainBundle]];
+    static NSString *ID = @"KnowledgeTitleCell";
+    UINib *nib = [UINib nibWithNibName:@"LJKnowledgeTitleCell" bundle: [NSBundle mainBundle]];
     [collectionView registerNib:nib forCellWithReuseIdentifier:ID];
-    LJHousePriceCell *cell = [[LJHousePriceCell alloc] init];
+    LJKnowledgeTitleCell *cell = [[LJKnowledgeTitleCell alloc] init];
     return cell;
 }
 @end

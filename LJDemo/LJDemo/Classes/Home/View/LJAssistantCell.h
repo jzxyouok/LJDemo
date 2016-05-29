@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LJAssistantCell : UICollectionViewCell
-
++ (instancetype)cellWithCollectionView:(UICollectionView *)collectionView;
 @end
