@@ -32,13 +32,15 @@ static const CGFloat LJImageHeight = 192;
 
 
 @property (nonatomic, strong) UIView *searchView;
+
+@property (nonatomic, strong) UIView *greenView;
 @end
 
 @implementation LJHomePageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     //隐藏导航栏
     self.navigationController.navigationBar.hidden = YES;
     
@@ -75,8 +77,15 @@ static const CGFloat LJImageHeight = 192;
     [self.view bringSubviewToFront:self.searchView];
     self.searchView.backgroundColor = [UIColor redColor];
     CGFloat margin = self.topView.lj_height - CGRectGetMaxY(self.searchView.frame);
-//    CGFloat margin = CGRectGetMaxY(self.topView.frame) - self.searchView.lj_centerY;
+    //    CGFloat margin = CGRectGetMaxY(self.topView.frame) - self.searchView.lj_centerY;
     NSLog(@"%f",margin);
+}
+
+- (UIView *)greenView {
+    if (_greenView == nil) {
+        _greenView = [[UIView alloc] init];
+    }
+    return _greenView;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -145,17 +154,36 @@ static const CGFloat LJImageHeight = 192;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
     CGFloat y = scrollView.contentOffset.y;//根据实际选择加不加上NavigationBarHight（44、64 或者没有导航条）
+    
+    NSLog(@"%f",y);
+    
     if (y < -LJImageHeight) {
         CGRect frame = _zoomImageView.frame;
         frame.origin.y = y;
         frame.size.height =  -y;//contentMode = UIViewContentModeScaleAspectFill时，高度改变宽度也跟着改变
         _zoomImageView.frame = frame;
         self.topView.frame = frame;
-
-        self.searchView.lj_centerY = CGRectGetHeight(self.topView.frame)- 50;
         
-        NSLog(@"%@",NSStringFromCGRect(self.topView.frame));
+        self.searchView.lj_centerY = -y + 20 - 50;
     }
+    else if (y >= -80) {
+        self.greenView.lj_height = 80;
+        self.searchView.lj_centerY = 50;
+    }
+    else if (y > -150) {
+        self.greenView.frame = CGRectMake(0, 0,self.view.lj_width , -y + 20);
+        [self.view addSubview:self.greenView];
+        [self.view bringSubviewToFront:self.searchView];
+        self.greenView.backgroundColor = [UIColor greenColor];
+        
+        self.searchView.lj_centerY = -y + 20 - 50;
+    }
+    else if (y <= -150) {
+        [self.greenView removeFromSuperview];
+        
+        self.searchView.lj_centerY = -y + 20 - 50;
+    }
+    
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -168,7 +196,7 @@ static const CGFloat LJImageHeight = 192;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
- 
+    
     if (indexPath.section == 0) {
         static NSString *ID = @"houseCell";
         LJHouseEnterCell *cell = [LJHouseEnterCell cellWithCollectionView:collectionView];
@@ -229,7 +257,7 @@ static const CGFloat LJImageHeight = 192;
     else {
         return CGSizeMake(375, 114);
     }
-
+    
 }
 
 //每个item之间的间距
@@ -247,7 +275,7 @@ static const CGFloat LJImageHeight = 192;
         return 10;
     }
     else if (section == 2) {
-       return 10;
+        return 10;
     }
     else if (section == 3) {
         return 10;
@@ -288,7 +316,7 @@ static const CGFloat LJImageHeight = 192;
     else {
         return UIEdgeInsetsMake(0, 0, 0, 0);//分别为上、左、下、右
     }
-
+    
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
