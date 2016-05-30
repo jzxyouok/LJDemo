@@ -16,7 +16,7 @@
 #import "LJGroup.h"
 
 /** 顶部图片高度 */
-static const CGFloat LJImageHeight = 192;
+static const CGFloat LJImageHeight = 211;
 
 @interface LJHomePageViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -77,7 +77,6 @@ static const CGFloat LJImageHeight = 192;
     [self.view bringSubviewToFront:self.searchView];
     self.searchView.backgroundColor = [UIColor redColor];
     CGFloat margin = self.topView.lj_height - CGRectGetMaxY(self.searchView.frame);
-    //    CGFloat margin = CGRectGetMaxY(self.topView.frame) - self.searchView.lj_centerY;
     NSLog(@"%f",margin);
 }
 
@@ -155,28 +154,33 @@ static const CGFloat LJImageHeight = 192;
     
     CGFloat y = scrollView.contentOffset.y;//根据实际选择加不加上NavigationBarHight（44、64 或者没有导航条）
     
-    NSLog(@"%f",y);
-    
     if (y < -LJImageHeight) {
         CGRect frame = _zoomImageView.frame;
         frame.origin.y = y;
         frame.size.height =  -y;//contentMode = UIViewContentModeScaleAspectFill时，高度改变宽度也跟着改变
         _zoomImageView.frame = frame;
-        self.topView.frame = frame;
         
+        self.topView.frame = frame;
         self.searchView.lj_centerY = -y + 20 - 50;
     }
     else if (y >= -80) {
         self.greenView.lj_height = 80;
         self.searchView.lj_centerY = 50;
+        self.greenView.alpha = 1;
     }
     else if (y > -150) {
-        self.greenView.frame = CGRectMake(0, 0,self.view.lj_width , -y + 20);
+        
+        self.greenView.frame = CGRectMake(0, 0,self.view.lj_width , -y);
         [self.view addSubview:self.greenView];
         [self.view bringSubviewToFront:self.searchView];
         self.greenView.backgroundColor = [UIColor greenColor];
         
         self.searchView.lj_centerY = -y + 20 - 50;
+        
+        //变色
+        CGFloat colorMargin = -y - 80;
+        CGFloat  f = colorMargin / 70;
+        self.greenView.alpha = 1 - f;
     }
     else if (y <= -150) {
         [self.greenView removeFromSuperview];
