@@ -11,4 +11,7 @@
 
 #import "UIView+LJExtension.h"
 
+#define LJScreenW [UIScreen mainScreen].bounds.size.width
+#define LJScreenH [UIScreen mainScreen].bounds.size.height
+
 #endif /* LJ_pch */
