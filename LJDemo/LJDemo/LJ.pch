@@ -11,6 +11,10 @@
 
 #import "UIView+LJExtension.h"
 
+// 快速创建颜色
+#define LJColor(r, g, b, a) [UIColor colorWithRed:r green:g blue:b alpha:a]
+
+//宽高
 #define LJScreenW [UIScreen mainScreen].bounds.size.width
 #define LJScreenH [UIScreen mainScreen].bounds.size.height
 

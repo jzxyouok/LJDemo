@@ -97,7 +97,7 @@ static const CGFloat LJImageHeight = 211;
     UILabel *cityLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 11.5, 28, 17)];
     cityLabel.text = @"北京";
     cityLabel.font = [UIFont systemFontOfSize:14];
-    cityLabel.textColor = [UIColor colorWithRed:0.13 green:0.13 blue:0.13 alpha:1];
+    cityLabel.textColor = LJColor(0.13, 0.13, 0.13, 1);
     [cityView addSubview:cityLabel];
     
     UIImageView *arrowImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"homepage_search_iconjiantou"]];
@@ -110,7 +110,7 @@ static const CGFloat LJImageHeight = 211;
     [self.searchView addSubview:cityButton];
     
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(68, 10, 1, 20)];
-    lineView.backgroundColor = [UIColor colorWithRed:0.88 green:0.88 blue:0.88 alpha:1];
+    lineView.backgroundColor = LJColor(0.88, 0.88, 0.88, 1);
     [self.searchView addSubview:lineView];
     
     UIView *searchTextView = [[UIView alloc] initWithFrame:CGRectMake(69, 0, self.searchView.lj_width - 68, 40)];
@@ -123,7 +123,7 @@ static const CGFloat LJImageHeight = 211;
     UILabel *searchLabel = [[UILabel alloc] initWithFrame:CGRectMake(104, 11.5, 140, 17)];
     searchLabel.text = @"输入小区名或商圈名称";
     searchLabel.font = [UIFont systemFontOfSize:14];
-    searchLabel.textColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1];
+    searchLabel.textColor = LJColor(0.6, 0.6, 0.6, 1);
     [self.searchView addSubview:searchLabel];
     
     UIButton *startSearchButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -225,7 +225,7 @@ static const CGFloat LJImageHeight = 211;
         //变色
         CGFloat colorMargin = -y - 80;
         CGFloat  f = colorMargin / 70;
-        self.greenView.backgroundColor = [UIColor colorWithRed:0.19 green:0.63 blue:0.34 alpha:1 - f];
+        self.greenView.backgroundColor = LJColor(0.19, 0.63, 0.34, 1 - f);
         self.searchView.lj_centerY = -y + 20 - 50;
     }
     else if (y <= -150) {
@@ -401,7 +401,7 @@ static const CGFloat LJImageHeight = 211;
             headerRV = [[UICollectionReusableView alloc] init];
         }
         
-        headerRV.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1];
+        headerRV.backgroundColor = LJColor(0.9, 0.9, 0.9, 1);
         return headerRV;
         
     }else //有兴趣的也可以添加尾部视图
