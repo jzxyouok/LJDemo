@@ -33,9 +33,11 @@ static const CGFloat LJImageHeight = 235;
 @property (nonatomic, strong)  UIImageView *zoomImageView;
 /** 表示组的集合 */
 @property (nonatomic, strong) NSMutableArray *groups;
-
+/** 顶部view */
 @property (nonatomic, weak) UIView *topView;
+/** 头像图片 */
 @property (nonatomic, weak) UIImageView *avatarImageView;
+/** 登录按钮 */
 @property (nonatomic, weak) UIButton *loginButton;
 @end
 
@@ -48,28 +50,46 @@ static const CGFloat LJImageHeight = 235;
     //隐藏导航栏
     self.navigationController.navigationBar.hidden = YES;
     
-    //4.设置contentInset属性（上左下右 的值）
+    //设置contentInset属性（上左下右 的值）
     self.tableView.contentInset = UIEdgeInsetsMake(LJImageHeight, 0, 0, 0);
     
-    _zoomImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg"]];
-    _zoomImageView.frame = CGRectMake(0, -LJImageHeight, self.view.frame.size.width, LJImageHeight);
-    
-    //contentMode = UIViewContentModeScaleAspectFill时，高度改变宽度也跟着改变
+    //初始化顶部view
+    [self p_initTopView];
+
+    //初始化数据
+    [self p_loadGroup0];
+    [self p_loadGroup1];
+    [self p_loadGroup2];
+    [self p_loadGroup3];
+    [self p_loadGroup4];
+    [self p_loadGroup5];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+}
+
+/**
+ *  初始化顶部view
+ */
+- (void)p_initTopView {
+    self.zoomImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"bg"]];
+    self.zoomImageView.frame = CGRectMake(0, -LJImageHeight, self.view.frame.size.width, LJImageHeight);
     _zoomImageView.contentMode = UIViewContentModeScaleAspectFill;//重点（不设置那将只会被纵向拉伸）
-    [self.tableView addSubview:_zoomImageView];
+    [self.tableView addSubview:self.zoomImageView];
     
     UIView *topView = [[UIView alloc] init];
     topView.frame = CGRectMake(0, -LJImageHeight, self.view.frame.size.width, LJImageHeight);
-
+    
     topView.contentMode = UIViewContentModeScaleAspectFill;//重点（不设置那将只会被纵向拉伸）
     [self.tableView addSubview:topView];
     self.topView = topView;
-
+    
     UIImageView *avatarImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"myhome-icon-avatar"]];
     avatarImageView.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, LJImageHeight/2 + 10);
     [self.topView addSubview:avatarImageView];
     self.avatarImageView = avatarImageView;
-
+    
     UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [loginButton setBackgroundImage:[UIImage imageNamed:@"action_btn_border"] forState:UIControlStateNormal];
     [loginButton setTitle:@"登录/注册" forState:UIControlStateNormal];
@@ -79,19 +99,6 @@ static const CGFloat LJImageHeight = 235;
     loginButton.lj_centerY = CGRectGetMaxY(avatarImageView.frame) + 25;
     [self.topView addSubview:loginButton];
     self.loginButton = loginButton;
-
-    //初始化数据
-    [self loadGroup0];
-    [self loadGroup1];
-    [self loadGroup2];
-    [self loadGroup3];
-    [self loadGroup4];
-    [self loadGroup5];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -181,14 +188,14 @@ static const CGFloat LJImageHeight = 235;
 }
 
 #pragma mark - Private
-- (void)loadGroup0 {
+- (void)p_loadGroup0 {
     // 创建组, 以及每组内的模型
     LJGroup *group0 = [[LJGroup alloc] init];
     group0.items = @[@"group0"];
     [self.groups addObject:group0];
 }
 
-- (void)loadGroup1 {
+- (void)p_loadGroup1 {
     // 创建组, 以及每组内的模型
     LJGroup *group1 = [[LJGroup alloc] init];
     
@@ -201,7 +208,7 @@ static const CGFloat LJImageHeight = 235;
     [self.groups addObject:group1];
 }
 
-- (void)loadGroup2 {
+- (void)p_loadGroup2 {
     // 创建组, 以及每组内的模型
     LJGroup *group2 = [[LJGroup alloc] init];
     
@@ -211,7 +218,7 @@ static const CGFloat LJImageHeight = 235;
     [self.groups addObject:group2];
 }
 
-- (void)loadGroup3 {
+- (void)p_loadGroup3 {
     // 创建组, 以及每组内的模型
     LJGroup *group3 = [[LJGroup alloc] init];
     
@@ -221,7 +228,7 @@ static const CGFloat LJImageHeight = 235;
     [self.groups addObject:group3];
 }
 
-- (void)loadGroup4 {
+- (void)p_loadGroup4 {
     // 创建组, 以及每组内的模型
     LJGroup *group4 = [[LJGroup alloc] init];
     
@@ -234,7 +241,7 @@ static const CGFloat LJImageHeight = 235;
     [self.groups addObject:group4];
 }
 
-- (void)loadGroup5 {
+- (void)p_loadGroup5 {
     // 创建组, 以及每组内的模型
     LJGroup *group5 = [[LJGroup alloc] init];
     

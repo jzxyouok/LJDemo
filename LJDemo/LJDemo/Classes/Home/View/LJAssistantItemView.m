@@ -16,8 +16,4 @@
 
 @implementation LJAssistantItemView
 
-+ (instancetype)viewFromXib {
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
-}
-
 @end

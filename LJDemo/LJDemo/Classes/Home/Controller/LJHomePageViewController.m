@@ -20,19 +20,17 @@ static const CGFloat LJImageHeight = 211;
 
 @interface LJHomePageViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-
-@property (nonatomic, strong)  UIImageView *zoomImageView;//变焦图片做底层
-
+/** 顶部图片 */
+@property (nonatomic, strong)  UIImageView *zoomImageView;
 /** 数据源 */
 @property (nonatomic, strong) NSMutableArray *dataSourceArray;
-/** 表示组的集合 */
+/** 组的集合 */
 @property (nonatomic, strong) NSMutableArray *groups;
-
+/** 顶部view */
 @property (nonatomic, weak) UIView *topView;
-
-
+/** 搜索view */
 @property (nonatomic, strong) UIView *searchView;
-
+/** 搜索框绿色渐变背景视图 */
 @property (nonatomic, strong) UIView *greenView;
 @end
 
@@ -44,47 +42,17 @@ static const CGFloat LJImageHeight = 211;
     //隐藏导航栏
     self.navigationController.navigationBar.hidden = YES;
     
-    //4.设置contentInset属性（上左下右 的值）
+    //设置contentInset属性（上左下右的值）
     self.collectionView.contentInset = UIEdgeInsetsMake(LJImageHeight, 0, 0, 0);
     
-    _zoomImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"homepage_visual"]];
-    _zoomImageView.frame = CGRectMake(0, -LJImageHeight, self.view.frame.size.width, LJImageHeight);
+    [self p_initTopView];
+    [self p_initSearchView];
     
-    //contentMode = UIViewContentModeScaleAspectFill时，高度改变宽度也跟着改变
-    _zoomImageView.contentMode = UIViewContentModeScaleAspectFill;//重点（不设置那将只会被纵向拉伸）
-    [self.collectionView addSubview:_zoomImageView];
-    
-    
-    UIView *topView = [[UIView alloc] init];
-    topView.frame = CGRectMake(0, -LJImageHeight, self.view.frame.size.width, LJImageHeight);
-    
-    topView.contentMode = UIViewContentModeScaleAspectFill;//重点（不设置那将只会被纵向拉伸）
-    [self.collectionView addSubview:topView];
-    self.topView = topView;
-    
-    UIImageView *titleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"homepage_biaoti"]];
-    titleImageView.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, LJImageHeight/2 - 20);
-    [self.topView addSubview:titleImageView];
-    
+    //初始化数据
     [self initData];
     
+    //注册collectionView组头
     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"kHeaderID"];
-    
-    
-    self.searchView = [[UIView alloc] init];
-    self.searchView.frame = CGRectMake(15, 151, 345, 40);
-    [self.view addSubview:self.searchView];
-    [self.view bringSubviewToFront:self.searchView];
-    self.searchView.backgroundColor = [UIColor redColor];
-    CGFloat margin = self.topView.lj_height - CGRectGetMaxY(self.searchView.frame);
-    NSLog(@"%f",margin);
-}
-
-- (UIView *)greenView {
-    if (_greenView == nil) {
-        _greenView = [[UIView alloc] init];
-    }
-    return _greenView;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -92,13 +60,93 @@ static const CGFloat LJImageHeight = 211;
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Private
+/**
+ *  初始化顶部视图view
+ */
+- (void)p_initTopView {
+    self.zoomImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"homepage_visual"]];
+    self.zoomImageView.frame = CGRectMake(0, -LJImageHeight, self.view.frame.size.width, LJImageHeight);
+    self.zoomImageView.contentMode = UIViewContentModeScaleAspectFill;//重点（不设置那将只会被纵向拉伸）
+    [self.collectionView addSubview:self.zoomImageView];
+    
+    UIView *topView = [[UIView alloc] init];
+    topView.frame = CGRectMake(0, -LJImageHeight, self.view.frame.size.width, LJImageHeight);
+    topView.contentMode = UIViewContentModeScaleAspectFill;//重点（不设置那将只会被纵向拉伸）
+    [self.collectionView addSubview:topView];
+    self.topView = topView;
+    
+    UIImageView *titleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"homepage_biaoti"]];
+    titleImageView.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, LJImageHeight/2 - 20);
+    [self.topView addSubview:titleImageView];
+}
+
+/**
+ *  初始化搜索框view
+ */
+- (void)p_initSearchView {
+    self.searchView = [[UIView alloc] init];
+    self.searchView.frame = CGRectMake(15, 151, self.view.lj_width - 30, 40);
+    [self.view addSubview:self.searchView];
+    [self.view bringSubviewToFront:self.searchView];
+    self.searchView.backgroundColor = [UIColor whiteColor];
+    
+    UIView *cityView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 68, 40)];
+    [self.searchView addSubview:cityView];
+    
+    UILabel *cityLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 11.5, 28, 17)];
+    cityLabel.text = @"北京";
+    cityLabel.font = [UIFont systemFontOfSize:14];
+    cityLabel.textColor = [UIColor colorWithRed:0.13 green:0.13 blue:0.13 alpha:1];
+    [cityView addSubview:cityLabel];
+    
+    UIImageView *arrowImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"homepage_search_iconjiantou"]];
+    arrowImageView.lj_origin = CGPointMake(43, 10);
+    [cityView addSubview:arrowImageView];
+    
+    UIButton *cityButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    cityButton.frame = CGRectMake(0, 0, 68, 40);
+    [cityButton addTarget:self action:@selector(p_choiceCity) forControlEvents:UIControlEventTouchUpInside];
+    [self.searchView addSubview:cityButton];
+    
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(68, 10, 1, 20)];
+    lineView.backgroundColor = [UIColor colorWithRed:0.88 green:0.88 blue:0.88 alpha:1];
+    [self.searchView addSubview:lineView];
+    
+    UIView *searchTextView = [[UIView alloc] initWithFrame:CGRectMake(69, 0, self.searchView.lj_width - 68, 40)];
+    [self.searchView addSubview:searchTextView];
+    
+    UIImageView *searchIconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"homepage_search_icon"]];
+    searchIconView.lj_origin = CGPointMake(79, 10);
+    [self.searchView addSubview:searchIconView];
+    
+    UILabel *searchLabel = [[UILabel alloc] initWithFrame:CGRectMake(104, 11.5, 140, 17)];
+    searchLabel.text = @"输入小区名或商圈名称";
+    searchLabel.font = [UIFont systemFontOfSize:14];
+    searchLabel.textColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1];
+    [self.searchView addSubview:searchLabel];
+    
+    UIButton *startSearchButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    startSearchButton.frame = CGRectMake(69, 0, self.searchView.lj_width - 68, 40);
+    [startSearchButton addTarget:self action:@selector(p_startSearch) forControlEvents:UIControlEventTouchUpInside];
+    [self.searchView addSubview:startSearchButton];
+}
+
+/**
+ *  选择城市点击方法
+ */
+- (void)p_choiceCity {
+    NSLog(@"%s",__func__);
+}
+
+/**
+ *  点击搜索框事件
+ */
+- (void)p_startSearch {
+    NSLog(@"%s",__func__);
+}
+
 - (void)initData {
-    //第0组 8个
-    //第1组 1个
-    //第2组 1个
-    //第3组 1个
-    //第4组 1个
-    //第5组 3个
     [self loadGroup0];
     [self loadGroup1];
     [self loadGroup2];
@@ -237,7 +285,6 @@ static const CGFloat LJImageHeight = 211;
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
         return cell;
     }
-    
 }
 
 //定义每个UICollectionViewCell 的大小
@@ -320,7 +367,6 @@ static const CGFloat LJImageHeight = 211;
     else {
         return UIEdgeInsetsMake(0, 0, 0, 0);//分别为上、左、下、右
     }
-    
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
@@ -372,6 +418,13 @@ static const CGFloat LJImageHeight = 211;
         _groups = [NSMutableArray array];
     }
     return _groups;
+}
+
+- (UIView *)greenView {
+    if (_greenView == nil) {
+        _greenView = [[UIView alloc] init];
+    }
+    return _greenView;
 }
 
 @end

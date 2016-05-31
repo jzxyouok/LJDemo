@@ -8,8 +8,8 @@
 
 #import "LJBannerCell.h"
 
-//定义轮播图片的个数
-#define image_count 3
+/** 定义轮播图片的个数 */
+static const CGFloat LJImage_count = 3;
 
 @interface LJBannerCell ()<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
@@ -31,15 +31,16 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    [self initScrollView];
+    [self p_initScrollView];
 }
 
-- (void)initScrollView {
+#pragma mark - Private
+- (void)p_initScrollView {
     //1 创建imageView
     CGFloat imgW = [UIScreen mainScreen].bounds.size.width;
     CGFloat imgH = self.scrollView.frame.size.height;
     
-    for (int i = 0;i < image_count;i++){
+    for (int i = 0;i < LJImage_count;i++){
 //        NSString *imgName = [NSString stringWithFormat:@"%02d",i+1];
         UIImage *img = [UIImage imageNamed:@"default-banner"];
         
@@ -58,7 +59,7 @@
     //把第一张图片 ,添加到最后
     UIImageView *imgView = [[UIImageView alloc] initWithImage:self.images[0]];
     [self.scrollView addSubview:imgView];
-    imgView.frame = CGRectMake(imgW * (image_count+1), 0, imgW, imgH);
+    imgView.frame = CGRectMake(imgW * (LJImage_count+1), 0, imgW, imgH);
     //把最后一张图片,添加到最前面
     imgView = [[UIImageView alloc] initWithImage:self.images[self.images.count - 1]];
     [self.scrollView addSubview:imgView];
@@ -68,26 +69,26 @@
     self.scrollView.contentOffset = CGPointMake(imgW, 0);
     
     //2 设置scrollView可以滚动
-    self.scrollView.contentSize = CGSizeMake(imgW * (image_count+2), 0);
+    self.scrollView.contentSize = CGSizeMake(imgW * (LJImage_count+2), 0);
     
     //3 分页控件
     self.scrollView.pagingEnabled = YES;
     //去掉滚动条
     self.scrollView.showsHorizontalScrollIndicator = NO;
     //设置总共多少页
-    self.pageControl.numberOfPages = image_count;
+    self.pageControl.numberOfPages = LJImage_count;
     //设置代理
     self.scrollView.delegate = self;
     
     //4 定时器,自动滚动    当时间间隔到达才会执行
-    NSTimer *timer = [NSTimer timerWithTimeInterval:4 target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:4 target:self selector:@selector(p_nextImage) userInfo:nil repeats:YES];
     self.timer = timer;
     
     NSRunLoop *runloop = [NSRunLoop currentRunLoop];
     [runloop addTimer:timer forMode:NSRunLoopCommonModes];
 }
 
-- (void)nextImage {
+- (void)p_nextImage {
     NSInteger currentPage = self.pageControl.currentPage;
     currentPage++;
     currentPage = currentPage > self.pageControl.numberOfPages ? 0 :currentPage;
@@ -114,7 +115,7 @@
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     //结束拖拽 重新开启定时器
-    NSTimer *timer = [NSTimer timerWithTimeInterval:4 target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:4 target:self selector:@selector(p_nextImage) userInfo:nil repeats:YES];
     self.timer = timer;
     //    extern NSString* const  NSDefaultRunLoopMode ;
     //    extern NSString* const  NSRunLoopCommonModes;
@@ -145,6 +146,7 @@
     }
 }
 
+#pragma mark - Lazy
 - (NSMutableArray *)images{
     if (_images == nil) {
         _images = [NSMutableArray array];

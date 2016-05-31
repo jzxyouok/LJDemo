@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LJErrorView : UIView
-+ (instancetype)viewFromXib;
+
 @end

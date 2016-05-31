@@ -18,7 +18,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    [self initScrollViewSubView];
+    [self p_initScrollViewSubView];
 }
 
 + (instancetype)cellWithCollectionView:(UICollectionView *)collectionView {
@@ -29,7 +29,8 @@
     return cell;
 }
 
-- (void)initScrollViewSubView {
+#pragma mark - Private
+- (void)p_initScrollViewSubView {
 
     CGFloat w = 83;
     CGFloat h = 86;
