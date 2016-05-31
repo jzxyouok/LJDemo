@@ -8,20 +8,6 @@
 
 #import "LJTabBarController.h"
 
-/**
- *  该模块根控制器是否有导航栏
- */
-typedef NS_ENUM(NSUInteger, LJMoudleNavState) {
-    /**
-     *  没有导航栏
-     */
-    LJMoudleNavStateNone,
-    /**
-     *  有导航栏
-     */
-    LJMoudleNavStateHave
-};
-
 @interface LJTabBarController ()
 
 @end
