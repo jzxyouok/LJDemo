@@ -218,6 +218,7 @@ static const CGFloat LJImageHeight = 211;
     }
     else if (y > -150) {
         
+        NSLog(@"come here");
         self.greenView.frame = CGRectMake(0, 0,self.view.lj_width , -y);
         [self.view addSubview:self.greenView];
         [self.view bringSubviewToFront:self.searchView];
@@ -233,7 +234,18 @@ static const CGFloat LJImageHeight = 211;
         
         self.searchView.lj_centerY = -y + 20 - 50;
     }
+}
+
+//拖动结束
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     
+    CGFloat y = scrollView.contentOffset.y;//根据实际选择加不加上NavigationBarHight（44、64 或者没有导航条）
+    if (y >= -80) {
+        self.greenView.frame = CGRectMake(0, 0, self.view.lj_width , 80);
+        self.greenView.backgroundColor = LJColor(0.19, 0.63, 0.34, 1);
+        [self.view addSubview:self.greenView];
+        [self.view bringSubviewToFront:self.searchView];
+    }
 }
 
 #pragma mark - UICollectionViewDataSource
