@@ -221,14 +221,12 @@ static const CGFloat LJImageHeight = 211;
         self.greenView.frame = CGRectMake(0, 0,self.view.lj_width , -y);
         [self.view addSubview:self.greenView];
         [self.view bringSubviewToFront:self.searchView];
-        self.greenView.backgroundColor = [UIColor greenColor];
-        
-        self.searchView.lj_centerY = -y + 20 - 50;
         
         //变色
         CGFloat colorMargin = -y - 80;
         CGFloat  f = colorMargin / 70;
-        self.greenView.alpha = 1 - f;
+        self.greenView.backgroundColor = [UIColor colorWithRed:0.19 green:0.63 blue:0.34 alpha:1 - f];
+        self.searchView.lj_centerY = -y + 20 - 50;
     }
     else if (y <= -150) {
         [self.greenView removeFromSuperview];

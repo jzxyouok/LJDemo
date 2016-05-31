@@ -36,7 +36,7 @@ typedef NS_ENUM(NSUInteger, LJMoudleNavState) {
     [self p_addChildViewControllers];
     
     //2.设置tabbar文字颜色
-    self.tabBar.tintColor = [UIColor greenColor];
+    self.tabBar.tintColor = [UIColor colorWithRed:0.19 green:0.63 blue:0.34 alpha:1];
 }
 
 - (void)didReceiveMemoryWarning {
