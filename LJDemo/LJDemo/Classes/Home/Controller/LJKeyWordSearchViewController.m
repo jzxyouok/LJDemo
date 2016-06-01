@@ -9,7 +9,7 @@
 #import "LJKeyWordSearchViewController.h"
 #import "LJNoDataMaskView.h"
 
-@interface LJKeyWordSearchViewController ()
+@interface LJKeyWordSearchViewController ()<UITextFieldDelegate>
 /** 提示View */
 @property (nonatomic, strong) LJNoDataMaskView *noDataMaskView;
 @end
@@ -24,7 +24,8 @@
     [self.view addSubview:self.noDataMaskView];
     
     [self initNavigationBar];
-
+    
+    [self p_addObserverNSNotification];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,6 +60,8 @@
     [view addSubview:choiceButton];
     
     UITextField *searchTextField = [[UITextField alloc] initWithFrame:CGRectMake(69, 5, view.lj_width, 21)];
+    searchTextField.delegate = self;
+    [searchTextField becomeFirstResponder];
     UIColor *color = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.5];
     searchTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"输入小区名或商圈名称" attributes:@{NSForegroundColorAttributeName: color}];
     searchTextField.font = [UIFont systemFontOfSize:14];
@@ -80,8 +83,74 @@
  */
 - (void)p_back{
     [self.navigationController popViewControllerAnimated:YES];
-    
 }
+
+/**
+ *  注册通知
+ */
+- (void)p_addObserverNSNotification {
+    //注册键盘出现的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardWillShowNotification object:nil];
+    //注册键盘消失的通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillBeHidden:) name:UIKeyboardWillHideNotification object:nil];
+}
+
+#pragma mark - NSNotification
+/**
+ *  键盘弹出
+ */
+- (void)keyboardWasShown:(NSNotification*)notification {
+    //键盘高度
+    CGRect keyBoardFrame = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    NSLog(@"%@",NSStringFromCGRect(keyBoardFrame));
+    
+    [UIView animateWithDuration:3.0 animations:^{
+        self.noDataMaskView.lj_height = self.noDataMaskView.lj_height - 50;
+    }];
+}
+
+/**
+ *  键盘消失
+ */
+-(void)keyboardWillBeHidden:(NSNotification*)notification {
+    [UIView animateWithDuration:3.0 animations:^{
+        self.noDataMaskView.lj_height = self.view.lj_height;
+    }];
+}
+
+#pragma mark - UITextFieldDelegate
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    NSLog(@"%s",__func__);
+    return YES;
+}
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    NSLog(@"%s",__func__);
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+    NSLog(@"%s",__func__);
+    return YES;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    NSLog(@"%s",__func__);
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSLog(@"%s",__func__);
+    return YES;
+}
+
+- (BOOL)textFieldShouldClear:(UITextField *)textField {
+    NSLog(@"%s",__func__);
+    return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    NSLog(@"%s",__func__);
+    return YES;
+}
+
 
 #pragma mark - Lazy
 - (LJNoDataMaskView *)noDataMaskView {
