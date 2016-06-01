@@ -15,6 +15,8 @@
 #import "LJKnowledgeInfoCell.h"
 #import "LJGroup.h"
 #import "LJKeyWordSearchViewController.h"
+#import "LJSelecteCityViewController.h"
+//#import <QuartzCore/QuartzCore.h>
 
 /** 顶部图片高度 */
 static const CGFloat LJImageHeight = 211;
@@ -142,6 +144,16 @@ static const CGFloat LJImageHeight = 211;
  */
 - (void)p_choiceCity {
     NSLog(@"%s",__func__);
+    
+    LJSelecteCityViewController *selecteCityVC = [[LJSelecteCityViewController alloc] init];
+//    [self.navigationController pushViewController:selecteCityVC animated:YES];
+    
+    CATransition* transition = [CATransition animation];
+    transition.type = kCATransitionPush;//可更改为其他方式
+    transition.subtype = kCATransitionFromTop;//可更改为其他方式
+    [self.navigationController.view.layer addAnimation:transition forKey:kCATransition];
+    
+    [self.navigationController pushViewController:selecteCityVC animated:YES];
 }
 
 /**

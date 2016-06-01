@@ -75,6 +75,7 @@
 		4FB7AE201CFF996B00807772 /* lianjia_rights.html in Resources */ = {isa = PBXBuildFile; fileRef = 4FB7AE1F1CFF996B00807772 /* lianjia_rights.html */; };
 		4FB7AE221CFF999400807772 /* LJAreaAndSubway.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FB7AE211CFF999400807772 /* LJAreaAndSubway.plist */; };
 		4FB7AE241CFF99B900807772 /* LJCityDistrictInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FB7AE231CFF99B900807772 /* LJCityDistrictInfo.plist */; };
+		4FB7AE271CFF9A6E00807772 /* LJSelecteCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB7AE261CFF9A6E00807772 /* LJSelecteCityViewController.m */; };
 		4FFDB9E51CFF26D400FD4109 /* LJKeyWordSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDB9E31CFF26D400FD4109 /* LJKeyWordSearchViewController.m */; };
 		4FFDB9E61CFF26D400FD4109 /* LJKeyWordSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFDB9E41CFF26D400FD4109 /* LJKeyWordSearchViewController.xib */; };
 		4FFDB9E91CFF275B00FD4109 /* LJNoDataMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDB9E81CFF275B00FD4109 /* LJNoDataMaskView.m */; };
@@ -191,6 +192,8 @@
 		4FB7AE1F1CFF996B00807772 /* lianjia_rights.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lianjia_rights.html; sourceTree = "<group>"; };
 		4FB7AE211CFF999400807772 /* LJAreaAndSubway.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = LJAreaAndSubway.plist; sourceTree = "<group>"; };
 		4FB7AE231CFF99B900807772 /* LJCityDistrictInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = LJCityDistrictInfo.plist; sourceTree = "<group>"; };
+		4FB7AE251CFF9A6E00807772 /* LJSelecteCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJSelecteCityViewController.h; sourceTree = "<group>"; };
+		4FB7AE261CFF9A6E00807772 /* LJSelecteCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJSelecteCityViewController.m; sourceTree = "<group>"; };
 		4FFDB9E21CFF26D400FD4109 /* LJKeyWordSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJKeyWordSearchViewController.h; sourceTree = "<group>"; };
 		4FFDB9E31CFF26D400FD4109 /* LJKeyWordSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJKeyWordSearchViewController.m; sourceTree = "<group>"; };
 		4FFDB9E41CFF26D400FD4109 /* LJKeyWordSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJKeyWordSearchViewController.xib; sourceTree = "<group>"; };
@@ -329,6 +332,8 @@
 				4FFDB9E21CFF26D400FD4109 /* LJKeyWordSearchViewController.h */,
 				4FFDB9E31CFF26D400FD4109 /* LJKeyWordSearchViewController.m */,
 				4FFDB9E41CFF26D400FD4109 /* LJKeyWordSearchViewController.xib */,
+				4FB7AE251CFF9A6E00807772 /* LJSelecteCityViewController.h */,
+				4FB7AE261CFF9A6E00807772 /* LJSelecteCityViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -738,6 +743,7 @@
 				4F2BC6AC1CF9F021006923BB /* LJBannerCell.m in Sources */,
 				4F4C11381CFA926600D99DD5 /* LJErrorView.m in Sources */,
 				4F98D1FB1CF50F60001DDD78 /* LJTabBarController.m in Sources */,
+				4FB7AE271CFF9A6E00807772 /* LJSelecteCityViewController.m in Sources */,
 				4F3B80251CF91CF100784F3E /* LJLoginThirdPartView.m in Sources */,
 				4FB5AFEE1CF663EB00A4B509 /* LJCalculateViewController.m in Sources */,
 				4FB5AFD11CF661A600A4B509 /* LJMyFollowedHouseListViewController.m in Sources */,
