@@ -7,9 +7,11 @@
 //
 
 #import "LJKeyWordSearchViewController.h"
+#import "LJNoDataMaskView.h"
 
 @interface LJKeyWordSearchViewController ()
-
+/** 提示View */
+@property (nonatomic, strong) LJNoDataMaskView *noDataMaskView;
 @end
 
 @implementation LJKeyWordSearchViewController
@@ -19,7 +21,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    [self.view addSubview:self.noDataMaskView];
+    
     [self initNavigationBar];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,5 +83,13 @@
     
 }
 
+#pragma mark - Lazy
+- (LJNoDataMaskView *)noDataMaskView {
+    if (_noDataMaskView == nil) {
+        _noDataMaskView = [LJNoDataMaskView viewFromXib];
+        _noDataMaskView.frame = self.view.bounds;
+    }
+    return _noDataMaskView;
+}
 
 @end
