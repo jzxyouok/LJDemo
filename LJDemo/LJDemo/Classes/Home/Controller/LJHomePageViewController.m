@@ -14,6 +14,7 @@
 #import "LJKnowledgeTitleCell.h"
 #import "LJKnowledgeInfoCell.h"
 #import "LJGroup.h"
+#import "LJKeyWordSearchViewController.h"
 
 /** 顶部图片高度 */
 static const CGFloat LJImageHeight = 211;
@@ -38,6 +39,7 @@ static const CGFloat LJImageHeight = 211;
 
 @implementation LJHomePageViewController
 
+#pragma mark - ViewLife
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -146,7 +148,8 @@ static const CGFloat LJImageHeight = 211;
  *  点击搜索框事件
  */
 - (void)p_startSearch {
-    NSLog(@"%s",__func__);
+    LJKeyWordSearchViewController *KeyWordSearchVc = [[LJKeyWordSearchViewController alloc] init];
+    [self.navigationController pushViewController:KeyWordSearchVc animated:YES];
 }
 
 - (void)initData {

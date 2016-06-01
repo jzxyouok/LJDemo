@@ -72,6 +72,10 @@
 		4FB5B0061CF6668000A4B509 /* LJItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5B0051CF6668000A4B509 /* LJItem.m */; };
 		4FB5B0091CF667E800A4B509 /* LJItemArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5B0081CF667E800A4B509 /* LJItemArrow.m */; };
 		4FB5B00C1CF6681F00A4B509 /* LJItemSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5B00B1CF6681F00A4B509 /* LJItemSwitch.m */; };
+		4FFDB9E51CFF26D400FD4109 /* LJKeyWordSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDB9E31CFF26D400FD4109 /* LJKeyWordSearchViewController.m */; };
+		4FFDB9E61CFF26D400FD4109 /* LJKeyWordSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFDB9E41CFF26D400FD4109 /* LJKeyWordSearchViewController.xib */; };
+		4FFDB9E91CFF275B00FD4109 /* LJNoDataMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDB9E81CFF275B00FD4109 /* LJNoDataMaskView.m */; };
+		4FFDB9EB1CFF276900FD4109 /* LJNoDataMaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFDB9EA1CFF276900FD4109 /* LJNoDataMaskView.xib */; };
 		B8B67BA76E28A10AB1F71AC8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71768DB75781E184D4DC0FA8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -181,6 +185,12 @@
 		4FB5B0081CF667E800A4B509 /* LJItemArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJItemArrow.m; sourceTree = "<group>"; };
 		4FB5B00A1CF6681F00A4B509 /* LJItemSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJItemSwitch.h; sourceTree = "<group>"; };
 		4FB5B00B1CF6681F00A4B509 /* LJItemSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJItemSwitch.m; sourceTree = "<group>"; };
+		4FFDB9E21CFF26D400FD4109 /* LJKeyWordSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJKeyWordSearchViewController.h; sourceTree = "<group>"; };
+		4FFDB9E31CFF26D400FD4109 /* LJKeyWordSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJKeyWordSearchViewController.m; sourceTree = "<group>"; };
+		4FFDB9E41CFF26D400FD4109 /* LJKeyWordSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJKeyWordSearchViewController.xib; sourceTree = "<group>"; };
+		4FFDB9E71CFF275B00FD4109 /* LJNoDataMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJNoDataMaskView.h; sourceTree = "<group>"; };
+		4FFDB9E81CFF275B00FD4109 /* LJNoDataMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJNoDataMaskView.m; sourceTree = "<group>"; };
+		4FFDB9EA1CFF276900FD4109 /* LJNoDataMaskView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJNoDataMaskView.xib; sourceTree = "<group>"; };
 		71768DB75781E184D4DC0FA8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF4A83AC915A334ACAC0E88D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -309,6 +319,9 @@
 			children = (
 				4F98D1D01CF50F60001DDD78 /* LJHomePageViewController.h */,
 				4F98D1D11CF50F60001DDD78 /* LJHomePageViewController.m */,
+				4FFDB9E21CFF26D400FD4109 /* LJKeyWordSearchViewController.h */,
+				4FFDB9E31CFF26D400FD4109 /* LJKeyWordSearchViewController.m */,
+				4FFDB9E41CFF26D400FD4109 /* LJKeyWordSearchViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -397,6 +410,9 @@
 				4F4C11361CFA926600D99DD5 /* LJErrorView.h */,
 				4F4C11371CFA926600D99DD5 /* LJErrorView.m */,
 				4F4C11391CFA927C00D99DD5 /* LJErrorView.xib */,
+				4FFDB9E71CFF275B00FD4109 /* LJNoDataMaskView.h */,
+				4FFDB9E81CFF275B00FD4109 /* LJNoDataMaskView.m */,
+				4FFDB9EA1CFF276900FD4109 /* LJNoDataMaskView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -623,6 +639,7 @@
 				4F4C11301CFA75DE00D99DD5 /* LJKnowledgeTitleCell.xib in Resources */,
 				4FB5AFD71CF661DA00A4B509 /* LJFollowedBuildingListViewController.xib in Resources */,
 				4FB5AFDC1CF6625C00A4B509 /* LJMySeenRecordViewController.xib in Resources */,
+				4FFDB9E61CFF26D400FD4109 /* LJKeyWordSearchViewController.xib in Resources */,
 				4F2BC6B71CF9F973006923BB /* LJAssistantItemView.xib in Resources */,
 				4FB5AFF31CF6641C00A4B509 /* LCUserFeedbackViewController.xib in Resources */,
 				4FB5AFE11CF662AA00A4B509 /* LJMyAskViewController.xib in Resources */,
@@ -633,6 +650,7 @@
 				4F4C11351CFA760500D99DD5 /* LJKnowledgeInfoCell.xib in Resources */,
 				4FB5AFCD1CF6616800A4B509 /* LJMyFollowedCommunityViewController.xib in Resources */,
 				4F98D2031CF50F60001DDD78 /* Me.storyboard in Resources */,
+				4FFDB9EB1CFF276900FD4109 /* LJNoDataMaskView.xib in Resources */,
 				4F2BC6B21CF9F692006923BB /* LJAssistantCell.xib in Resources */,
 				4F4C113A1CFA927C00D99DD5 /* LJErrorView.xib in Resources */,
 				4FB5AFD21CF661A600A4B509 /* LJMyFollowedHouseListViewController.xib in Resources */,
@@ -708,6 +726,7 @@
 				4FB5AFD61CF661DA00A4B509 /* LJFollowedBuildingListViewController.m in Sources */,
 				4FB5AFEA1CF6637A00A4B509 /* LJInviteFriendsViewController.m in Sources */,
 				4FB5B0031CF6667900A4B509 /* LJGroup.m in Sources */,
+				4FFDB9E91CFF275B00FD4109 /* LJNoDataMaskView.m in Sources */,
 				4F39A3A21CF33A50004E37E8 /* main.m in Sources */,
 				4FB5B0091CF667E800A4B509 /* LJItemArrow.m in Sources */,
 				4F98D1FC1CF50F60001DDD78 /* AppDelegate.m in Sources */,
@@ -715,6 +734,7 @@
 				4F98D1FF1CF50F60001DDD78 /* LJAccountOverviewCell.m in Sources */,
 				4FB5AFE01CF662AA00A4B509 /* LJMyAskViewController.m in Sources */,
 				4F98D2011CF50F60001DDD78 /* LJMyInfoTableViewCell.m in Sources */,
+				4FFDB9E51CFF26D400FD4109 /* LJKeyWordSearchViewController.m in Sources */,
 				4FB5AFCC1CF6616800A4B509 /* LJMyFollowedCommunityViewController.m in Sources */,
 				4F4C11341CFA760500D99DD5 /* LJKnowledgeInfoCell.m in Sources */,
 				4F98D1F71CF50F60001DDD78 /* LJHomePageViewController.m in Sources */,
