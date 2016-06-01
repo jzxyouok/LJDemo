@@ -72,6 +72,9 @@
 		4FB5B0061CF6668000A4B509 /* LJItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5B0051CF6668000A4B509 /* LJItem.m */; };
 		4FB5B0091CF667E800A4B509 /* LJItemArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5B0081CF667E800A4B509 /* LJItemArrow.m */; };
 		4FB5B00C1CF6681F00A4B509 /* LJItemSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5B00B1CF6681F00A4B509 /* LJItemSwitch.m */; };
+		4FB7AE201CFF996B00807772 /* lianjia_rights.html in Resources */ = {isa = PBXBuildFile; fileRef = 4FB7AE1F1CFF996B00807772 /* lianjia_rights.html */; };
+		4FB7AE221CFF999400807772 /* LJAreaAndSubway.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FB7AE211CFF999400807772 /* LJAreaAndSubway.plist */; };
+		4FB7AE241CFF99B900807772 /* LJCityDistrictInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FB7AE231CFF99B900807772 /* LJCityDistrictInfo.plist */; };
 		4FFDB9E51CFF26D400FD4109 /* LJKeyWordSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDB9E31CFF26D400FD4109 /* LJKeyWordSearchViewController.m */; };
 		4FFDB9E61CFF26D400FD4109 /* LJKeyWordSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFDB9E41CFF26D400FD4109 /* LJKeyWordSearchViewController.xib */; };
 		4FFDB9E91CFF275B00FD4109 /* LJNoDataMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDB9E81CFF275B00FD4109 /* LJNoDataMaskView.m */; };
@@ -185,6 +188,9 @@
 		4FB5B0081CF667E800A4B509 /* LJItemArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJItemArrow.m; sourceTree = "<group>"; };
 		4FB5B00A1CF6681F00A4B509 /* LJItemSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJItemSwitch.h; sourceTree = "<group>"; };
 		4FB5B00B1CF6681F00A4B509 /* LJItemSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJItemSwitch.m; sourceTree = "<group>"; };
+		4FB7AE1F1CFF996B00807772 /* lianjia_rights.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lianjia_rights.html; sourceTree = "<group>"; };
+		4FB7AE211CFF999400807772 /* LJAreaAndSubway.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = LJAreaAndSubway.plist; sourceTree = "<group>"; };
+		4FB7AE231CFF99B900807772 /* LJCityDistrictInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = LJCityDistrictInfo.plist; sourceTree = "<group>"; };
 		4FFDB9E21CFF26D400FD4109 /* LJKeyWordSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJKeyWordSearchViewController.h; sourceTree = "<group>"; };
 		4FFDB9E31CFF26D400FD4109 /* LJKeyWordSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJKeyWordSearchViewController.m; sourceTree = "<group>"; };
 		4FFDB9E41CFF26D400FD4109 /* LJKeyWordSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJKeyWordSearchViewController.xib; sourceTree = "<group>"; };
@@ -295,6 +301,7 @@
 		4F98D1CD1CF50F60001DDD78 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4FB7AE1E1CFF996000807772 /* Resources */,
 				4F04F5591CF7B490005437F6 /* Account */,
 				4F98D1CE1CF50F60001DDD78 /* Home */,
 				4F98D1D51CF50F60001DDD78 /* Main */,
@@ -549,6 +556,16 @@
 			path = Items;
 			sourceTree = "<group>";
 		};
+		4FB7AE1E1CFF996000807772 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4FB7AE231CFF99B900807772 /* LJCityDistrictInfo.plist */,
+				4FB7AE211CFF999400807772 /* LJAreaAndSubway.plist */,
+				4FB7AE1F1CFF996B00807772 /* lianjia_rights.html */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		715C839C824E868B8E6A39C6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -635,14 +652,17 @@
 				4F39A3B01CF33A50004E37E8 /* LaunchScreen.storyboard in Resources */,
 				4FB5AFEB1CF6637A00A4B509 /* LJInviteFriendsViewController.xib in Resources */,
 				4F04F5581CF7B3EC005437F6 /* LJMyCouponsViewController.xib in Resources */,
+				4FB7AE241CFF99B900807772 /* LJCityDistrictInfo.plist in Resources */,
 				4F98D2021CF50F60001DDD78 /* LJMyInfoTableViewCell.xib in Resources */,
 				4F4C11301CFA75DE00D99DD5 /* LJKnowledgeTitleCell.xib in Resources */,
 				4FB5AFD71CF661DA00A4B509 /* LJFollowedBuildingListViewController.xib in Resources */,
 				4FB5AFDC1CF6625C00A4B509 /* LJMySeenRecordViewController.xib in Resources */,
+				4FB7AE221CFF999400807772 /* LJAreaAndSubway.plist in Resources */,
 				4FFDB9E61CFF26D400FD4109 /* LJKeyWordSearchViewController.xib in Resources */,
 				4F2BC6B71CF9F973006923BB /* LJAssistantItemView.xib in Resources */,
 				4FB5AFF31CF6641C00A4B509 /* LCUserFeedbackViewController.xib in Resources */,
 				4FB5AFE11CF662AA00A4B509 /* LJMyAskViewController.xib in Resources */,
+				4FB7AE201CFF996B00807772 /* lianjia_rights.html in Resources */,
 				4F04F5531CF7B3B8005437F6 /* LJCreditCenterViewController.xib in Resources */,
 				4F39A3AD1CF33A50004E37E8 /* Assets.xcassets in Resources */,
 				4FB5AFE61CF6634400A4B509 /* LJSellerEntrancePageController.xib in Resources */,
