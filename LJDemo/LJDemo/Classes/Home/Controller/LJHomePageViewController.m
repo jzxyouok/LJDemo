@@ -32,6 +32,8 @@ static const CGFloat LJImageHeight = 211;
 @property (nonatomic, strong) UIView *searchView;
 /** 搜索框绿色渐变背景视图 */
 @property (nonatomic, strong) UIView *greenView;
+/** 头部标题View */
+@property (nonatomic, strong) UIImageView *titleImageView;
 @end
 
 @implementation LJHomePageViewController
@@ -79,6 +81,7 @@ static const CGFloat LJImageHeight = 211;
     UIImageView *titleImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"homepage_biaoti"]];
     titleImageView.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, LJImageHeight/2 - 20);
     [self.topView addSubview:titleImageView];
+    self.titleImageView = titleImageView;
 }
 
 /**
@@ -203,10 +206,12 @@ static const CGFloat LJImageHeight = 211;
     CGFloat y = scrollView.contentOffset.y;//根据实际选择加不加上NavigationBarHight（44、64 或者没有导航条）
     
     if (y < -LJImageHeight) {
-        CGRect frame = _zoomImageView.frame;
+        CGRect frame = self.zoomImageView.frame;
         frame.origin.y = y;
         frame.size.height =  -y;//contentMode = UIViewContentModeScaleAspectFill时，高度改变宽度也跟着改变
-        _zoomImageView.frame = frame;
+        self.zoomImageView.frame = frame;
+        
+        self.titleImageView.lj_centerY = -self.topView.lj_centerY;
         
         self.topView.frame = frame;
         self.searchView.lj_centerY = -y + 20 - 50;
@@ -217,8 +222,6 @@ static const CGFloat LJImageHeight = 211;
         self.greenView.alpha = 1;
     }
     else if (y > -150) {
-        
-        NSLog(@"come here");
         self.greenView.frame = CGRectMake(0, 0,self.view.lj_width , -y);
         [self.view addSubview:self.greenView];
         [self.view bringSubviewToFront:self.searchView];
