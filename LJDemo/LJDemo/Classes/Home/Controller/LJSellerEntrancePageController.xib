@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LJSellerEntrancePageController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seller_entrance_1242x2208.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="h8I-Fi-x17">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKg-lL-YKp">
+                    <rect key="frame" x="59" y="558" width="257" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Jis-8W-dHK"/>
+                    </constraints>
+                    <state key="normal" title="查看我的房子" image="xq_maifang" backgroundImage="yz_butten_black">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已有房子在链家出售？您可以" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkU-F9-iPa">
+                    <rect key="frame" x="109" y="536" width="156" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="USx-IE-J2j"/>
+                        <constraint firstAttribute="width" constant="156" id="Wzj-41-cRG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orK-IL-494">
+                    <rect key="frame" x="60" y="468" width="125.5" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ufN-e0-2um"/>
+                        <constraint firstAttribute="width" constant="125.5" id="zTf-zI-7qv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="我要估价">
+                        <color key="titleColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etC-80-ork">
+                    <rect key="frame" x="190" y="468" width="125" height="50"/>
+                    <color key="backgroundColor" red="0.18823529411764706" green="0.62745098039215685" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="125" id="Z4Q-w8-6Ag"/>
+                        <constraint firstAttribute="height" constant="50" id="wyN-lh-JID"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="发布房源">
+                        <color key="titleColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="h8I-Fi-x17" secondAttribute="trailing" id="2TB-73-Egj"/>
+                <constraint firstItem="orK-IL-494" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-65" id="6cB-rz-Sw9"/>
+                <constraint firstItem="hKg-lL-YKp" firstAttribute="top" secondItem="RkU-F9-iPa" secondAttribute="bottom" constant="8" id="6vo-N1-zdJ"/>
+                <constraint firstAttribute="bottom" secondItem="hKg-lL-YKp" secondAttribute="bottom" constant="59" id="Dgr-Xs-Iqf"/>
+                <constraint firstAttribute="trailing" secondItem="hKg-lL-YKp" secondAttribute="trailing" constant="59" id="F8c-NL-13B"/>
+                <constraint firstItem="RkU-F9-iPa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Gfn-8a-sH6"/>
+                <constraint firstAttribute="bottom" secondItem="h8I-Fi-x17" secondAttribute="bottom" id="cSC-Qy-RiH"/>
+                <constraint firstItem="etC-80-ork" firstAttribute="leading" secondItem="orK-IL-494" secondAttribute="trailing" constant="5" id="cs8-Je-9Fe"/>
+                <constraint firstItem="RkU-F9-iPa" firstAttribute="top" secondItem="etC-80-ork" secondAttribute="bottom" constant="18" id="ltL-nM-rlH"/>
+                <constraint firstItem="RkU-F9-iPa" firstAttribute="top" secondItem="orK-IL-494" secondAttribute="bottom" constant="18" id="onr-57-bcZ"/>
+                <constraint firstItem="hKg-lL-YKp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="59" id="rbn-gI-f3D"/>
+                <constraint firstItem="h8I-Fi-x17" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="sCS-yX-UPf"/>
+                <constraint firstItem="h8I-Fi-x17" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uMM-Mk-bdM"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="seller_entrance_1242x2208.jpg" width="1242" height="2208"/>
+        <image name="xq_maifang" width="25" height="20"/>
+        <image name="yz_butten_black" width="202" height="50"/>
+    </resources>
+</document>
