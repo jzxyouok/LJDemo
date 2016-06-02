@@ -16,7 +16,6 @@
 #import "LJGroup.h"
 #import "LJKeyWordSearchViewController.h"
 #import "LJSelecteCityViewController.h"
-//#import <QuartzCore/QuartzCore.h>
 
 /** 顶部图片高度 */
 static const CGFloat LJImageHeight = 211;

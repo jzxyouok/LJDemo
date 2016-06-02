@@ -8,8 +8,11 @@
 
 #import "LJSelecteCityViewController.h"
 
+static NSString * const LJHeaderId = @"header";
+
 @interface LJSelecteCityViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *citys;
 @end
 
 @implementation LJSelecteCityViewController
@@ -28,6 +31,8 @@
     [self.view addSubview:self.tableView];
     
 //    [self initNavigationBar];
+    
+    [self.tableView registerClass:[UITableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:LJHeaderId];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,6 +59,7 @@
     
     [self.view addSubview:bar];
 }
+
 
 //
 //#pragma mark - Private
@@ -96,7 +102,7 @@
         return 1;
     }
     else {
-        return 10;
+        return self.citys.count;
     }
 }
 
@@ -107,20 +113,57 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
     
-    // 设置 Cell...
-    cell.textLabel.text = @"hello";
-    
+    if (indexPath.section == 0) {
+        cell.textLabel.text = [NSString stringWithFormat:@"%@市",self.citys[indexPath.row]];
+    }
+    else {
+        cell.textLabel.text = self.citys[indexPath.row];
+    }
+
     return cell;
 }
 
-//返回每组头标题名称
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+#pragma mark - UITableViewDelegate
+/**
+ *  自定义组头
+ */
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    UITableViewHeaderFooterView *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:LJHeaderId];
+    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(16, 11, 173, 21)];
+    titleLabel.textColor = LJColor(0.67, 0.67, 0.67, 1);
+    titleLabel.font = [UIFont systemFontOfSize:16];
+    [header addSubview:titleLabel];
+    
+    // 覆盖文字
     if (section == 0) {
-        return @"当前定位的城市";
+        titleLabel.text = @"当前定位的城市";
+    } else {
+        titleLabel.text = @"所有城市";
     }
-    else {
-        return @"所有城市";
+    return header;
+}
+
+/**
+ *  自定义组头高度
+ */
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 44;
+}
+
+#pragma mark - Lazy
+- (NSMutableArray *)citys {
+    if (_citys == nil) {
+        _citys = [[NSMutableArray alloc] init];
+        NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"LJCityDistrictInfo" ofType:@"plist"];
+        NSArray *array = [[NSArray alloc] initWithContentsOfFile:plistPath];
+        for (int i = 0; i < array.count; ++i) {
+            NSDictionary *dic = array[i];
+            [_citys addObject:dic[@"name"]];
+        }
     }
+    return _citys;
 }
 
 @end
