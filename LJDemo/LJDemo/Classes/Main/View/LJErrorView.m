@@ -19,4 +19,10 @@
 
 @implementation LJErrorView
 
+- (void)setimageNameStr:(NSString *)imageNameStr titleStr:(NSString *)titleStr guideInfoStr:(NSString *)guideInfoStr {
+    self.tipImageView.image = [UIImage imageNamed:imageNameStr];
+    self.titleLabel.text = titleStr;
+    self.guideLabel.text = guideInfoStr;
+}
+
 @end

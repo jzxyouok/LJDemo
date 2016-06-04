@@ -8,6 +8,7 @@
 
 #import "LJSaleHouseListViewController.h"
 #import "LJCustomSelectionMenu.h"
+#import "LJErrorView.h"
 
 @interface LJSaleHouseListViewController ()<UITextFieldDelegate>
 
@@ -18,6 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    LJErrorView *errorView = [LJErrorView viewFromXib];
+    errorView.frame = self.view.bounds;
+    [errorView setimageNameStr:@"no-network" titleStr:@"网络开了小差" guideInfoStr:@"请点击页面刷新"];
+    [self.view addSubview:errorView];
     
     [self initNavigationBar];
     

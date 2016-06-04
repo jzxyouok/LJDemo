@@ -16,5 +16,5 @@
  *  @param titleStr     提示信息
  *  @param guideInfoStr 指导信息
  */
-- (void)setInfo:(NSString *)imageNameStr titleStr:(NSString *)titleStr guideInfoStr:(NSString *)guideInfoStr;
+- (void)setimageNameStr:(NSString *)imageNameStr titleStr:(NSString *)titleStr guideInfoStr:(NSString *)guideInfoStr;
 @end

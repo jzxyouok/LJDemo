@@ -11,6 +11,10 @@
 
 static const NSUInteger count = 4;
 
+@interface LJCustomSelectionMenu ()
+@property (nonatomic, weak) UIView *controlView;
+@end
+
 @implementation LJCustomSelectionMenu
 
 -(void)layoutSubviews {
@@ -41,5 +45,12 @@ static const NSUInteger count = 4;
     UIView *bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 43.5, LJScreenW, 0.5)];
     bottomLineView.backgroundColor = LJColor(0.88, 0.88, 0.88, 1);
     [self addSubview:bottomLineView];
+    
+    UIView *controlView = [[UIView alloc] init];
+    self.controlView = controlView;
+    controlView.frame = CGRectMake(0, h, self.lj_width, LJScreenH - 44);
+    controlView.backgroundColor = [UIColor clearColor];
+    [self addSubview:controlView];
+    
 }
 @end
