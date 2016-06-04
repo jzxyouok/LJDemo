@@ -17,6 +17,8 @@
 #import "LJKeyWordSearchViewController.h"
 #import "LJSelecteCityViewController.h"
 
+#import "LJSaleHouseListViewController.h"
+
 /** 顶部图片高度 */
 static const CGFloat LJImageHeight = 211;
 
@@ -369,8 +371,8 @@ static const CGFloat LJImageHeight = 211;
 
 //选择了某个cell
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
-    [cell setBackgroundColor:[UIColor greenColor]];
+    LJSaleHouseListViewController *vc = [[LJSaleHouseListViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 //定义每个Section 的 margin

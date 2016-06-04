@@ -21,6 +21,9 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="filter-dropdown-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Nhq-gF-bOR">
+                    <rect key="frame" x="31" y="19" width="8" height="4.5"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -31,4 +34,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
+    <resources>
+        <image name="filter-dropdown-arrow" width="8" height="4"/>
+    </resources>
 </document>
