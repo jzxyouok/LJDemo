@@ -8,12 +8,41 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="saleHouseMoreCell" id="gTV-IL-0wX" customClass="LJSaleHouseMoreCell">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="77.5" height="30"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="77.5" height="30"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tuK-aT-iRQ">
+                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="30"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtB-PT-H4B">
+                                <rect key="frame" x="0.5" y="0.5" width="76.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WtB-PT-H4B" firstAttribute="leading" secondItem="tuK-aT-iRQ" secondAttribute="leading" constant="0.5" id="MLi-co-uMK"/>
+                            <constraint firstAttribute="trailing" secondItem="WtB-PT-H4B" secondAttribute="trailing" constant="0.5" id="XRM-Xb-EdW"/>
+                            <constraint firstItem="WtB-PT-H4B" firstAttribute="top" secondItem="tuK-aT-iRQ" secondAttribute="top" constant="0.5" id="f68-Uq-2n1"/>
+                            <constraint firstAttribute="bottom" secondItem="WtB-PT-H4B" secondAttribute="bottom" constant="0.5" id="wjG-8l-zFd"/>
+                        </constraints>
+                    </view>
+                </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <constraints>
+                <constraint firstItem="tuK-aT-iRQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GSn-LS-9aF"/>
+                <constraint firstItem="tuK-aT-iRQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="GbJ-Ey-aJU"/>
+                <constraint firstAttribute="trailing" secondItem="tuK-aT-iRQ" secondAttribute="trailing" id="Ib3-eB-1D5"/>
+                <constraint firstAttribute="bottom" secondItem="tuK-aT-iRQ" secondAttribute="bottom" id="e7c-PK-e82"/>
+            </constraints>
+            <connections>
+                <outlet property="borderView" destination="tuK-aT-iRQ" id="sog-aA-Qxh"/>
+            </connections>
         </collectionViewCell>
     </objects>
 </document>

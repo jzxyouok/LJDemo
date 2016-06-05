@@ -30,6 +30,9 @@
                             <state key="normal" title="确认">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="confirmClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="HQU-qy-yR9"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>
@@ -42,7 +45,7 @@
                         <constraint firstItem="e44-y9-tXF" firstAttribute="top" secondItem="agd-Q7-4cl" secondAttribute="top" id="y72-dc-qzJ"/>
                     </constraints>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NCR-sS-4hE">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NCR-sS-4hE">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CgE-sf-NI7">

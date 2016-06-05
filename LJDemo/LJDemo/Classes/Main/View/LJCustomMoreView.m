@@ -32,6 +32,11 @@ static NSString *ID = @"saleHouseMoreCell";
     return self;
 }
 
+- (IBAction)confirmClick:(UIButton *)sender {
+    NSLog(@"%s",__func__);
+}
+
+
 - (void)initData {
     
 //    [self.collectionView registerClass:[LJSaleHouseMoreCell class] forCellWithReuseIdentifier:ID];
@@ -103,6 +108,26 @@ static NSString *ID = @"saleHouseMoreCell";
     return cell;
 }
 
+//定义每个UICollectionViewCell 的大小
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(77.25, 30);
+}
+
+//每个item之间的间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 12.25;
+}
+
+//每个section中不同的行之间的行间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 10;
+}
+
+
+//定义每个Section 的 margin
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(20.5, 7.5, 20.5, 7.5);//分别为上、左、下、右
+}
 #pragma mark - Lazy
 - (NSMutableArray *)groups {
     if (_groups == nil) {

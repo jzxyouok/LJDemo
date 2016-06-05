@@ -8,16 +8,17 @@
 
 #import "LJSaleHouseMoreCell.h"
 
+@interface LJSaleHouseMoreCell ()
+@property (weak, nonatomic) IBOutlet UIView *borderView;
+
+@end
+
 @implementation LJSaleHouseMoreCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
-    UILabel *label = [[UILabel alloc] init];
-    label.frame = CGRectMake(0.5, 0.5, self.lj_width - 1, self.lj_height - 1);
-    label.text = @"南";
-    label.textColor = LJColor(0.4, 0.4, 0.4, 1);
-    [self addSubview:label];
+    self.borderView.layer.borderWidth = 0.5;
+    self.borderView.layer.borderColor = [LJColor(0.4, 0.4, 0.4, 1) CGColor];
 }
 
 + (instancetype)cellWithCollectionView:(UICollectionView *)collectionView {
