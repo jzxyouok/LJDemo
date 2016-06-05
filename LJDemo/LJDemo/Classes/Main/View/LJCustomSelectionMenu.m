@@ -31,6 +31,7 @@ static const NSUInteger count = 4;
         [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [btn setImage:[UIImage imageNamed:@"filter-dropdown-arrow"] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"filter-dropdown-arrow-active"] forState:UIControlStateSelected];
         [self addSubview:btn];
   
         if (i != count - 1) {
@@ -52,6 +53,8 @@ static const NSUInteger count = 4;
 }
 
 - (void)btnClick:(UIButton *)sender {
+    
+    sender.selected = !sender.selected;
     
     LJCustomDistrictAndSubwaySiftView *districtAndSubwaySiftView = [[LJCustomDistrictAndSubwaySiftView alloc] init];
     districtAndSubwaySiftView.frame = self.controlView.bounds;
