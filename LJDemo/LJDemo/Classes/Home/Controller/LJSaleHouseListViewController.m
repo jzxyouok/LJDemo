@@ -27,9 +27,11 @@
     
     [self initNavigationBar];
     
-    LJCustomSelectionMenu *menuView = [LJCustomSelectionMenu viewFromXib];
-    menuView.frame = CGRectMake(0, 65, LJScreenW, 44);
+    LJCustomSelectionMenu *menuView = [[LJCustomSelectionMenu alloc] init];
+    menuView.frame = CGRectMake(0, 65, LJScreenW, LJScreenH - 64);
     [self.view addSubview:menuView];
+    
+    NSLog(@"(menuView.frame  %@",NSStringFromCGRect(menuView.frame));
 }
 
 - (void)didReceiveMemoryWarning {

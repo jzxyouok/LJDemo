@@ -46,15 +46,16 @@ static const NSUInteger count = 4;
     
     UIView *controlView = [[UIView alloc] init];
     self.controlView = controlView;
-    controlView.frame = CGRectMake(0, h, self.lj_width, LJScreenH - 44);
-    controlView.backgroundColor = [UIColor clearColor];
+    controlView.frame = CGRectMake(0, h, self.lj_width, LJScreenH - 64 - 44);
+    controlView.backgroundColor = [UIColor redColor];
     [self addSubview:controlView];
 }
 
 - (void)btnClick:(UIButton *)sender {
     
     LJCustomDistrictAndSubwaySiftView *districtAndSubwaySiftView = [LJCustomDistrictAndSubwaySiftView viewFromXib];
-    districtAndSubwaySiftView.frame = CGRectMake(0, 0, LJScreenW, 308);
+    districtAndSubwaySiftView.frame = self.controlView.bounds;
     [self.controlView addSubview:districtAndSubwaySiftView];
+
 }
 @end

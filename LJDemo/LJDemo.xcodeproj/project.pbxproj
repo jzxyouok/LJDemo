@@ -35,7 +35,6 @@
 		4F43990C1D007BEA000B93DE /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F43990B1D007BEA000B93DE /* NSArray+Log.m */; };
 		4F43990F1D00838F000B93DE /* LJSaleHouseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F43990E1D00838F000B93DE /* LJSaleHouseListViewController.m */; };
 		4F4399121D0083E4000B93DE /* LJCustomSelectionMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4399111D0083E4000B93DE /* LJCustomSelectionMenu.m */; };
-		4F4399141D0083FA000B93DE /* LJCustomSelectionMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F4399131D0083FA000B93DE /* LJCustomSelectionMenu.xib */; };
 		4F4399171D008482000B93DE /* LJCustomSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4399161D008482000B93DE /* LJCustomSectionView.m */; };
 		4F4399191D008493000B93DE /* LJCustomSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F4399181D008493000B93DE /* LJCustomSectionView.xib */; };
 		4F43991D1D0085F2000B93DE /* LJSellerEntrancePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F43991B1D0085F2000B93DE /* LJSellerEntrancePageController.m */; };
@@ -146,7 +145,6 @@
 		4F43990E1D00838F000B93DE /* LJSaleHouseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJSaleHouseListViewController.m; sourceTree = "<group>"; };
 		4F4399101D0083E4000B93DE /* LJCustomSelectionMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJCustomSelectionMenu.h; sourceTree = "<group>"; };
 		4F4399111D0083E4000B93DE /* LJCustomSelectionMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJCustomSelectionMenu.m; sourceTree = "<group>"; };
-		4F4399131D0083FA000B93DE /* LJCustomSelectionMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJCustomSelectionMenu.xib; sourceTree = "<group>"; };
 		4F4399151D008482000B93DE /* LJCustomSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJCustomSectionView.h; sourceTree = "<group>"; };
 		4F4399161D008482000B93DE /* LJCustomSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJCustomSectionView.m; sourceTree = "<group>"; };
 		4F4399181D008493000B93DE /* LJCustomSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJCustomSectionView.xib; sourceTree = "<group>"; };
@@ -507,7 +505,6 @@
 				4FFDB9EA1CFF276900FD4109 /* LJNoDataMaskView.xib */,
 				4F4399101D0083E4000B93DE /* LJCustomSelectionMenu.h */,
 				4F4399111D0083E4000B93DE /* LJCustomSelectionMenu.m */,
-				4F4399131D0083FA000B93DE /* LJCustomSelectionMenu.xib */,
 				4F4399151D008482000B93DE /* LJCustomSectionView.h */,
 				4F4399161D008482000B93DE /* LJCustomSectionView.m */,
 				4F4399181D008493000B93DE /* LJCustomSectionView.xib */,
@@ -737,7 +734,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F4399141D0083FA000B93DE /* LJCustomSelectionMenu.xib in Resources */,
 				4F4399241D008675000B93DE /* LJCityDistrictInfo.plist in Resources */,
 				4F3B80271CF91D0100784F3E /* LJLoginThirdPartView.xib in Resources */,
 				4F04F5611CF7B4FF005437F6 /* LJLoginViewController.xib in Resources */,
