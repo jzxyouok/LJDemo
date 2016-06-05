@@ -14,7 +14,12 @@ static const CGFloat tableViewHeight = 308;
 @interface LJCustomDistrictAndSubwaySiftView ()<UITableViewDelegate,UITableViewDataSource>
 /** tableView个数 */
 @property (nonatomic, assign) NSUInteger tableViewCount;
-
+/** 一级菜单数组 */
+@property (nonatomic, strong) NSArray *oneLevelS;
+/** 二级菜单数组 */
+@property (nonatomic, strong) NSArray *twoLevelS;
+/** 三级菜单数组 */
+@property (nonatomic, strong) NSArray *threeLevelS;
 @end
 
 @implementation LJCustomDistrictAndSubwaySiftView

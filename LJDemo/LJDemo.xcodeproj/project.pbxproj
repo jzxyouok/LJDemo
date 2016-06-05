@@ -51,6 +51,10 @@
 		4F4C11381CFA926600D99DD5 /* LJErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C11371CFA926600D99DD5 /* LJErrorView.m */; };
 		4F4C113A1CFA927C00D99DD5 /* LJErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F4C11391CFA927C00D99DD5 /* LJErrorView.xib */; };
 		4F8AF7E81D03BB0100E18588 /* LJCustomDistrictAndSubwaySiftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8AF7E71D03BB0100E18588 /* LJCustomDistrictAndSubwaySiftView.m */; };
+		4F8B43791D041254007F3EB6 /* LJCustomCommonSiftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8B43781D041254007F3EB6 /* LJCustomCommonSiftView.m */; };
+		4F8B437B1D041297007F3EB6 /* LJCustomCommonSiftView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F8B437A1D041297007F3EB6 /* LJCustomCommonSiftView.xib */; };
+		4F8B437E1D041963007F3EB6 /* LJCustomSelectRoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8B437D1D041963007F3EB6 /* LJCustomSelectRoomView.m */; };
+		4F8B43801D04196E007F3EB6 /* LJCustomSelectRoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F8B437F1D04196E007F3EB6 /* LJCustomSelectRoomView.xib */; };
 		4F98D1F71CF50F60001DDD78 /* LJHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F98D1D11CF50F60001DDD78 /* LJHomePageViewController.m */; };
 		4F98D1F81CF50F60001DDD78 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F98D1D41CF50F60001DDD78 /* Home.storyboard */; };
 		4F98D1F91CF50F60001DDD78 /* LJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F98D1D81CF50F60001DDD78 /* LJBaseViewController.m */; };
@@ -165,6 +169,12 @@
 		4F81F4811CFB40FA009EB8E5 /* LJ.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJ.pch; sourceTree = "<group>"; };
 		4F8AF7E61D03BB0100E18588 /* LJCustomDistrictAndSubwaySiftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJCustomDistrictAndSubwaySiftView.h; sourceTree = "<group>"; };
 		4F8AF7E71D03BB0100E18588 /* LJCustomDistrictAndSubwaySiftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJCustomDistrictAndSubwaySiftView.m; sourceTree = "<group>"; };
+		4F8B43771D041254007F3EB6 /* LJCustomCommonSiftView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJCustomCommonSiftView.h; sourceTree = "<group>"; };
+		4F8B43781D041254007F3EB6 /* LJCustomCommonSiftView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJCustomCommonSiftView.m; sourceTree = "<group>"; };
+		4F8B437A1D041297007F3EB6 /* LJCustomCommonSiftView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJCustomCommonSiftView.xib; sourceTree = "<group>"; };
+		4F8B437C1D041963007F3EB6 /* LJCustomSelectRoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJCustomSelectRoomView.h; sourceTree = "<group>"; };
+		4F8B437D1D041963007F3EB6 /* LJCustomSelectRoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJCustomSelectRoomView.m; sourceTree = "<group>"; };
+		4F8B437F1D04196E007F3EB6 /* LJCustomSelectRoomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJCustomSelectRoomView.xib; sourceTree = "<group>"; };
 		4F98D1D01CF50F60001DDD78 /* LJHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJHomePageViewController.h; sourceTree = "<group>"; };
 		4F98D1D11CF50F60001DDD78 /* LJHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJHomePageViewController.m; sourceTree = "<group>"; };
 		4F98D1D41CF50F60001DDD78 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -502,6 +512,12 @@
 				4F4A1D6B1D01CAF500413C91 /* LJButton.m */,
 				4F8AF7E61D03BB0100E18588 /* LJCustomDistrictAndSubwaySiftView.h */,
 				4F8AF7E71D03BB0100E18588 /* LJCustomDistrictAndSubwaySiftView.m */,
+				4F8B43771D041254007F3EB6 /* LJCustomCommonSiftView.h */,
+				4F8B43781D041254007F3EB6 /* LJCustomCommonSiftView.m */,
+				4F8B437A1D041297007F3EB6 /* LJCustomCommonSiftView.xib */,
+				4F8B437C1D041963007F3EB6 /* LJCustomSelectRoomView.h */,
+				4F8B437D1D041963007F3EB6 /* LJCustomSelectRoomView.m */,
+				4F8B437F1D04196E007F3EB6 /* LJCustomSelectRoomView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -748,8 +764,10 @@
 				4F39A3AD1CF33A50004E37E8 /* Assets.xcassets in Resources */,
 				4F2BC6AD1CF9F021006923BB /* LJBannerCell.xib in Resources */,
 				4F4C11351CFA760500D99DD5 /* LJKnowledgeInfoCell.xib in Resources */,
+				4F8B437B1D041297007F3EB6 /* LJCustomCommonSiftView.xib in Resources */,
 				4F188ADF1D00F2FA005002EB /* LJPEHomeViewController.xib in Resources */,
 				4F43992B1D00869E000B93DE /* seller_entrance_750x1334.jpg in Resources */,
+				4F8B43801D04196E007F3EB6 /* LJCustomSelectRoomView.xib in Resources */,
 				4FB5AFCD1CF6616800A4B509 /* LJMyFollowedCommunityViewController.xib in Resources */,
 				4F98D2031CF50F60001DDD78 /* Me.storyboard in Resources */,
 				4FFDB9EB1CFF276900FD4109 /* LJNoDataMaskView.xib in Resources */,
@@ -824,6 +842,7 @@
 				4F4C11381CFA926600D99DD5 /* LJErrorView.m in Sources */,
 				4F98D1FB1CF50F60001DDD78 /* LJTabBarController.m in Sources */,
 				4F43990F1D00838F000B93DE /* LJSaleHouseListViewController.m in Sources */,
+				4F8B437E1D041963007F3EB6 /* LJCustomSelectRoomView.m in Sources */,
 				4FB7AE271CFF9A6E00807772 /* LJSelecteCityViewController.m in Sources */,
 				4F3B80251CF91CF100784F3E /* LJLoginThirdPartView.m in Sources */,
 				4FB5AFEE1CF663EB00A4B509 /* LJCalculateViewController.m in Sources */,
@@ -833,6 +852,7 @@
 				4FB5AFD61CF661DA00A4B509 /* LJFollowedBuildingListViewController.m in Sources */,
 				4FB5AFEA1CF6637A00A4B509 /* LJInviteFriendsViewController.m in Sources */,
 				4FB5B0031CF6667900A4B509 /* LJGroup.m in Sources */,
+				4F8B43791D041254007F3EB6 /* LJCustomCommonSiftView.m in Sources */,
 				4FFDB9E91CFF275B00FD4109 /* LJNoDataMaskView.m in Sources */,
 				4F43991D1D0085F2000B93DE /* LJSellerEntrancePageController.m in Sources */,
 				4F4A1D6C1D01CAF500413C91 /* LJButton.m in Sources */,
