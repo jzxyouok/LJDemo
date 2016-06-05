@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LJCustomDistrictAndSubwaySiftView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QoK-5o-YLu">
+                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="308"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="308" id="zdd-24-Pbg"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="jGj-Mp-54V"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="EK3-oq-F4t"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Dp-n8-YqR">
+                    <rect key="frame" x="187" y="0.0" width="187.5" height="308"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="nO4-bK-ZfH"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="yI9-gV-XPZ"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="5Dp-n8-YqR" firstAttribute="height" secondItem="QoK-5o-YLu" secondAttribute="height" id="HoI-Gw-LOU"/>
+                <constraint firstItem="5Dp-n8-YqR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="M9b-28-G3d"/>
+                <constraint firstItem="QoK-5o-YLu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SCq-cy-7ad"/>
+                <constraint firstItem="5Dp-n8-YqR" firstAttribute="leading" secondItem="QoK-5o-YLu" secondAttribute="trailing" id="aSe-Wo-u3t"/>
+                <constraint firstAttribute="trailing" secondItem="5Dp-n8-YqR" secondAttribute="trailing" id="goC-rN-dmt"/>
+                <constraint firstItem="QoK-5o-YLu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lOa-X7-SfM"/>
+                <constraint firstItem="5Dp-n8-YqR" firstAttribute="width" secondItem="QoK-5o-YLu" secondAttribute="width" id="mBQ-f2-Ocg"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <connections>
+                <outlet property="leftTableView" destination="QoK-5o-YLu" id="7Cq-t0-obq"/>
+                <outlet property="rightTableView" destination="5Dp-n8-YqR" id="mpg-kZ-gyM"/>
+            </connections>
+            <point key="canvasLocation" x="353.5" y="356.5"/>
+        </view>
+    </objects>
+</document>

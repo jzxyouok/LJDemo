@@ -8,6 +8,7 @@
 
 #import "LJCustomSelectionMenu.h"
 #import "LJButton.h"
+#import "LJCustomDistrictAndSubwaySiftView.h"
 
 static const NSUInteger count = 4;
 
@@ -19,9 +20,7 @@ static const NSUInteger count = 4;
 
 -(void)layoutSubviews {
     [super layoutSubviews];
-    
-//    self.backgroundColor = [UIColor redColor];
-    
+
     CGFloat w = (LJScreenW - count - 1) / count;
     CGFloat h = 44;
     
@@ -29,12 +28,11 @@ static const NSUInteger count = 4;
         LJButton *btn = [LJButton buttonWithType:UIButtonTypeCustom];
         btn.frame = CGRectMake(w * i + i, 0, w, h);
         [btn setTitle:@"区域" forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [btn setImage:[UIImage imageNamed:@"filter-dropdown-arrow"] forState:UIControlStateNormal];
         [self addSubview:btn];
-        
-        NSLog(@"%@",NSStringFromCGRect(btn.frame));
-        
+  
         if (i != count - 1) {
             UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(w * (i + 1)+i, 11, 0.5, 22)];
             lineView.backgroundColor = LJColor(0.88, 0.88, 0.88, 1);
@@ -51,6 +49,12 @@ static const NSUInteger count = 4;
     controlView.frame = CGRectMake(0, h, self.lj_width, LJScreenH - 44);
     controlView.backgroundColor = [UIColor clearColor];
     [self addSubview:controlView];
+}
+
+- (void)btnClick:(UIButton *)sender {
     
+    LJCustomDistrictAndSubwaySiftView *districtAndSubwaySiftView = [LJCustomDistrictAndSubwaySiftView viewFromXib];
+    districtAndSubwaySiftView.frame = CGRectMake(0, 0, LJScreenW, 308);
+    [self.controlView addSubview:districtAndSubwaySiftView];
 }
 @end
