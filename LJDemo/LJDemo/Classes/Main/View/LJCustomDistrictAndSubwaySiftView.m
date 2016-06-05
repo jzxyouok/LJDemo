@@ -64,6 +64,11 @@ static const CGFloat tableViewHeight = 308;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (indexPath.row == 0) {
+        [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
+    }
+    
     if (tableView.tag == 100) {
         static NSString *identifier = @"lefCell";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
@@ -71,6 +76,18 @@ static const CGFloat tableViewHeight = 308;
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         }
         cell.textLabel.text = @"地铁";
+        cell.textLabel.font = [UIFont systemFontOfSize:16];
+        cell.textLabel.textColor = LJColor(0, 0, 0, 1);
+        cell.textLabel.highlightedTextColor = LJColor(0.22, 0.67, 0.42, 1);
+        UIView *selectedView = [[UIView alloc] init];
+        selectedView.backgroundColor = [UIColor whiteColor];
+        cell.selectedBackgroundView = selectedView;
+
+        UIView *lineView = [[UIView alloc] init];
+        lineView.frame = CGRectMake(15, 43.5, cell.lj_width, 0.5);
+        lineView.backgroundColor = LJColor(0.88, 0.88, 0.88, 1);
+        [cell.selectedBackgroundView addSubview:lineView];
+        
         return cell;
     }
     else if (tableView.tag == 101) {
@@ -80,6 +97,10 @@ static const CGFloat tableViewHeight = 308;
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         }
         cell.textLabel.text = @"西二旗";
+        cell.textLabel.font = [UIFont systemFontOfSize:16];
+        cell.textLabel.textColor = LJColor(0, 0, 0, 1);
+        cell.textLabel.highlightedTextColor = LJColor(0.22, 0.67, 0.42, 1);
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
     else if (tableView.tag == 102) {
@@ -89,6 +110,10 @@ static const CGFloat tableViewHeight = 308;
             cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         }
         cell.textLabel.text = @"西二旗";
+        cell.textLabel.font = [UIFont systemFontOfSize:16];
+        cell.textLabel.textColor = LJColor(0, 0, 0, 1);
+        cell.textLabel.highlightedTextColor = LJColor(0.22, 0.67, 0.42, 1);
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
     return nil;
@@ -96,7 +121,11 @@ static const CGFloat tableViewHeight = 308;
 
 //选中table view的某行的时候执行
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%s",__func__);
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    UIView *lineView = [[UIView alloc] init];
+    lineView.frame = CGRectMake(15, 0.5, cell.lj_width, 0.5);
+    lineView.backgroundColor = LJColor(0.88, 0.88, 0.88, 1);
+    [cell.selectedBackgroundView addSubview:lineView];
 }
 
 @end
