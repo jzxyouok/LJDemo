@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LJSaleHouseMoreCell : UICollectionViewCell
-
++ (instancetype)cellWithCollectionView:(UICollectionView *)collectionView;
 @end

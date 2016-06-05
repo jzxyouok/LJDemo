@@ -34,7 +34,7 @@ static NSString *ID = @"saleHouseMoreCell";
 
 - (void)initData {
     
-    [self.collectionView registerClass:[LJSaleHouseMoreCell class] forCellWithReuseIdentifier:ID];
+//    [self.collectionView registerClass:[LJSaleHouseMoreCell class] forCellWithReuseIdentifier:ID];
     
     [self loadGroup0];
     [self loadGroup1];
@@ -98,12 +98,8 @@ static NSString *ID = @"saleHouseMoreCell";
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    LJSaleHouseMoreCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
-    
-    if (!cell) {
-        cell = [[LJSaleHouseMoreCell alloc] init];
-    }
-    
+    LJSaleHouseMoreCell *cell = [LJSaleHouseMoreCell cellWithCollectionView:collectionView];
+    cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
     return cell;
 }
 

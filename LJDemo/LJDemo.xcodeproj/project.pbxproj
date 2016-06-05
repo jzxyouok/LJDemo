@@ -57,7 +57,6 @@
 		4F8B43801D04196E007F3EB6 /* LJCustomSelectRoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F8B437F1D04196E007F3EB6 /* LJCustomSelectRoomView.xib */; };
 		4F8B43831D041B98007F3EB6 /* LJCustomMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8B43821D041B98007F3EB6 /* LJCustomMoreView.m */; };
 		4F8B43851D041C09007F3EB6 /* LJCustomMoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F8B43841D041C09007F3EB6 /* LJCustomMoreView.xib */; };
-		4F8B438B1D041D79007F3EB6 /* LJSaleHouseMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8B438A1D041D79007F3EB6 /* LJSaleHouseMoreCell.m */; };
 		4F8B43911D0420B6007F3EB6 /* LJCustomMoreHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8B43901D0420B6007F3EB6 /* LJCustomMoreHeaderView.m */; };
 		4F98D1F71CF50F60001DDD78 /* LJHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F98D1D11CF50F60001DDD78 /* LJHomePageViewController.m */; };
 		4F98D1F81CF50F60001DDD78 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F98D1D41CF50F60001DDD78 /* Home.storyboard */; };
@@ -96,6 +95,8 @@
 		4FB5B00C1CF6681F00A4B509 /* LJItemSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB5B00B1CF6681F00A4B509 /* LJItemSwitch.m */; };
 		4FB7AE201CFF996B00807772 /* lianjia_rights.html in Resources */ = {isa = PBXBuildFile; fileRef = 4FB7AE1F1CFF996B00807772 /* lianjia_rights.html */; };
 		4FB7AE271CFF9A6E00807772 /* LJSelecteCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB7AE261CFF9A6E00807772 /* LJSelecteCityViewController.m */; };
+		4FE6AA4D1D0442F400C31C5A /* LJSaleHouseMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE6AA4B1D0442F400C31C5A /* LJSaleHouseMoreCell.m */; };
+		4FE6AA4E1D0442F400C31C5A /* LJSaleHouseMoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FE6AA4C1D0442F400C31C5A /* LJSaleHouseMoreCell.xib */; };
 		4FFDB9E51CFF26D400FD4109 /* LJKeyWordSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDB9E31CFF26D400FD4109 /* LJKeyWordSearchViewController.m */; };
 		4FFDB9E61CFF26D400FD4109 /* LJKeyWordSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFDB9E41CFF26D400FD4109 /* LJKeyWordSearchViewController.xib */; };
 		4FFDB9E91CFF275B00FD4109 /* LJNoDataMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFDB9E81CFF275B00FD4109 /* LJNoDataMaskView.m */; };
@@ -182,8 +183,6 @@
 		4F8B43811D041B98007F3EB6 /* LJCustomMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJCustomMoreView.h; sourceTree = "<group>"; };
 		4F8B43821D041B98007F3EB6 /* LJCustomMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJCustomMoreView.m; sourceTree = "<group>"; };
 		4F8B43841D041C09007F3EB6 /* LJCustomMoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJCustomMoreView.xib; sourceTree = "<group>"; };
-		4F8B43891D041D79007F3EB6 /* LJSaleHouseMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJSaleHouseMoreCell.h; sourceTree = "<group>"; };
-		4F8B438A1D041D79007F3EB6 /* LJSaleHouseMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJSaleHouseMoreCell.m; sourceTree = "<group>"; };
 		4F8B438F1D0420B6007F3EB6 /* LJCustomMoreHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJCustomMoreHeaderView.h; sourceTree = "<group>"; };
 		4F8B43901D0420B6007F3EB6 /* LJCustomMoreHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJCustomMoreHeaderView.m; sourceTree = "<group>"; };
 		4F98D1D01CF50F60001DDD78 /* LJHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJHomePageViewController.h; sourceTree = "<group>"; };
@@ -246,6 +245,9 @@
 		4FB7AE1F1CFF996B00807772 /* lianjia_rights.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lianjia_rights.html; sourceTree = "<group>"; };
 		4FB7AE251CFF9A6E00807772 /* LJSelecteCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJSelecteCityViewController.h; sourceTree = "<group>"; };
 		4FB7AE261CFF9A6E00807772 /* LJSelecteCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJSelecteCityViewController.m; sourceTree = "<group>"; };
+		4FE6AA4A1D0442F400C31C5A /* LJSaleHouseMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJSaleHouseMoreCell.h; sourceTree = "<group>"; };
+		4FE6AA4B1D0442F400C31C5A /* LJSaleHouseMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJSaleHouseMoreCell.m; sourceTree = "<group>"; };
+		4FE6AA4C1D0442F400C31C5A /* LJSaleHouseMoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJSaleHouseMoreCell.xib; sourceTree = "<group>"; };
 		4FFDB9E21CFF26D400FD4109 /* LJKeyWordSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJKeyWordSearchViewController.h; sourceTree = "<group>"; };
 		4FFDB9E31CFF26D400FD4109 /* LJKeyWordSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJKeyWordSearchViewController.m; sourceTree = "<group>"; };
 		4FFDB9E41CFF26D400FD4109 /* LJKeyWordSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LJKeyWordSearchViewController.xib; sourceTree = "<group>"; };
@@ -532,10 +534,11 @@
 				4F8B43811D041B98007F3EB6 /* LJCustomMoreView.h */,
 				4F8B43821D041B98007F3EB6 /* LJCustomMoreView.m */,
 				4F8B43841D041C09007F3EB6 /* LJCustomMoreView.xib */,
-				4F8B43891D041D79007F3EB6 /* LJSaleHouseMoreCell.h */,
-				4F8B438A1D041D79007F3EB6 /* LJSaleHouseMoreCell.m */,
 				4F8B438F1D0420B6007F3EB6 /* LJCustomMoreHeaderView.h */,
 				4F8B43901D0420B6007F3EB6 /* LJCustomMoreHeaderView.m */,
+				4FE6AA4A1D0442F400C31C5A /* LJSaleHouseMoreCell.h */,
+				4FE6AA4B1D0442F400C31C5A /* LJSaleHouseMoreCell.m */,
+				4FE6AA4C1D0442F400C31C5A /* LJSaleHouseMoreCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -789,6 +792,7 @@
 				4F8B43801D04196E007F3EB6 /* LJCustomSelectRoomView.xib in Resources */,
 				4FB5AFCD1CF6616800A4B509 /* LJMyFollowedCommunityViewController.xib in Resources */,
 				4F98D2031CF50F60001DDD78 /* Me.storyboard in Resources */,
+				4FE6AA4E1D0442F400C31C5A /* LJSaleHouseMoreCell.xib in Resources */,
 				4FFDB9EB1CFF276900FD4109 /* LJNoDataMaskView.xib in Resources */,
 				4F4399231D008675000B93DE /* LJAreaAndSubway.plist in Resources */,
 				4F2BC6B21CF9F692006923BB /* LJAssistantCell.xib in Resources */,
@@ -886,7 +890,6 @@
 				4FFDB9E51CFF26D400FD4109 /* LJKeyWordSearchViewController.m in Sources */,
 				4FB5AFCC1CF6616800A4B509 /* LJMyFollowedCommunityViewController.m in Sources */,
 				4F4C11341CFA760500D99DD5 /* LJKnowledgeInfoCell.m in Sources */,
-				4F8B438B1D041D79007F3EB6 /* LJSaleHouseMoreCell.m in Sources */,
 				4F98D1F71CF50F60001DDD78 /* LJHomePageViewController.m in Sources */,
 				4F98D1FE1CF50F60001DDD78 /* LJMyInfoViewController.m in Sources */,
 				4F04F5521CF7B3B8005437F6 /* LJCreditCenterViewController.m in Sources */,
@@ -895,6 +898,7 @@
 				4FB5AFDB1CF6625C00A4B509 /* LJMySeenRecordViewController.m in Sources */,
 				4F04F5571CF7B3EC005437F6 /* LJMyCouponsViewController.m in Sources */,
 				4F8AF7E81D03BB0100E18588 /* LJCustomDistrictAndSubwaySiftView.m in Sources */,
+				4FE6AA4D1D0442F400C31C5A /* LJSaleHouseMoreCell.m in Sources */,
 				4F8B43831D041B98007F3EB6 /* LJCustomMoreView.m in Sources */,
 				4F2BC6B51CF9F963006923BB /* LJAssistantItemView.m in Sources */,
 				4F188ADA1D00F1F7005002EB /* LJHtmlWapViewController.m in Sources */,
