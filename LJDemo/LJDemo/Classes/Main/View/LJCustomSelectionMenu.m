@@ -9,6 +9,7 @@
 #import "LJCustomSelectionMenu.h"
 #import "LJButton.h"
 #import "LJCustomDistrictAndSubwaySiftView.h"
+#import "LJCustomMoreView.h"
 
 static const NSUInteger count = 4;
 
@@ -56,9 +57,14 @@ static const NSUInteger count = 4;
     
     sender.selected = !sender.selected;
     
-    LJCustomDistrictAndSubwaySiftView *districtAndSubwaySiftView = [[LJCustomDistrictAndSubwaySiftView alloc] init];
-    districtAndSubwaySiftView.frame = self.controlView.bounds;
-    [self.controlView addSubview:districtAndSubwaySiftView];
+//    LJCustomDistrictAndSubwaySiftView *districtAndSubwaySiftView = [[LJCustomDistrictAndSubwaySiftView alloc] init];
+//    districtAndSubwaySiftView.frame = self.controlView.bounds;
+//    [self.controlView addSubview:districtAndSubwaySiftView];
+    
+    LJCustomMoreView *moreView = [LJCustomMoreView viewFromXib];
+    moreView.frame = self.controlView.bounds;
+    [self.controlView addSubview:moreView];
+    
 
 }
 @end
