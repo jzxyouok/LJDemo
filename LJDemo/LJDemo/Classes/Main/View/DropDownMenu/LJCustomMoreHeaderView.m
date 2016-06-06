@@ -14,16 +14,6 @@
 
 @implementation LJCustomMoreHeaderView
 
-//-(void)layoutSubviews {
-//    [super layoutSubviews];
-//    
-//    UILabel *label = [[UILabel alloc] init];
-//    label.frame = CGRectMake(15, 16, self.lj_width - 30, self.lj_height - 16);
-//    label.textColor = LJColor(0.2, 0.2, 0.2, 1);
-//    label.text = @"朝向";
-//    [self addSubview:label];
-//}
-
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {

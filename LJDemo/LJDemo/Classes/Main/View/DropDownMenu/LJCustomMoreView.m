@@ -10,7 +10,7 @@
 #import "LJGroup.h"
 #import "LJSaleHouseMoreCell.h"
 #import "LJCustomMoreHeaderView.h"
-
+#import "LJClearContentCell.h"
 
 static NSString *ID = @"saleHouseMoreCell";
 
@@ -39,22 +39,19 @@ static NSString *ID = @"saleHouseMoreCell";
 - (void)awakeFromNib {
     [super awakeFromNib];
 
-    [self.collectionView registerClass:[LJCustomMoreHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"hxwHeader"];
+    [self.collectionView registerClass:[LJCustomMoreHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"LJHeader"];
+    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"LJFooter"];
 }
 
 
 - (void)initData {
-    
-//    [self.collectionView registerClass:[LJSaleHouseMoreCell class] forCellWithReuseIdentifier:ID];
-    
-//    [self.collectionView registerClass:[LJCustomMoreHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"hxwHeader"];
-    
     [self loadGroup0];
     [self loadGroup1];
     [self loadGroup2];
     [self loadGroup3];
     [self loadGroup4];
     [self loadGroup5];
+    [self loadGroup6];
 }
 
 - (void)loadGroup0 {
@@ -99,6 +96,12 @@ static NSString *ID = @"saleHouseMoreCell";
     [self.groups addObject:group5];
 }
 
+- (void)loadGroup6 {
+    // 创建组, 以及每组内的模型
+    LJGroup *group6 = [[LJGroup alloc] init];
+    group6.items = @[@"0"];
+    [self.groups addObject:group6];
+}
 
 #pragma mark - UICollectionViewDataSource
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -110,15 +113,27 @@ static NSString *ID = @"saleHouseMoreCell";
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-
-    LJSaleHouseMoreCell *cell = [LJSaleHouseMoreCell cellWithCollectionView:collectionView];
-    cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
-    return cell;
+    
+    if (indexPath.section == self.groups.count - 1) {
+        LJClearContentCell *cell = [LJClearContentCell cellWithCollectionView:collectionView];
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"clearCell" forIndexPath:indexPath];
+        return cell;
+    }
+    else {
+        LJSaleHouseMoreCell *cell = [LJSaleHouseMoreCell cellWithCollectionView:collectionView];
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
+        return cell;
+    }
 }
 
 //定义每个UICollectionViewCell 的大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(77.25, 30);
+    if (indexPath.section == self.groups.count - 1) {
+        return CGSizeMake(LJScreenW, 45);
+    }
+    else {
+        return CGSizeMake(77.25, 30);
+    }
 }
 
 //每个item之间的间距
@@ -133,22 +148,39 @@ static NSString *ID = @"saleHouseMoreCell";
 
 //定义每个Section 的 margin
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(20.5, 7.5, 20.5, 7.5);//分别为上、左、下、右
+    return UIEdgeInsetsMake(10, 15, 10, 12.25);//分别为上、左、下、右
 }
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
-    return CGSizeMake(375,31);
+    if (section == self.groups.count - 1) {
+        return CGSizeMake(0, 0);
+    }
+    else {
+        return CGSizeMake(LJScreenW,31);
+    }
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
+    if (section == self.groups.count - 1) {
+        return CGSizeMake(0, 0);
+    }
+    else {
+        return CGSizeMake(LJScreenW,0.5);
+    }
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
-    
-    LJCustomMoreHeaderView *headView;
-    
+
     if([kind isEqual:UICollectionElementKindSectionHeader]) {
-        headView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"hxwHeader" forIndexPath:indexPath];
-//        [headView setLabelText:[NSString stringWithFormat:@"section %d's header",indexPath.section]];
+        LJCustomMoreHeaderView *headView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"LJHeader" forIndexPath:indexPath];
+        return headView;
     }
-    return headView;
+    else if(kind == UICollectionElementKindSectionFooter) {
+        UICollectionReusableView *footView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"LJFooter" forIndexPath:indexPath];
+        footView.backgroundColor = LJColor(0.9, 0.9, 0.9, 1);
+        return footView;
+    }
+    return nil;
 }
 
 #pragma mark - Lazy
