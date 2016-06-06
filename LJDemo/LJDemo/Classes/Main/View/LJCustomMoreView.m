@@ -35,11 +35,19 @@ static NSString *ID = @"saleHouseMoreCell";
 - (IBAction)confirmClick:(UIButton *)sender {
     NSLog(@"%s",__func__);
 }
+#warning 为什么注册头部视图的方法，放在initWithCoder里会奔溃
+- (void)awakeFromNib {
+    [super awakeFromNib];
+
+    [self.collectionView registerClass:[LJCustomMoreHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"hxwHeader"];
+}
 
 
 - (void)initData {
     
 //    [self.collectionView registerClass:[LJSaleHouseMoreCell class] forCellWithReuseIdentifier:ID];
+    
+//    [self.collectionView registerClass:[LJCustomMoreHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"hxwHeader"];
     
     [self loadGroup0];
     [self loadGroup1];
@@ -123,11 +131,26 @@ static NSString *ID = @"saleHouseMoreCell";
     return 10;
 }
 
-
 //定义每个Section 的 margin
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(20.5, 7.5, 20.5, 7.5);//分别为上、左、下、右
 }
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
+    return CGSizeMake(375,31);
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    
+    LJCustomMoreHeaderView *headView;
+    
+    if([kind isEqual:UICollectionElementKindSectionHeader]) {
+        headView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"hxwHeader" forIndexPath:indexPath];
+//        [headView setLabelText:[NSString stringWithFormat:@"section %d's header",indexPath.section]];
+    }
+    return headView;
+}
+
 #pragma mark - Lazy
 - (NSMutableArray *)groups {
     if (_groups == nil) {
